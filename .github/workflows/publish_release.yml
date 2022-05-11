@@ -1,0 +1,34 @@
+name: Publish a new release
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  release:
+    name: Semantic-Release
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Install Node.js
+      uses: actions/setup-node@v3
+
+    - name: Get yarn cache directory path
+      uses: c-hive/gha-yarn-cache@v2
+
+    - name: Install dependencies
+      run: |
+      yarn install
+
+    - name: Semantic Release
+      uses: cycjimmy/semantic-release-action@v3
+      with:
+        extra_plugins: |
+          "semantic-release-config-gitmoji"
+        extends: semantic-release-config-gitmoji
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
