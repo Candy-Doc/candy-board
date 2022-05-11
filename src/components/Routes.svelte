@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Route } from "svelte-navigator";
-  import CandyData from "@Src/static/candy-data.json";
+  import CandyData from "@Public/candy-data.json";
   import Home from "@Src/pages/Home.svelte";
   import slugify from "slugify";
 </script>
