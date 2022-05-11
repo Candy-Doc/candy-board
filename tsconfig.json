@@ -11,7 +11,8 @@
     "strict": true,
     "isolatedModules": true,
     "paths": {
-      "@Src/*": ["./src/*"]
+      "@Src/*": ["./src/*"],
+      "@Public/*": ["./public/*"]
     }
   },
   "references": [{ "path": "./tsconfig.node.json" }],

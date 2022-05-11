@@ -10,7 +10,10 @@ export default defineConfig({
       include: ["**/*.svelte", "**/*.ts"],
     }),
     alias({
-      entries: [{ find: /^@Src(\/|$)/, replacement: `${__dirname}/src/` }],
+      entries: [
+        { find: /^@Src(\/|$)/, replacement: `${__dirname}/src/` },
+        { find: /^@Public(\/|$)/, replacement: `${__dirname}/public/` },
+      ],
     }),
   ],
 });

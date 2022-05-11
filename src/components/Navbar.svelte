@@ -1,6 +1,6 @@
 <script lang="ts">
   import { navigate, useLocation } from "svelte-navigator";
-  import CandyData from "@Src/static/candy-data.json";
+  import CandyData from "@Public/candy-data.json";
   import "@candy-doc/ui/src/components/Sidebar/Element/Element";
   import "@candy-doc/ui/src/components/Sidebar/SideBar";
   import slugify from "slugify";
