@@ -1,12 +1,11 @@
 name: Build the candy-board project
 
 on:
-  push
-  # push:
-  #   branches:
-  #   - main
-  # release:
-  #   types: [created, published]
+  push:
+    branches:
+    - main
+  release:
+    types: [created, published]
 
 jobs:
   build_project:
@@ -20,6 +19,6 @@ jobs:
     - run: yarn build
     - uses: actions/upload-artifact@v3
       with:
-        name: dist-artifact
+        name: candy-board
         path: ./dist/
 
