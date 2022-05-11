@@ -1,8 +1,14 @@
 {
-  "name": "@candy-doc/web",
-  "private": true,
+  "name": "@candy-doc/board",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite --open",
     "build": "vite build",
@@ -12,7 +18,8 @@
     "format-fix": "prettier --plugin=./../../node_modules/prettier-plugin-svelte --write .",
     "lint": "eslint --ext .cjs,.js,.ts,.json,.svelte .",
     "lint-fix": "eslint --fix --ext .cjs,.js,.ts,.json,.svelte .",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@candy-doc/ui": "*",
