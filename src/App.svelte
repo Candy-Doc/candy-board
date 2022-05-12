@@ -1,6 +1,5 @@
 <script lang="ts">
   import { Router } from "svelte-navigator";
-  import "@candy-doc/ui/src/components/Topbar/Topbar";
   import Navbar from "./components/Navbar.svelte";
   import Routes from "./components/Routes.svelte";
   import { setContext } from "svelte";
@@ -20,7 +19,6 @@
 </script>
 
 <Router>
-  <candy-topbar></candy-topbar>
   <div class="grid grid-cols-3">
     <Navbar />
     <Routes />
