@@ -10,7 +10,7 @@ module.exports = {
     ecmaVersion: 2019,
     sourceType: "module",
   },
-  extends: ["eslint:recommended"],
+  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
   plugins: ["svelte3"],
   overrides: [
     {
