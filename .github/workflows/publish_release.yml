@@ -5,6 +5,7 @@ on:
     branches:
     - main
 
+
 jobs:
   release:
     name: Semantic-Release
