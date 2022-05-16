@@ -1,8 +1,12 @@
 <script lang="ts">
   import { Route } from "svelte-navigator";
-  import CandyData from "@Public/candy-data.json";
   import Home from "@Src/pages/Home.svelte";
   import slugify from "slugify";
+  import { getContext } from "svelte";
+  import { Context } from "@Src/tools/context";
+  import type { WritableCandyData } from "@Src/types/candyData";
+
+  const CandyData = getContext<WritableCandyData>(Context.CandyData);
 </script>
 
 <main class="col-span-2">
@@ -10,7 +14,7 @@
     <Route path="/">
       <Home />
     </Route>
-    {#each CandyData as boundedContext}
+    {#each $CandyData as boundedContext}
       <Route path="{slugify(boundedContext.name, { lower: true, strict: true, trim: true })}">
         <div class="prose">
           <h2>{boundedContext.name}</h2>
