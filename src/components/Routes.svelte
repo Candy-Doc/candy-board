@@ -9,7 +9,7 @@
   const CandyData = getContext<WritableCandyData>(Context.CandyData);
 </script>
 
-<main class="col-span-2">
+<main>
   <div class="p-6">
     <Route path="/">
       <Home />
