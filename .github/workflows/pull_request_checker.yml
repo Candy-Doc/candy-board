@@ -6,6 +6,7 @@ on:
 
 jobs:
   check_pr_name:
+
     if: ${{ github.actor != 'dependabot[bot]'  && github.actor != 'allcontributors[bot]' }}
     runs-on: ubuntu-latest
     steps:
@@ -33,6 +34,13 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-python@v2
+
+    - name: Get yarn cache directory path
+      uses: c-hive/gha-yarn-cache@v2
+
+    - name: Install dependencies
+      run: yarn install
+
     - name: Run pre-commit hooks
       uses: pre-commit/action@v2.0.3
       with:

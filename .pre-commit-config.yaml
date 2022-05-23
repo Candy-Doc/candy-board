@@ -2,6 +2,20 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
 
+
+- repo: https://github.com/pre-commit/mirrors-eslint
+  rev: v8.14.0
+  hooks:
+  - id: eslint
+    files: \.[jt]sx?$      # *.js, *.jsx, *.ts and *.tsx
+    types: [file]
+    additional_dependencies:
+    - eslint@latest
+    - eslint-plugin-wc@latest
+    - eslint-plugin-lit@latest
+    - eslint-plugin-prettier@latest
+    - typescript-eslint@latest
+
 - repo: https://github.com/Yelp/detect-secrets
   rev: v1.2.0
   hooks:
@@ -20,11 +34,13 @@ repos:
     name: markdownlint
     description: Checks the style of Markdown/Commonmark files.
     entry: markdownlint
+
     args: [--ignore=CHANGELOG.md, --disable=MD040, --disable=MD033, --disable=MD013, --disable=MD028, --disable=MD036]
     types: [markdown]
   - id: markdownlint-fix
     name: markdownlint-fix
     description: Fixes the style of Markdown/Commonmark files.
     entry: markdownlint --fix
+
     args: [--ignore=CHANGELOG.md, --disable=MD040, --disable=MD033, --disable=MD013, --disable=MD028, --disable=MD036]
     types: [markdown]

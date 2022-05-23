@@ -1,13 +1,12 @@
 <script lang="ts">
   import "@candy-doc/ui/src/components/Input/Input";
 
-  function handleInput(e: Event) {
+  /*   function handleInput(e: Event) {
     const value = (e.target as HTMLInputElement).value;
     console.log(value);
-  }
+  } */
 </script>
 
-<candy-input on:input="{handleInput}"></candy-input>
 <div class="prose">
   <h1>Heading 1</h1>
   <h2>Heading 2</h2>
