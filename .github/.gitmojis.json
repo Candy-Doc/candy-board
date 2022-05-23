@@ -105,14 +105,6 @@
       "semver": "major"
     },
     {
-      "emoji": "🚩",
-      "entity": "&#x1F6A9;",
-      "code": ":triangular_flag_on_post:",
-      "description": "Add, update, or remove feature flags.",
-      "name": "triangular-flag-on-post",
-      "semver": "patch"
-    },
-    {
       "emoji": "🧪",
       "entity": "&#x1F9EA;",
       "code": ":test_tube:",
