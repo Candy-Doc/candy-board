@@ -6,22 +6,30 @@ on:
 
 jobs:
   check_pr_name:
+
+    if: ${{ github.actor != 'dependabot[bot]'  && github.actor != 'allcontributors[bot]' }}
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Get yarn cache directory path
-      uses: c-hive/gha-yarn-cache@v2
-    - name: Install dependencies
-      run: yarn install
+    - uses: actions/cache@v2
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
     - name: Install Dependencies
       run: |
         sed -i'' 's/"type": "module"/"type": "commonjs"/g' package.json
         yarn add commitlint-config-gitmoji commitlint 
         echo "module.exports = {extends: ['gitmoji']};" > ./commitlint.config.js
+
     - name: Run PR name linter
+      env:
+        GITMOJI_PATH: ./.github/.gitmojis.json
       uses: JulienKode/pull-request-name-linter-action@v0.5.0
 
   run_precommit_hooks:
+    if: ${{ github.actor != 'dependabot[bot]'  && github.actor != 'allcontributors[bot]' }}
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -38,4 +46,3 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         SKIP: markdownlint-fix
-
