@@ -2,7 +2,6 @@
   "name": "@candy-doc/board",
   "private": false,
   "version": "0.0.0",
-  "type": "module",
   "publishConfig": {
     "access": "public"
   },
@@ -16,8 +15,8 @@
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "format": "prettier --plugin=./../../node_modules/prettier-plugin-svelte --check .",
     "format-fix": "prettier --plugin=./../../node_modules/prettier-plugin-svelte --write .",
-    "lint": "eslint --ext .cjs,.js,.ts,.json,.svelte .",
-    "lint-fix": "eslint --fix --ext .cjs,.js,.ts,.json,.svelte .",
+    "lint": "eslint --ext .ts,.json,.svelte .",
+    "lint-fix": "eslint --fix --ext .ts,.json,.svelte .",
     "type-check": "tsc --noEmit",
     "prepublishOnly": "npm run build"
   },
@@ -41,7 +40,7 @@
     "eslint-svelte3-preprocess": "^0.0.5",
     "postcss": "^8.4.8",
     "prettier": "^2.6.2",
-    "prettier-plugin-svelte": "^2.6.0",
+    "prettier-plugin-svelte": "^2.7.0",
     "slugify": "^1.6.5",
     "svelte": "^3.44.0",
     "svelte-check": "^2.2.7",

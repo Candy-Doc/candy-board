@@ -21,4 +21,7 @@ module.exports = {
   settings: {
     "svelte3/typescript": () => require("typescript"),
   },
+  rules: {
+    '@typescript-eslint/no-var-requires': 0,
+  }
 };
