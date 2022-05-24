@@ -1,4 +1,4 @@
-const tailwindConfig = require("@candy-doc/ui/tailwind.config.js");
+const tailwindConfig = await import("@candy-doc/ui/tailwind.config.js");
 
 tailwindConfig.content = ["./index.html", "./src/**/*.{js,ts,svelte}"];
 
