@@ -14,7 +14,7 @@
   <a href="https://www.npmjs.com/package/@candy-doc/board">
     <img src="https://flat.badgen.net/npm/dt/@candy-doc/board" alt="NPM downloads">
   </a>
-  <a href="https://github.com/Candy-Doc/candy-template/blob/main/LICENSE" alt="License">
+  <a href="https://github.com/Candy-Doc/candy-board/blob/main/LICENSE" alt="License">
     <img src="https://flat.badgen.net/badge/license/GPL3/blue" alt="License">
   </a>
 </p>
