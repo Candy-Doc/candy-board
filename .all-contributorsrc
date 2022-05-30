@@ -19,6 +19,19 @@
         "maintenance",
         "review"
       ]
+    },
+    {
+      "login": "Tifloz",
+      "name": "Florian Louvet",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32623039?v=4",
+      "profile": "https://github.com/Tifloz",
+      "contributions": [
+        "code",
+        "doc",
+        "infra",
+        "maintenance",
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7
