@@ -30,7 +30,8 @@
         "doc",
         "infra",
         "maintenance",
-        "review"
+        "review",
+        "platform"
       ]
     }
   ],
