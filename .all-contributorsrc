@@ -1,0 +1,25 @@
+{
+  "projectName": "candy-board",
+  "projectOwner": "Candy-Doc",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "gitmoji",
+  "contributors": [
+    {
+      "login": "Michiels96",
+      "name": "Pierre",
+      "avatar_url": "https://avatars.githubusercontent.com/u/62119206?v=4",
+      "profile": "https://github.com/Michiels96",
+      "contributions": [
+        "maintenance",
+        "review"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}

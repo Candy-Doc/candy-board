@@ -40,6 +40,19 @@ Join our [Discord](https://discord.gg/CxwdeKjtcT) to start communicating with ev
 ## Contributors ✨
 
 [Contribute to the project](./CONTRIBUTING.md)
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/Michiels96"><img src="https://avatars.githubusercontent.com/u/62119206?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pierre</b></sub></a><br /><a href="#maintenance-Michiels96" title="Maintenance">🚧</a> <a href="https://github.com/Candy-Doc/candy-board/pulls?q=is%3Apr+reviewed-by%3AMichiels96" title="Reviewed Pull Requests">👀</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 - Ippon Technologies Lille 🧑‍💼
 
