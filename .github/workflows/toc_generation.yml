@@ -1,0 +1,16 @@
+name: Auto-generate a table of content in readme.md
+
+on:
+  push:
+    paths: [README.md]
+
+jobs:
+  generate:
+    name: Generate table of content
+    runs-on: ubuntu-latest
+    steps:
+    - uses: technote-space/toc-generator@v4
+      with:
+        TOC_TITLE: '## Table of Contents'
+        COMMIT_NAME: Auto ToC Bot
+        COMMIT_EMAIL: bot@github.com

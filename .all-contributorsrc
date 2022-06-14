@@ -1,0 +1,62 @@
+{
+  "projectName": "candy-board",
+  "projectOwner": "Candy-Doc",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "gitmoji",
+  "contributors": [
+    {
+      "login": "Michiels96",
+      "name": "Pierre",
+      "avatar_url": "https://avatars.githubusercontent.com/u/62119206?v=4",
+      "profile": "https://github.com/Michiels96",
+      "contributions": [
+        "maintenance",
+        "review",
+        "doc"
+      ]
+    },
+    {
+      "login": "Tifloz",
+      "name": "Florian Louvet",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32623039?v=4",
+      "profile": "https://github.com/Tifloz",
+      "contributions": [
+        "code",
+        "doc",
+        "infra",
+        "maintenance",
+        "review",
+        "platform"
+      ]
+    },
+    {
+      "login": "ctacquet",
+      "name": "Charles Tacquet",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22562938?v=4",
+      "profile": "https://ctacquet.com/",
+      "contributions": [
+        "code",
+        "doc",
+        "design"
+      ]
+    },
+    {
+      "login": "M4gie",
+      "name": "Maji",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33150916?v=4",
+      "profile": "https://maji.kiwi/",
+      "contributions": [
+        "code",
+        "review",
+        "design"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}

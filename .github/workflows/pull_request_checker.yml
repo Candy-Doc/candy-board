@@ -1,0 +1,48 @@
+name: Run the linters and detect if a secret has leaked
+
+on:
+  pull_request:
+    types: [opened, edited, reopened, synchronize]
+
+jobs:
+  check_pr_name:
+
+    if: ${{ github.actor != 'dependabot[bot]'  && github.actor != 'allcontributors[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/cache@v2
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+    - name: Install Dependencies
+      run: |
+        sed -i'' 's/"type": "module"/"type": "commonjs"/g' package.json
+        yarn add commitlint-config-gitmoji commitlint 
+        echo "module.exports = {extends: ['gitmoji']};" > ./commitlint.config.js
+
+    - name: Run PR name linter
+      env:
+        GITMOJI_PATH: ./.github/.gitmojis.json
+      uses: JulienKode/pull-request-name-linter-action@v0.5.0
+
+  run_precommit_hooks:
+    if: ${{ github.actor != 'dependabot[bot]'  && github.actor != 'allcontributors[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v2
+
+    - name: Get yarn cache directory path
+      uses: c-hive/gha-yarn-cache@v2
+
+    - name: Install dependencies
+      run: yarn install
+
+    - name: Run pre-commit hooks
+      uses: pre-commit/action@v2.0.3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        SKIP: markdownlint-fix

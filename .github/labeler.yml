@@ -1,0 +1,4 @@
+CI/CD:
+- .github/**/*
+- .github/*
+- .pre-commit-config.yaml
