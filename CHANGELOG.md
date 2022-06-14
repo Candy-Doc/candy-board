@@ -1,3 +1,8 @@
+# [v1.1.1](https://github.com/Candy-Doc/candy-board/compare/v1.1.0...v1.1.1) (2022-06-14)
+
+## 🐛 Bug Fixes
+- [`0846fb8`](https://github.com/Candy-Doc/candy-board/commit/0846fb8)  fix: json files should not be published in the npm package (#25) (Issues: [`#25`](https://github.com/Candy-Doc/candy-board/issues/25))
+
 # [v1.1.0](https://github.com/Candy-Doc/candy-board/compare/v1.0.1...v1.1.0) (2022-05-24)
 
 ## ✨ New minor Features
