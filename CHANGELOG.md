@@ -1,3 +1,8 @@
+# [v1.1.2](https://github.com/Candy-Doc/candy-board/compare/v1.1.1...v1.1.2) (2022-06-15)
+
+## 🐛 Bug Fixes
+- [`555b8a4`](https://github.com/Candy-Doc/candy-board/commit/555b8a4)  fix: explicitly write required files for the bundle (#26) (Issues: [`#26`](https://github.com/Candy-Doc/candy-board/issues/26))
+
 # [v1.1.1](https://github.com/Candy-Doc/candy-board/compare/v1.1.0...v1.1.1) (2022-06-14)
 
 ## 🐛 Bug Fixes
