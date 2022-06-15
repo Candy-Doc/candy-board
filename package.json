@@ -6,7 +6,9 @@
     "access": "public"
   },
   "files": [
-    "dist"
+    "dist/assets",
+    "dist/favicon.ico",
+    "dist/index.html"
   ],
   "scripts": {
     "dev": "vite --open",
