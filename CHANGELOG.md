@@ -1,3 +1,8 @@
+# [v1.1.3](https://github.com/Candy-Doc/candy-board/compare/v1.1.2...v1.1.3) (2022-06-20)
+
+## 🐛 Bug Fixes
+- [`5c5d749`](https://github.com/Candy-Doc/candy-board/commit/5c5d749)  fix: support the last version of the emited json (#27) (Issues: [`#27`](https://github.com/Candy-Doc/candy-board/issues/27))
+
 # [v1.1.2](https://github.com/Candy-Doc/candy-board/compare/v1.1.1...v1.1.2) (2022-06-15)
 
 ## 🐛 Bug Fixes
