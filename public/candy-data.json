@@ -1,80 +1,42 @@
 [
   {
-    "name": "Library Of Books",
+    "simpleName": "Library",
+    "canonicalName": "fr.ipponlille.library.package-info",
     "description": "Library of books",
-    "packageName": "fr.ipponlille.model",
+    "packageName": "fr.ipponlille.library",
     "coreConcepts": [],
     "domainCommands": [],
-    "domainEvents": [],
+    "valueObjects": [
+      {
+        "description": "Code of the book, composed of 13 numbers",
+        "simpleName": "EAN13",
+        "canonicalName": "fr.ipponlille.library.EAN13",
+        "type": "VALUE_OBJECT",
+        "interactsWith": [{ "simpleName": "Book", "canonicalName": "fr.ipponlille.library.Book" }],
+        "errors": []
+      },
+      {
+        "description": "Price of a book, in € and $",
+        "simpleName": "Price",
+        "canonicalName": "fr.ipponlille.library.Price",
+        "type": "VALUE_OBJECT",
+        "interactsWith": [{ "simpleName": "Book", "canonicalName": "fr.ipponlille.library.Book" }],
+        "errors": []
+      }
+    ],
     "aggregates": [
       {
         "description": "A readable book",
-        "name": "Book",
-        "className": "fr.ipponlille.model.Book",
+        "simpleName": "Book",
+        "canonicalName": "fr.ipponlille.library.Book",
         "type": "AGGREGATE",
         "interactsWith": [
-          { "name": "EAN13", "className": "fr.ipponlille.model.EAN13" },
-          { "name": "Price", "className": "fr.ipponlille.model.Price" }
+          { "simpleName": "EAN13", "canonicalName": "fr.ipponlille.library.EAN13" },
+          { "simpleName": "Price", "canonicalName": "fr.ipponlille.library.Price" }
         ],
         "errors": []
       }
     ],
-    "valueObjects": [
-      {
-        "description": "Price of a book, in € and $",
-        "name": "Price",
-        "className": "fr.ipponlille.model.Price",
-        "type": "VALUE_OBJECT",
-        "interactsWith": [{ "name": "Book", "className": "fr.ipponlille.model.Book" }],
-        "errors": []
-      },
-      {
-        "description": "Code of the book, composed of 13 numbers",
-        "name": "EAN13",
-        "className": "fr.ipponlille.model.EAN13",
-        "type": "VALUE_OBJECT",
-        "interactsWith": [{ "name": "Book", "className": "fr.ipponlille.model.Book" }],
-        "errors": []
-      }
-    ]
-  },
-  {
-    "name": "Factory",
-    "description": "Library of factory",
-    "packageName": "fr.ipponlille.model",
-    "coreConcepts": [],
-    "domainCommands": [],
-    "domainEvents": [],
-    "aggregates": [
-      {
-        "description": "A readable book",
-        "name": "Book",
-        "className": "fr.ipponlille.model.Book",
-        "type": "AGGREGATE",
-        "interactsWith": [
-          { "name": "EAN13", "className": "fr.ipponlille.model.EAN13" },
-          { "name": "Price", "className": "fr.ipponlille.model.Price" }
-        ],
-        "errors": []
-      }
-    ],
-    "valueObjects": [
-      {
-        "description": "Price of a book, in € and $",
-        "name": "Price",
-        "className": "fr.ipponlille.model.Price",
-        "type": "VALUE_OBJECT",
-        "interactsWith": [{ "name": "Book", "className": "fr.ipponlille.model.Book" }],
-        "errors": []
-      },
-      {
-        "description": "Code of the book, composed of 13 numbers",
-        "name": "EAN13",
-        "className": "fr.ipponlille.model.EAN13",
-        "type": "VALUE_OBJECT",
-        "interactsWith": [{ "name": "Book", "className": "fr.ipponlille.model.Book" }],
-        "errors": []
-      }
-    ]
+    "domainEvents": []
   }
 ]

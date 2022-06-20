@@ -16,10 +16,10 @@
 
   $: {
     sidebarElements = [...sidebarElements];
-    $CandyData.forEach(({ name }) =>
+    $CandyData.forEach(({ simpleName }) =>
       sidebarElements.push({
-        label: name,
-        path: slugify(name, { lower: true, strict: true, trim: true }),
+        label: simpleName,
+        path: slugify(simpleName, { lower: true, strict: true, trim: true }),
         active: false,
         icon: faObjectGroup,
       })
