@@ -15,9 +15,9 @@
       <Home />
     </Route>
     {#each $CandyData as boundedContext}
-      <Route path="{slugify(boundedContext.name, { lower: true, strict: true, trim: true })}">
+      <Route path="{slugify(boundedContext.simpleName, { lower: true, strict: true, trim: true })}">
         <div class="prose">
-          <h2>{boundedContext.name}</h2>
+          <h2>{boundedContext.simpleName}</h2>
           <p>{boundedContext.description}</p>
         </div>
       </Route>

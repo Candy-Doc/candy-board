@@ -9,7 +9,8 @@ export enum Type {
 }
 
 export type BoundedContext = {
-  name: string;
+  simpleName: string;
+  canonicalName: string;
   description: string;
   packageName: string;
   coreConcepts: CoreConcept[];
