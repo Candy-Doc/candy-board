@@ -105,26 +105,15 @@ const hideNeighbors = (cyInstance: any, node: cytoscape.NodeSingular) => {
   cyInstance.elements().not(node).not(neighbors).addClass('hidden')
 
   if (node.isChild()) {
-    // showParents(node.parent());
     node.parent().forEach((subChild: cytoscape.NodeSingular) => {
       subChild.removeClass('hidden')
     })
   }
   if (node.isParent()) {
-    // showChilds(node.children());
     node.children().forEach((subChild: cytoscape.NodeSingular) => {
       subChild.removeClass('hidden')
     })
   }
-
-  // neighbors.forEach((element: any) => {
-  //   if (element.isChild()) {
-  //     showParents(element.parent());
-  //   }
-  //   if (element.isParent()) {
-  //     showChilds(element.children());
-  //   }
-  // });
 }
 
 const showNeighbors = (cyInstance: any) => {
@@ -149,24 +138,7 @@ const hideTippy = (
   }
 }
 
-const showParents = (parent: any) => {
-  parent.removeClass('hidden')
-  if (parent.isChild()) {
-    showParents(parent.parent())
-  }
-  return
-}
-
-const showChilds = (child: any) => {
-  child.forEach((subChild: any) => {
-    subChild.removeClass('hidden')
-    if (subChild.isParent()) {
-      showChilds(subChild.children())
-    }
-  })
-}
-
-const checkCtrlKeyPressed = (e: any) => {
+const checkCtrlKeyPressed = (e: KeyboardEvent) => {
   e.stopPropagation()
   isCtrlPressed = e.ctrlKey
 }

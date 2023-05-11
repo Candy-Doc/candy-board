@@ -1,7 +1,7 @@
 import tippy from 'tippy.js'
 import 'tippy.js/dist/tippy.css'
 
-export const makeTippy = function (ele: cytoscape.Singular, text: string) {
+export const makeTippy = function (ele: cytoscape.SingularElementReturnValue, text: string) {
   const ref = ele.popperRef()
 
   // Since tippy constructor requires DOM element/elements, create a placeholder
