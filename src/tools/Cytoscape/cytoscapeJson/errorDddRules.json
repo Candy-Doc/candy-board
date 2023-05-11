@@ -1,0 +1,390 @@
+[
+  {
+    "data": {
+      "id": "a0",
+      "label": "Aggregate",
+      "parent": "bc3"
+    },
+    "classes": "aggregate"
+  },
+  {
+    "data": {
+      "id": "v0",
+      "label": "Value Object",
+      "parent": "a0",
+      "errors": ["Value objects cannot contains entities nor aggregate"]
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "v1",
+      "label": "Value Object",
+      "parent": "a0"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "e0",
+      "label": "Entity",
+      "parent": "v0",
+      "errors": ["Value objects cannot contains entities nor aggregate"]
+    },
+    "classes": "entity"
+  },
+  {
+    "data": {
+      "id": "bc1",
+      "label": "Bounded context 1"
+    },
+    "classes": "boundedContext"
+  },
+  {
+    "data": {
+      "id": "bc2",
+      "label": "Bounded context 2"
+    },
+    "classes": "boundedContext"
+  },
+  {
+    "data": {
+      "id": "a1",
+      "label": "Aggregate",
+      "parent": "bc1"
+    },
+    "classes": "aggregate"
+  },
+  {
+    "data": {
+      "id": "a2",
+      "label": "Aggregate",
+      "parent": "bc2"
+    },
+    "classes": "aggregate"
+  },
+  {
+    "data": {
+      "id": "e1",
+      "label": "Entity",
+      "parent": "a1",
+      "errors": ["An Entity cannot communicate beyond its own bounded context"]
+    },
+    "classes": "entity"
+  },
+  {
+    "data": {
+      "id": "e2",
+      "label": "Entity",
+      "parent": "a2",
+      "errors": ["An Entity cannot communicate beyond its own bounded context"]
+    },
+    "classes": "entity"
+  },
+  {
+    "data": {
+      "id": "v2",
+      "label": "Value Object",
+      "parent": "a1"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "v3",
+      "label": "Value Object",
+      "parent": "a2"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": 1,
+      "source": "a2",
+      "target": "a1"
+    }
+  },
+  {
+    "data": {
+      "id": 2,
+      "source": "e1",
+      "target": "e2",
+      "errors": ["An Entity cannot communicate beyond its own bounded context"]
+    }
+  },
+  {
+    "data": {
+      "id": "v4",
+      "label": "Mutable Value Object",
+      "parent": "bc3",
+      "warnings": [
+        "A value object is, by definition, immutable"
+      ]
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "a10",
+      "label": "Aggregate",
+      "parent": "bc3",
+      "errors": [
+        "Test"
+      ]
+    },
+    "classes": "aggregate"
+  },
+  {
+    "data": {
+      "id": "e10",
+      "label": "Entity",
+      "parent": "a10",
+      "errors" : [
+        "Entities cannot contains aggregates"
+      ]
+    },
+    "classes": "entity"
+  },
+  {
+    "data": {
+      "id": "e11",
+      "label": "Entity",
+      "parent": "a10"
+    },
+    "classes": "entity"
+  },
+  {
+    "data": {
+      "id": "a11",
+      "label": "Aggregate",
+      "parent": "e10",
+      "errors" : [
+        "Entities cannot contains aggregates"
+      ]
+    },
+    "classes": "aggregate"
+  },
+  {
+    "data": {
+      "id": "v10",
+      "label": "Value Object",
+      "parent": "e10"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "bc3",
+      "label": "Bounded Context"
+    },
+    "classes": "boundedContext"
+  },
+  {
+    "data": {
+      "id": "a13",
+      "label": "Aggregate",
+      "parent": "bc3"
+    },
+    "classes": "aggregate"
+  },
+  {
+    "data": {
+      "id": "v15",
+      "label": "Value Object",
+      "parent": "a13"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "e15",
+      "label": "Entity",
+      "parent": "a13",
+      "errors": [
+        "An object within an aggregate cannot be referenced by an outsider one"
+      ]
+    },
+    "classes": "entity"
+  },
+  {
+    "data": {
+      "id": "f15",
+      "label": "Factory",
+      "parent": "bc3",
+      "errors": [
+        "An object within an aggregate cannot be referenced by an outsider one"
+      ]
+    },
+    "classes": "factory"
+  },
+  {
+    "data": {
+      "id": 10,
+      "source": "f15",
+      "target": "a13"
+    }
+  },
+  {
+    "data": {
+      "id": 11,
+      "source": "f15",
+      "target": "e15",
+      "errors": [
+        "An object within an aggregate cannot be referenced by an outsider one"
+      ]
+    }
+  },
+  {
+    "data": {
+      "id": "r20",
+      "label": "Repository",
+      "parent": "bc3",
+      "errors": [
+        "A repository only manages aggregates"
+      ]
+    },
+    "classes": "repository"
+  },
+  {
+    "data": {
+      "id": "a20",
+      "label": "Aggregate",
+      "parent": "bc3"
+    },
+    "classes": "aggregate"
+  },
+  {
+    "data": {
+      "id": "a21",
+      "label": "Aggregate",
+      "parent": "bc3"
+    },
+    "classes": "aggregate"
+  },
+  {
+    "data": {
+      "id": "e20",
+      "label": "Entity",
+      "parent": "bc3",
+      "errors": [
+        "A repository only manages aggregates"
+      ]
+    },
+    "classes": "entity"
+  },
+  {
+    "data": {
+      "id": 20,
+      "source": "r20",
+      "target": "a20"
+    }
+  },
+  {
+    "data": {
+      "id": 21,
+      "source": "r20",
+      "target": "a21"
+    }
+  },
+  {
+    "data": {
+      "id": 22,
+      "source": "r20",
+      "target": "e20",
+      "errors": [
+        "A repository only manages aggregates"
+      ]
+    }
+  },
+  {
+    "data": {
+      "id": "a100",
+      "label": "Triple error",
+      "parent": "bc3",
+      "errors": [
+        "This is the first error",
+        "This is the second error",
+        "This is the third error"
+      ]
+    },
+    "classes": "aggregate"
+  },
+  {
+    "data": {
+      "id": "a101",
+      "label": "Triple warning",
+      "parent": "bc3",
+      "warnings": [
+        "This is the first warning",
+        "This is the second warning",
+        "This is the third warning"
+      ]
+    },
+    "classes": "aggregate"
+  },
+  {
+    "data": {
+      "id": "a102",
+      "label": "Error and warning",
+      "parent": "bc3",
+      "errors": [
+        "This is the error"
+      ],
+      "warnings": [
+        "This is the warning"
+      ]
+    },
+    "classes": "aggregate"
+  },
+  {
+    "data": {
+      "id": "a110",
+      "label": "Aggregate",
+      "parent": "bc3"
+    },
+    "classes": "aggregate"
+  },
+  {
+    "data": {
+      "id": "v110",
+      "label": "Value Object",
+      "parent": "a110"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "e110",
+      "label": "Entity",
+      "parent": "a110",
+      "errors": [
+        "Only aggregates can publish domain events"
+      ]
+    },
+    "classes": "entity"
+  },
+  {
+    "data": {
+      "id": 110,
+      "source": "e110",
+      "target": "de102",
+      "errors": [
+        "Only aggregates can publish domain events"
+      ]
+    }
+  },
+  {
+    "data": {
+      "id": "de102",
+      "label": "Domain Event",
+      "parent": "bc3",
+      "errors": [
+        "Only aggregates can publish domain events"
+      ],
+      "warnings": [
+        "It seems this domain event doesn't own id or timestamp"
+      ]
+    },
+    "classes": "event"
+  }
+]

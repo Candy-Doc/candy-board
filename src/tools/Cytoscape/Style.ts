@@ -1,4 +1,4 @@
-import type { Stylesheet } from 'cytoscape'
+import type { Stylesheet, NodeSingular } from 'cytoscape'
 
 const Style: Stylesheet[] = [
   {
@@ -10,8 +10,7 @@ const Style: Stylesheet[] = [
       'text-valign': 'center',
       'text-halign': 'center',
       'text-wrap': 'ellipsis',
-      // "width": "label"
-      width: (node: any) => {
+      width: (node: NodeSingular) => {
         const width = node.data('label').length * 8
         return width > 30 ? width : 30
       }
@@ -192,9 +191,9 @@ const Style: Stylesheet[] = [
       'line-style': 'dashed',
       'background-color': '#ffb32c',
       'border-color': '#d59727',
-      color: (node: any) => {
-        if (node.parent().hasClass('warnings') || !node.isParent()) {
-          return '#fff8ea'
+      color: (node: NodeSingular) => {
+        if (node.parent().toArray().some((ele: NodeSingular) => ele.hasClass("error")) || !node.isParent()) {
+            return '#fff8ea'
         } else {
           return '#ffb32c'
         }
@@ -209,8 +208,8 @@ const Style: Stylesheet[] = [
       'line-style': 'dashed',
       'background-color': '#ff4248',
       'border-color': '#B71C1C',
-      color: (node: any) => {
-        if (node.parent().hasClass('error') || !node.isParent()) {
+      color: (node: NodeSingular) => {
+        if (node.parent().toArray().some((ele: NodeSingular) => ele.hasClass("error")) || !node.isParent()) {
           return '#FFEBEE'
         } else {
           return '#EF5350'
@@ -233,7 +232,6 @@ const Style: Stylesheet[] = [
       'border-opacity': 0.05,
       'text-opacity': 0.05,
       'line-opacity': 0.05
-      // opacity: 0.05,
     }
   }
 ]

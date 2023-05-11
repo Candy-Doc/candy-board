@@ -56,7 +56,7 @@
       );
     }
 
-     cyInstance.elements().forEach((elem: Cytoscape.Singular) => {
+     cyInstance.elements().forEach((elem: Cytoscape.SingularElementReturnValue) => {
       addClassAndDisplayTooltips(elem);
     });
 
@@ -125,7 +125,7 @@
     cyInstance.off("click");
   });
 
-  const addClassAndDisplayTooltips = (elem: Cytoscape.Singular) => {
+  const addClassAndDisplayTooltips = (elem: Cytoscape.SingularElementReturnValue) => {
     let tooltipMessage = "";
     if (elem.data("errors")) {
       elem.addClass("error");
@@ -154,6 +154,7 @@
     e?.stopPropagation();
     cyInstance.animate({
       fit: {
+        eles: cyInstance.elements(),
         padding: 5,
       },
       easing: "ease",
@@ -192,7 +193,7 @@
         <input
           type="checkbox"
           bind:checked={disableHiding}
-          class="my-2 mr-2 "
+          class="my-2 mr-2 rounded "
           name="hide-neighbors"
         />
         <label for="hide-neighbors">Enable hiding neighbors</label>
@@ -238,7 +239,7 @@
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 1);
     place-items: center;
-    width: 100vw;
+    width: 100%;
     height: 80vh;
     display: block;
   }
@@ -249,7 +250,7 @@
     top: 0;
     color: rgb(37 99 235);
     left: 0;
-    background-color: rgba(20, 120, 250, 0.3);
+    background-color: rgba(191, 219, 254, 0.5);
     backdrop-filter: blur(10px);
   }
 
