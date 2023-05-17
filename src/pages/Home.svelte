@@ -1,5 +1,4 @@
 <script lang="ts">
-  import "@candy-doc/ui/src/components/Input/Input";
 
   /*   function handleInput(e: Event) {
     const value = (e.target as HTMLInputElement).value;

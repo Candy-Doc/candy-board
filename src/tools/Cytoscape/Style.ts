@@ -151,6 +151,22 @@ const Style: Stylesheet[] = [
     }
   },
   {
+    selector: '.sharedKernel',
+    style: {
+      'background-color': 'white',
+      'text-transform': 'uppercase',
+      shape: 'barrel',
+      'padding-bottom': '40',
+      'padding-top': '40',
+      'padding-right': '40',
+      'padding-left': '40',
+      'font-size': '20',
+      'font-weight': 'bold',
+      'border-style': 'dashed',
+      'border-width': '5'
+    }
+  },
+  {
     selector: '.service',
     style: {
       'background-color': '#A3E4D7',
