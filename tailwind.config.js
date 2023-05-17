@@ -1,5 +1,7 @@
-const tailwindConfig = require("@candy-doc/ui/tailwind.config.js");
-
-tailwindConfig.content = ["./index.html", "./src/**/*.{js,ts,svelte}"];
-
-module.exports = tailwindConfig;
+module.exports = {
+  content: ["./index.html", './src/**/*.{html,js,svelte,ts}'],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}

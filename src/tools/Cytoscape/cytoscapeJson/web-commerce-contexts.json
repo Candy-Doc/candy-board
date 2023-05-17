@@ -1,0 +1,452 @@
+[
+  {
+    "data": {
+      "id": "bc0",
+      "label": "Billing"
+    },
+    "classes" : "boundedContext"
+  },
+  {
+    "data": {
+      "id": "a0",
+      "label": "Payment",
+      "parent": "bc0"
+    },
+    "classes": "aggregate"
+  },
+  {
+    "data": {
+      "id": "vo0",
+      "label": "status",
+      "parent": "a0"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "a1",
+      "label": "Card",
+      "parent": "a0"
+    },
+    "classes": "entity"
+  },
+  {
+    "data": {
+      "id": "vo1",
+      "label": "Id Card",
+      "parent": "a1"
+    },
+    "classes" : "valueObject"
+  },
+  {
+    "data": {
+      "id": "vo2",
+      "label": "Secret Code",
+      "parent": "a1"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "vo3",
+      "label": "Owner",
+      "parent": "a1"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "e0",
+      "label": "Invoice",
+      "parent": "a0"
+    },
+    "classes": "entity"
+  },
+  {
+    "data": {
+      "id": "e1",
+      "label": "Client",
+      "parent": "e0"
+    },
+    "classes": "entity"
+  },
+  {
+    "data": {
+      "id": "e2",
+      "label": "Order",
+      "parent": "e0"
+    },
+    "classes": "entity"
+  },
+  {
+    "data": {
+      "id": "e3",
+      "label": "Product",
+      "parent": "e2"
+    },
+    "classes": "entity"
+  },
+  {
+    "data": {
+      "id": "vo6",
+      "label": "Id Product",
+      "parent": "e3"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "vo7",
+      "label": "Price",
+      "parent": "e3"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "vo8",
+      "label": "Quantity",
+      "parent": "e3"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "bc1",
+      "label": "Sales"
+    },
+    "classes" : "boundedContext"
+  },
+  {
+    "data": {
+      "id": "a2",
+      "label": "Order",
+      "parent": "bc1"
+    },
+    "classes": "aggregate"
+  },
+  {
+    "data": {
+      "id": "e4",
+      "label": "Order",
+      "parent": "a2"
+    },
+    "classes": "entity"
+  },
+  {
+    "data": {
+      "id": "vo9",
+      "label": "Features",
+      "parent": "e4"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "vo10",
+      "label": "Price",
+      "parent": "e4"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "vo11",
+      "label": "Image",
+      "parent": "e4"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "vo12",
+      "label": "Category",
+      "parent": "e4"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "bc2",
+      "label": "Warehouse"
+    },
+    "classes" : "boundedContext"
+  },
+  {
+    "data": {
+      "id": "a3",
+      "label": "Package",
+      "parent": "bc2"
+    },
+    "classes": "aggregate"
+  },
+  {
+    "data": {
+      "id": "e5",
+      "label": "Goods",
+      "parent": "a3"
+    },
+    "classes": "entity"
+  },
+  {
+    "data": {
+      "id": "vo13",
+      "label": "Dimension",
+      "parent": "e5"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "vo14",
+      "label": "Location",
+      "parent": "e5"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "vo15",
+      "label": "Quantity",
+      "parent": "e5"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "bc3",
+      "label": "Shipping"
+    },
+    "classes" : "boundedContext"
+  },
+  {
+    "data": {
+      "id": "a4",
+      "label": "Delivery",
+      "parent": "bc3"
+    },
+    "classes": "aggregate"
+  },
+  {
+    "data": {
+      "id": "vo16",
+      "label": "Carrier",
+      "parent": "a4"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "vo17",
+      "label": "Address Shipping",
+      "parent": "a4"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "bc5",
+      "label": "Fraud Reporting"
+    },
+    "classes": "boundedContext"
+  },
+  {
+    "data": {
+      "id": "e22",
+      "label": "Company",
+      "parent": "e20"
+    },
+    "classes": "entity"
+  },
+  {
+    "data": {
+      "id": "a6",
+      "label": "Report",
+      "parent": "bc5"
+    },
+    "classes": "aggregate"
+  },
+  {
+    "data": {
+      "id": "e20",
+      "label": "Suspect",
+      "parent": "a6",
+      "error": "This is an error !"
+    },
+    "classes": "entity"
+  },
+  {
+    "data": {
+      "id": "e21",
+      "label": "User",
+      "parent": "e20"
+    },
+    "classes": "entity"
+  },
+  {
+    "data": {
+      "id": "de4",
+      "label": "Fraud detected"
+    },
+    "classes": "event"
+  },
+  {
+    "data": {
+      "id": "dc4",
+      "label": "Send alert to DGCCRF"
+    },
+    "classes": "command"
+  },
+  {
+    "data": {
+      "id": "vo20",
+      "label": "Full Name",
+      "parent": "e21"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "vo21",
+      "label": "SIRET Id",
+      "parent": "e22"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "vo22",
+      "label": "Fraud type",
+      "parent": "e20"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "de0",
+      "label": "Shopping cart confirmed"
+    },
+    "classes": "event"
+  },
+  {
+    "data": {
+      "id": "de1",
+      "label": "Payment OK"
+    },
+    "classes": "event"
+  },
+  {
+    "data": {
+      "id": "de2",
+      "label": "Package ready"
+    },
+    "classes": "event"
+  },
+
+  {
+    "data": {
+      "id": "dc0",
+      "label": "Ask for payment"
+    },
+    "classes": "command"
+  },
+  {
+    "data": {
+      "id": "dc1",
+      "label": "Prepare package"
+    },
+    "classes": "command"
+  },
+  {
+    "data": {
+      "id": "dc2",
+      "label": "Send package"
+    },
+    "classes": "command"
+  }, {
+  "data": {
+    "id": 1,
+    "source": "a2",
+    "target": "de0"
+  }
+},
+  {
+    "data": {
+      "id": 2,
+      "source": "de0",
+      "target": "dc0"
+    }
+  },
+  {
+    "data": {
+      "id": 3,
+      "source": "dc0",
+      "target": "a0"
+    }
+  },
+  {
+    "data": {
+      "id": 4,
+      "source": "a0",
+      "target": "de1"
+    }
+  },
+  {
+    "data": {
+      "id": 5,
+      "source": "de1",
+      "target": "dc1"
+    }
+  },
+  {
+    "data": {
+      "id": 6,
+      "source": "dc1",
+      "target": "a3"
+    }
+  },
+  {
+    "data": {
+      "id": 7,
+      "source": "a3",
+      "target": "de2"
+    }
+  },
+  {
+    "data": {
+      "id": 8,
+      "source": "de2",
+      "target": "dc2"
+    }
+  },
+  {
+    "data": {
+      "id": 9,
+      "source": "dc2",
+      "target": "a4"
+    }
+  },
+  {
+    "data": {
+      "id": 10,
+      "source": "a0",
+      "target": "de4"
+    }
+  },
+  {
+    "data": {
+      "id": 11,
+      "source": "de4",
+      "target": "dc4"
+    }
+  },
+  {
+    "data": {
+      "id": 12,
+      "source": "dc4",
+      "target": "a6",
+      "error" : "This edge also have an error"
+    }
+  }
+
+]

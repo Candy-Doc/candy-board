@@ -1,3 +1,40 @@
 main {
   padding: 0 !important;
 }
+
+.tippy-box[data-theme~="error"] {
+  background-color: #FFEAEE;
+  color: #ff4248;
+  border: 1px solid #ff4248;
+  border-radius: 5px;
+  font-size: 1.2rem
+}
+
+.tippy-box[data-theme~="warning"] {
+  background-color: #fff8ea;
+  color: #ffb32c;
+  border: 1px solid #ffb32c;
+  border-radius: 5px;
+  font-size: 1.2rem
+}
+
+.tippy-box[data-theme~='error'][data-placement^='top']>.tippy-arrow::before {
+  border-top-color: #FFEAEE;
+}
+
+.tippy-box[data-theme~='error'][data-placement^='bottom']>.tippy-arrow::before {
+  border-bottom-color: #FFEAEE;
+}
+
+.tippy-box[data-theme~='error'][data-placement^='left']>.tippy-arrow::before {
+  border-left-color: #FFEAEE;
+}
+
+.tippy-box[data-theme~='error'][data-placement^='right']>.tippy-arrow::before {
+  border-right-color: #FFEAEE;
+}
+
+/*-- Too handle the line field '\n' --*/
+.tippy-content {
+  white-space: pre-line;
+}

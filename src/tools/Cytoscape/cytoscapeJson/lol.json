@@ -1,0 +1,401 @@
+[
+  {
+    "data": {
+      "id": "bc0",
+      "label": "Gamer Information"
+    },
+    "classes": "boundedContext"
+  },
+  {
+    "data": {
+      "id": "a0",
+      "label": "Gamer",
+      "parent": "bc0"
+    },
+    "classes": "aggregate"
+  },
+  {
+    "data": {
+      "id": "vo0",
+      "label": "Gamer Tag",
+      "parent": "a0"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "e0",
+      "label": "Rank",
+      "parent": "a0"
+    },
+    "classes": "entity"
+  },
+  {
+    "data": {
+      "id": "vo1",
+      "label": "Division",
+      "parent": "e0"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "vo2",
+      "label": "Sub-division",
+      "parent": "e0"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "de0",
+      "label": "Play mode selected"
+    },
+    "classes": "event"
+  },
+  {
+    "data": {
+      "id": "dc0",
+      "label": "Create a game"
+    },
+    "classes": "command"
+  },
+  {
+    "data": {
+      "id": "bc1",
+      "label": "Game Information"
+    },
+    "classes": "boundedContext"
+  },
+  {
+    "data": {
+      "id": "a1",
+      "label": "Game",
+      "parent": "bc1"
+    },
+    "classes": "aggregate"
+  },
+  {
+    "data": {
+      "id": "e9",
+      "label": "Play mode",
+      "parent": "a1"
+    },
+    "classes": "entity"
+  },
+  {
+    "data": {
+      "id": "v9",
+      "label": "Rules",
+      "parent": "e9"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "vo8",
+      "label": "Map",
+      "parent": "e9"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "v10",
+      "label": "Server",
+      "parent": "a1"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "v11",
+      "label": "Duration",
+      "parent": "a1"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "e10",
+      "label": "Gamer",
+      "parent": "a1"
+    },
+    "classes": "entity"
+  },
+  {
+    "data": {
+      "id": "v12",
+      "label": "Gamer Tag",
+      "parent": "e10"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "e11",
+      "label": "Champion",
+      "parent": "e10"
+    },
+    "classes": "entity"
+  },
+  {
+    "data": {
+      "id": "de1",
+      "label": "10 players found"
+    },
+    "classes": "event"
+  },
+  {
+    "data": {
+      "id": "dc1",
+      "label": "Launch the champ select"
+    },
+    "classes": "command"
+  },
+  {
+    "data": {
+      "id": "bc2",
+      "label": "Champ select"
+    },
+    "classes": "boundedContext"
+  },
+  {
+    "data": {
+      "id": "a2",
+      "label": "Champion",
+      "parent": "bc2"
+    },
+    "classes": "aggregate"
+  },
+  {
+    "data": {
+      "id": "v20",
+      "label": "Name",
+      "parent": "a2"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "e20",
+      "label": "Skins",
+      "parent": "a2"
+    },
+    "classes": "entity"
+  },
+  {
+    "data": {
+      "id": "v21",
+      "label": "Image",
+      "parent": "e20"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "e21",
+      "label": "Summoner's spell",
+      "parent": "a2"
+    },
+    "classes": "entity"
+  },
+  {
+    "data": {
+      "id": "v22",
+      "label": "Effects",
+      "parent": "e21"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "e22",
+      "label": "Runes",
+      "parent": "a2"
+    },
+    "classes": "entity"
+  },
+  {
+    "data": {
+      "id": "v23",
+      "label": "Effects",
+      "parent": "a2"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "de2",
+      "label": "Champ selected"
+    },
+    "classes": "event"
+  },
+  {
+    "data": {
+      "id": "dc2",
+      "label": "Launch the game"
+    },
+    "classes": "command"
+  },
+  {
+    "data": {
+      "id": "de3",
+      "label": "Shop opened"
+    },
+    "classes": "event"
+  },
+  {
+    "data": {
+      "id": "dc3",
+      "label": "Display items"
+    },
+    "classes": "command"
+  },
+  {
+    "data": {
+      "id": "bc3",
+      "label": "Items"
+    },
+    "classes": "boundedContext"
+  },
+  {
+    "data": {
+      "id": "a3",
+      "label": "Item",
+      "parent": "bc3"
+    },
+    "classes": "aggregate"
+  },
+  {
+    "data": {
+      "id": "vo30",
+      "label": "Statistics",
+      "parent": "a3"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "vo31",
+      "label": "Effects",
+      "parent": "a3"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "vo32",
+      "label": "Price",
+      "parent": "a3"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "vo33",
+      "label": "Name",
+      "parent": "a3"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "vo34",
+      "label": "Category",
+      "parent": "a3"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": "vo35",
+      "label": "Image",
+      "parent": "a3"
+    },
+    "classes": "valueObject"
+  },
+  {
+    "data": {
+      "id": 1,
+      "source": "a0",
+      "target": "de0"
+    }
+  },
+  {
+    "data": {
+      "id": 2,
+      "source": "de0",
+      "target": "dc0"
+    }
+  },
+  {
+    "data": {
+      "id": 3,
+      "source": "dc0",
+      "target": "a1"
+    }
+  },
+  {
+    "data": {
+      "id": 4,
+      "source": "a1",
+      "target": "de1"
+    }
+  },
+  {
+    "data": {
+      "id": 5,
+      "source": "de1",
+      "target": "dc1"
+    }
+  },
+  {
+    "data": {
+      "id": 6,
+      "source": "dc1",
+      "target": "a2"
+    }
+  },
+  {
+    "data": {
+      "id": 7,
+      "source": "a2",
+      "target": "de2"
+    }
+  },
+  {
+    "data": {
+      "id": 8,
+      "source": "de2",
+      "target": "dc2"
+    }
+  },
+  {
+    "data": {
+      "id": 9,
+      "source": "dc2",
+      "target": "a1"
+    }
+  },
+  {
+    "data": {
+      "id": 10,
+      "source": "a1",
+      "target": "de3"
+    }
+  },
+  {
+    "data": {
+      "id": 11,
+      "source": "de3",
+      "target": "dc3"
+    }
+  },{
+    "data": {
+      "id": 12,
+      "source": "dc3",
+      "target": "a3"
+    }
+  }
+]
