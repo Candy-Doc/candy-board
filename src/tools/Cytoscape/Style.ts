@@ -188,7 +188,7 @@ const Style: Stylesheet[] = [
       width: 5,
       'line-color': '#000',
       'target-arrow-color': '#000',
-      'target-arrow-shape': 'triangle',
+      'target-arrow-shape': 'none',
       'curve-style': 'bezier'
     }
   },
