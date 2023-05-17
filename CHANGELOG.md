@@ -1,3 +1,8 @@
+# [v1.2.0](https://github.com/Candy-Doc/candy-board/compare/v1.1.3...v1.2.0) (2023-05-17)
+
+## ✨ New minor Features
+- [`7b6afb6`](https://github.com/Candy-Doc/candy-board/commit/7b6afb6)  feat: cytoscape library (#32) (Issues: [`#32`](https://github.com/Candy-Doc/candy-board/issues/32) [`#32`](https://github.com/Candy-Doc/candy-board/issues/32))
+
 # [v1.1.3](https://github.com/Candy-Doc/candy-board/compare/v1.1.2...v1.1.3) (2022-06-20)
 
 ## 🐛 Bug Fixes
