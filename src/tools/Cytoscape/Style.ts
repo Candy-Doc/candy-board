@@ -209,7 +209,7 @@ const Style: Stylesheet[] = [
       'border-color': '#d59727',
       color: (node: NodeSingular) => {
         if (node.parent().toArray().some((ele: NodeSingular) => ele.hasClass("error")) || !node.isParent()) {
-            return '#fff8ea'
+          return '#fff8ea'
         } else {
           return '#ffb32c'
         }

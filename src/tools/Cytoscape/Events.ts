@@ -12,7 +12,6 @@ let nodePositionsChanged = false
 const errorOverrideStyle = {
   'border-color': '#B71C1C',
   'border-width': 3,
-  color: '#B71C1C',
   'font-weight': 'bold'
 }
 
@@ -67,7 +66,6 @@ export const setCytoscapeEvents = (cyInstance: any, tippys: Array<NodesTippy>) =
   cyInstance.on('mouseup', 'node', () => {
     if (nodePositionsChanged) {
       nodePositionsChanged = false
-      console.log(cyInstance.json().style)
       localStorage.setItem('elementsPosition', JSON.stringify(cyInstance.json().elements))
     }
   })
