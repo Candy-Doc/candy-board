@@ -12,6 +12,7 @@
   import type { NodesTippy } from "@Src/tools/Cytoscape/Events";
   import { setCytoscapeEvents, setHideNeighborsValue } from "@Src/tools/Cytoscape/Events";
   import "@candy-doc/ui/src/components/Button/Button";
+  import "@Src/styles/cytoscape.css";
 
   let disableHiding = false;
   let cyInstance: any;
@@ -172,7 +173,7 @@
   $: setHideNeighborsValue(disableHiding);
 </script>
 
-<div class="relative">
+<div class="relative flex h-full">
   <div class="graph-area">
     <div class="options p-3 flex flex-col rounded-md">
       <candy-button
@@ -201,47 +202,25 @@
     </div>
     <div bind:this={chartCanvas} id="graph-canvas" />
   </div>
-  <div id="exportButtons">
-    <candy-button
-      type="Secondary"
-      class="py-6"
-      label="reset localStorage elements"
-      size="md"
-      on:keypress
-      on:click={() => localStorage.removeItem("elementsPosition")}
-    />
-    <candy-button
-      type="Secondary"
-      class="py-6 px-4"
-      label="Print as an SVG"
-      size="md"
-      bind:this={printSvgButton}
-    />
-    <candy-button
-      type="Secondary"
-      class="py-6"
-      label="Download SVG"
-      size="md"
-      bind:this={downloadSvgButton}
-    />
-  </div>
 </div>
 
 <style>
   .graph-area {
-    display: flex;
+    display: block;
     justify-content: center;
-    border-radius: 10px;
+    height: 100%;
     width: 100%;
+    position: relative;
   }
 
   #graph-canvas {
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 1);
     place-items: center;
-    width: 100%;
-    height: 80vh;
     display: block;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 
   .options {
