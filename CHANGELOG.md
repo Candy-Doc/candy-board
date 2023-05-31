@@ -1,3 +1,8 @@
+# [v1.3.0](https://github.com/Candy-Doc/candy-board/compare/v1.2.0...v1.3.0) (2023-05-31)
+
+## ✨ New minor Features
+- [`33dbd42`](https://github.com/Candy-Doc/candy-board/commit/33dbd42)  feat: new design (#34) (Issues: [`#34`](https://github.com/Candy-Doc/candy-board/issues/34))
+
 # [v1.2.0](https://github.com/Candy-Doc/candy-board/compare/v1.1.3...v1.2.0) (2023-05-17)
 
 ## ✨ New minor Features
