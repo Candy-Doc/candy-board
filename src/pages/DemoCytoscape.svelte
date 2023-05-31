@@ -26,7 +26,7 @@
     uniformNodeDimensions: true,
     avoidOverlap: true,
     nodeDimensionsIncludeLabels: true,
-    padding: 5,
+    padding: 10,
     quality: "proof",
     animate: false,
     randomize: true,
@@ -57,7 +57,7 @@
       );
     }
 
-     cyInstance.elements().forEach((elem: Cytoscape.SingularElementReturnValue) => {
+    cyInstance.elements().forEach((elem: Cytoscape.SingularElementReturnValue) => {
       addClassAndDisplayTooltips(elem);
     });
 
@@ -151,12 +151,12 @@
     }
   }
 
-  const resetCameraView = (e: Event | undefined) => {
+  const resetCameraView = (e?: Event | undefined) => {
     e?.stopPropagation();
     cyInstance.animate({
       fit: {
         eles: cyInstance.elements(),
-        padding: 5,
+        padding: 10,
       },
       easing: "ease",
     });
@@ -173,69 +173,25 @@
   $: setHideNeighborsValue(disableHiding);
 </script>
 
-<div class="relative flex h-full">
+<div>
   <div class="graph-area">
-    <div class="options p-3 flex flex-col rounded-md">
-      <candy-button
-        label="Reset camera position"
-        size="sm"
-        class="pb-3"
-        on:keypress={resetCameraView}
-        on:click={resetCameraView}
-      />
-      <candy-button
-        label="Reset graph"
-        size="sm"
-        class="pb-3"
-        on:keypress={resetGraph}
-        on:click={resetGraph}
-      />
-      <div class="flex items-center">
-        <input
-          type="checkbox"
-          bind:checked={disableHiding}
-          class="my-2 mr-2 rounded "
-          name="hide-neighbors"
-        />
-        <label for="hide-neighbors">Enable hiding neighbors</label>
-      </div>
-    </div>
     <div bind:this={chartCanvas} id="graph-canvas" />
   </div>
 </div>
 
 <style>
   .graph-area {
-    display: block;
     justify-content: center;
     height: 100%;
     width: 100%;
-    position: relative;
+    display: flex;
+    align-items: center;
   }
 
   #graph-canvas {
     place-items: center;
     display: block;
-    position: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-
-  .options {
-    z-index: 1000;
-    position: absolute;
-    top: 0;
-    color: rgb(37 99 235);
-    left: 0;
-    background-color: rgba(191, 219, 254, 0.5);
-    backdrop-filter: blur(10px);
-  }
-
-  #exportButtons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    height: 90vh;
+    width: 100%;
   }
 </style>

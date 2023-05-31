@@ -12,7 +12,7 @@
 </script>
 
 <main class="pr-3 pb-3 h-full">
-  <div class="bg-white h-full rounded-xl">
+  <div class="bg-white h-full rounded-xl shadow-lg">
     <Route path="/">
       <Home />
     </Route>
