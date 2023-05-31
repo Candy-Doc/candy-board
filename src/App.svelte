@@ -16,13 +16,14 @@
     const bodyJSON: CandyData = await response.json();
     $candyData = bodyJSON;
   }
+
   fetchCandyData();
 </script>
 
 <Router>
   <div class="min-h-screen flex flex-col">
     <candy-topbar></candy-topbar>
-    <div class="flex flex-1">
+    <div class="flex flex-1 h-full">
       <div class="w-1/6">
         <Navbar />
       </div>
