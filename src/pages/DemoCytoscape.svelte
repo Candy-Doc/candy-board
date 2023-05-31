@@ -51,10 +51,7 @@
     });
 
     if (!savedElements) {
-      localStorage.setItem(
-        "elementsPosition",
-        JSON.stringify(cyInstance.json().elements)
-      );
+      localStorage.setItem("elementsPosition", JSON.stringify(cyInstance.json().elements));
     }
 
     cyInstance.elements().forEach((elem: Cytoscape.SingularElementReturnValue) => {
@@ -65,8 +62,7 @@
       if (node.hasClass("event") || node.hasClass("command")) {
         // Set custom shapes width based on label size
         node.style({
-          width:
-            node.layoutDimensions({ nodeDimensionsIncludeLabels: true }).w + 50,
+          width: node.layoutDimensions({ nodeDimensionsIncludeLabels: true }).w + 50,
         });
       }
     });
@@ -93,7 +89,7 @@
       }
     });
 
-     printSvgButton.addEventListener("click", () => {
+    printSvgButton.addEventListener("click", () => {
       const newWindow = window.open("", "newWindow");
       if (!newWindow) return;
       const newDocument = newWindow.document;
@@ -149,7 +145,7 @@
     if (tooltipMessage.length > 0) {
       tippys.push({ id: elem.id(), tippy: makeTippy(elem, tooltipMessage) });
     }
-  }
+  };
 
   const resetCameraView = (e?: Event | undefined) => {
     e?.stopPropagation();
@@ -164,10 +160,7 @@
 
   const resetGraph = () => {
     cyInstance.layout(fcoseLayoutOptions).run();
-    localStorage.setItem(
-      "elementsPosition",
-      JSON.stringify(cyInstance.json().elements)
-    );
+    localStorage.setItem("elementsPosition", JSON.stringify(cyInstance.json().elements));
   };
 
   $: setHideNeighborsValue(disableHiding);
@@ -175,7 +168,7 @@
 
 <div>
   <div class="graph-area">
-    <div bind:this={chartCanvas} id="graph-canvas" />
+    <div bind:this="{chartCanvas}" id="graph-canvas"></div>
   </div>
 </div>
 

@@ -16,7 +16,7 @@
     <Route path="/">
       <Home />
     </Route>
-     <Route path="/demo-cytoscape">
+    <Route path="/demo-cytoscape">
       <DemoCytoscape />
     </Route>
     {#each $CandyData as boundedContext}
