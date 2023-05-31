@@ -11,12 +11,12 @@
   const CandyData = getContext<WritableCandyData>(Context.CandyData);
 </script>
 
-<main>
-  <div class="p-6">
+<main class="pr-3 pb-3 h-full">
+  <div class="bg-white h-full rounded-xl shadow-lg">
     <Route path="/">
       <Home />
     </Route>
-     <Route path="/demo-cytoscape">
+    <Route path="/demo-cytoscape">
       <DemoCytoscape />
     </Route>
     {#each $CandyData as boundedContext}

@@ -12,8 +12,10 @@
   const location = useLocation();
   const CandyData = getContext<WritableCandyData>(Context.CandyData);
 
-  let sidebarElements = [{ label: "Overview", path: "/", active: false, icon: faBinoculars },
-    { label: "Demo", path: "/demo-cytoscape", active: false, icon: faLaptopCode }];
+  let sidebarElements = [
+    { label: "Overview", path: "/", active: false, icon: faBinoculars },
+    { label: "Demo", path: "/demo-cytoscape", active: false, icon: faLaptopCode },
+  ];
 
   $: {
     sidebarElements = [...sidebarElements];
