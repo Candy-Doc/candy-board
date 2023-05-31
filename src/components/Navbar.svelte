@@ -4,7 +4,7 @@
   import "@candy-doc/ui/src/components/Sidebar/SideBar";
   import slugify from "slugify";
   import Fa from "svelte-fa/src/fa.svelte";
-  import { faBinoculars, faObjectGroup, faLaptopCode } from "@fortawesome/free-solid-svg-icons";
+  import { faBinoculars, faObjectGroup, faLaptopCode, faEnvelopeOpen} from "@fortawesome/free-solid-svg-icons";
   import { Context } from "@Src/tools/context";
   import { getContext } from "svelte";
   import type { WritableCandyData } from "@Src/types/candyData";
@@ -13,7 +13,8 @@
   const CandyData = getContext<WritableCandyData>(Context.CandyData);
 
   let sidebarElements = [{ label: "Overview", path: "/", active: false, icon: faBinoculars },
-    { label: "Demo", path: "/demo-cytoscape", active: false, icon: faLaptopCode }];
+    { label: "Demo", path: "/demo-cytoscape", active: false, icon: faLaptopCode },
+    { label: "Contact us", path: "/contact", active: false, icon: faEnvelopeOpen }];
 
   $: {
     sidebarElements = [...sidebarElements];

@@ -7,6 +7,7 @@
   import { Context } from "@Src/tools/context";
   import type { WritableCandyData } from "@Src/types/candyData";
   import DemoCytoscape from "@Src/pages/DemoCytoscape.svelte";
+  import Contact from "@Src/pages/Contact.svelte";
 
   const CandyData = getContext<WritableCandyData>(Context.CandyData);
 </script>
@@ -18,6 +19,9 @@
     </Route>
      <Route path="/demo-cytoscape">
       <DemoCytoscape />
+    </Route>
+    <Route path="/contact">
+      <Contact />
     </Route>
     {#each $CandyData as boundedContext}
       <Route path="{slugify(boundedContext.simpleName, { lower: true, strict: true, trim: true })}">
