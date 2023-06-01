@@ -4,7 +4,7 @@
   import Home from "@Src/pages/Home.svelte";
   import DemoCytoscape from "@Src/pages/DemoCytoscape.svelte";
   import GraphSidebar from "@Src/components/GraphSidebar.svelte";
-  import DocSidebar from "@Src/components/DocSidebar.svelte";
+  import DocSidebar from "@Src/components/DocSidebar/DocSidebar.svelte";
 </script>
 
 <main class="pb-3 pr-3 flex-1 w-full">
