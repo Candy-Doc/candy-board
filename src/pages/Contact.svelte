@@ -13,7 +13,7 @@
 
         <div class="flex flex-col  m-7">
             <div class="relative right-1/2 bottom-1/2 h-0">
-                <h2 class="absolute top-0 right-16 text-center font-bold text-[#08004243] text-3xl">Wants to join a <br>breathtaking PROJECT ?</h2>
+                <h2 class="absolute top-0 right-16 text-center font-bold text-[#08004243] text-3xl">Want to join a <br>breathtaking PROJECT ?</h2>
                 <div class="absolute top-28 left-16 ">
                     <Arrow />
                 </div>
@@ -33,7 +33,7 @@
                 </a>
             </div>
             <div class="relative top-14 h-0">
-                <h2 class="absolute bottom-0 left-44 text-center font-bold text-[#08004243] text-3xl">Wants to join a <br>phenomenal TEAM ?</h2>
+                <h2 class="absolute bottom-0 left-44 text-center font-bold text-[#08004243] text-3xl">Want to join a <br>phenomenal TEAM ?</h2>
                 <div class="absolute bottom-40 left-32 scale-x-125  rotate-180">
                     <Arrow />
                 </div>
