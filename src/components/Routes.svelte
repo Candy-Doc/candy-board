@@ -1,31 +1,31 @@
 <script lang="ts">
   import { Route } from "svelte-navigator";
-  import { getContext } from "svelte";
-  import slugify from "slugify";
 
   import Home from "@Src/pages/Home.svelte";
-  import { Context } from "@Src/tools/context";
-  import type { WritableCandyData } from "@Src/types/candyData";
   import DemoCytoscape from "@Src/pages/DemoCytoscape.svelte";
-
-  const CandyData = getContext<WritableCandyData>(Context.CandyData);
+  import GraphSidebar from "@Src/components/GraphSidebar.svelte";
+  import DocSidebar from "@Src/components/DocSidebar.svelte";
 </script>
 
-<main class="pr-3 pb-3 h-full">
-  <div class="bg-white h-full rounded-xl shadow-lg">
-    <Route path="/">
-      <Home />
-    </Route>
-    <Route path="/demo-cytoscape">
-      <DemoCytoscape />
-    </Route>
-    {#each $CandyData as boundedContext}
-      <Route path="{slugify(boundedContext.simpleName, { lower: true, strict: true, trim: true })}">
-        <div class="prose">
-          <h2>{boundedContext.simpleName}</h2>
-          <p>{boundedContext.description}</p>
-        </div>
-      </Route>
-    {/each}
-  </div>
+<main class="pb-3 pr-3 flex-1 w-full">
+  <Route path="/">
+    <div class="flex h-full">
+      <div class="w-1/6">
+        <DocSidebar />
+      </div>
+      <div class="w-5/6 bg-white rounded-xl shadow-lg">
+        <Home />
+      </div>
+    </div>
+  </Route>
+  <Route path="/demo-cytoscape">
+    <div class="flex h-full">
+      <div class="w-1/6">
+        <GraphSidebar />
+      </div>
+      <div class="w-5/6 bg-white h-full rounded-xl shadow-lg">
+        <DemoCytoscape />
+      </div>
+    </div>
+  </Route>
 </main>

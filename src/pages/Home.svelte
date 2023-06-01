@@ -1,8 +1,4 @@
 <script lang="ts">
-  /*   function handleInput(e: Event) {
-    const value = (e.target as HTMLInputElement).value;
-    console.log(value);
-  } */
 </script>
 
 <div class="prose">

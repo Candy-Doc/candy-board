@@ -1,33 +1,16 @@
 <script lang="ts">
   import { navigate, useLocation } from "svelte-navigator";
-  import "@candy-doc/ui/src/components/Sidebar/Element/Element";
-  import "@candy-doc/ui/src/components/Sidebar/SideBar";
-  import slugify from "slugify";
   import Fa from "svelte-fa/src/fa.svelte";
-  import { faBinoculars, faObjectGroup, faLaptopCode } from "@fortawesome/free-solid-svg-icons";
-  import { Context } from "@Src/tools/context";
-  import { getContext } from "svelte";
-  import type { WritableCandyData } from "@Src/types/candyData";
+  import { faBinoculars, faLaptopCode } from "@fortawesome/free-solid-svg-icons";
+  import "@candy-doc/ui/src/components/Sidebar/Element";
+  import "@candy-doc/ui/src/components/Sidebar";
 
   const location = useLocation();
-  const CandyData = getContext<WritableCandyData>(Context.CandyData);
 
   let sidebarElements = [
     { label: "Overview", path: "/", active: false, icon: faBinoculars },
     { label: "Demo", path: "/demo-cytoscape", active: false, icon: faLaptopCode },
   ];
-
-  $: {
-    sidebarElements = [...sidebarElements];
-    $CandyData.forEach(({ simpleName }) =>
-      sidebarElements.push({
-        label: simpleName,
-        path: slugify(simpleName, { lower: true, strict: true, trim: true }),
-        active: false,
-        icon: faObjectGroup,
-      })
-    );
-  }
 
   $: {
     let pathIndex = sidebarElements.findIndex((elem) => {
