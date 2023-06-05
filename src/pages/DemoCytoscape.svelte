@@ -89,7 +89,7 @@
       }
     });
 
-    printSvgButton.addEventListener("click", () => {
+    printSvgButton?.addEventListener("click", () => {
       const newWindow = window.open("", "newWindow");
       if (!newWindow) return;
       const newDocument = newWindow.document;
@@ -102,7 +102,7 @@
       newDocument.body.appendChild(div);
     });
 
-    downloadSvgButton.addEventListener("click", () => {
+    downloadSvgButton?.addEventListener("click", () => {
       const a = document.createElement("a");
       const svg = cyInstance.svg({
         full: true,

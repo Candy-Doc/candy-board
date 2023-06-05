@@ -4,9 +4,10 @@
   import Routes from "./components/Routes.svelte";
   import { setContext } from "svelte";
   import { writable } from "svelte/store";
+
   import { Context } from "./tools/context";
   import type { CandyData } from "./types/candyData";
-  import "@candy-doc/ui/src/components/Topbar/Topbar";
+  import Topbar from "@Src/components/Topbar.svelte";
 
   const candyData = writable<CandyData>([]);
   setContext(Context.CandyData, candyData);
@@ -22,7 +23,7 @@
 
 <Router>
   <div class="min-h-screen flex flex-col">
-    <candy-topbar></candy-topbar>
+    <Topbar />
     <div class="flex flex-1 h-full">
       <div class="w-1/6">
         <Navbar />
