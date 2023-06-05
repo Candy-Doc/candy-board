@@ -88,7 +88,7 @@
       }
     });
   });
-
+  
   onDestroy(() => {
     cyInstance.off("mouseover");
     cyInstance.off("mouseout");
