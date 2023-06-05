@@ -1,6 +1,4 @@
 <script lang="ts">
-  import "@candy-doc/ui/src/components/SidebarDoc";
-
   import { type SidebarItem, ElementType } from "./SidebarItemTypes";
   import DocTitle from "@Src/components/DocSidebar/DocTitle/DocTitle.svelte";
   import DocElement from "@Src/components/DocSidebar/DocElement/DocElement.svelte";
@@ -13,12 +11,14 @@
   ];
 </script>
 
-<candy-sidebar-doc>
-  {#each sidebarElements as item}
-    {#if item.type === ElementType.TITLE}
-      <DocTitle title={item} expand/>
-    {:else}
-      <DocElement element={item} />
-    {/if}
-  {/each}
-</candy-sidebar-doc>
+<div class="sidebar">
+  <candy-sidebar-doc>
+    {#each sidebarElements as item}
+      {#if item.type === ElementType.TITLE}
+        <DocTitle title={item} expand/>
+      {:else}
+        <DocElement element={item} />
+      {/if}
+    {/each}
+  </candy-sidebar-doc>
+</div>

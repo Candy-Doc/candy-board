@@ -1,6 +1,4 @@
 <script lang="ts">
-  import "@candy-doc/ui/src/components/SidebarDoc/DocTitle";
-
   import { type SidebarItem, ElementType } from "../SidebarItemTypes";
   import DocElement from "../DocElement/DocElement.svelte";
 

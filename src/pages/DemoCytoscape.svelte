@@ -11,14 +11,12 @@
   import Style from "@Src/tools/Cytoscape/Style";
   import type { NodesTippy } from "@Src/tools/Cytoscape/Events";
   import { setCytoscapeEvents, setHideNeighborsValue } from "@Src/tools/Cytoscape/Events";
-  import "@candy-doc/ui/src/components/Button/Button";
   import "@Src/styles/cytoscape.css";
+  import GraphSidebar from "@Src/components/GraphSidebar/GraphSidebar.svelte";
 
   let disableHiding = false;
   let cyInstance: any;
   let chartCanvas: HTMLElement;
-  let printSvgButton: HTMLElement;
-  let downloadSvgButton: HTMLElement;
   let tippys: Array<NodesTippy> = [];
   let fcoseLayoutOptions = {
     name: "fcose",
@@ -41,6 +39,7 @@
     Cytoscape.use(popper);
     Cytoscape.use(svg);
     expandCollapse(Cytoscape);
+    localStorage.removeItem("elementsPosition")
     const savedElements = localStorage.getItem("elementsPosition");
 
     cyInstance = Cytoscape({
@@ -88,21 +87,16 @@
         expandCollapseAPI.collapse(clickedNode);
       }
     });
+  });
 
-    printSvgButton.addEventListener("click", () => {
-      const newWindow = window.open("", "newWindow");
-      if (!newWindow) return;
-      const newDocument = newWindow.document;
-      const svg = cyInstance.svg({
-        full: true,
-        scale: 1,
-      });
-      const div = newDocument.createElement("div");
-      div.innerHTML = svg;
-      newDocument.body.appendChild(div);
-    });
+  onDestroy(() => {
+    cyInstance.off("mouseover");
+    cyInstance.off("mouseout");
+    cyInstance.off("click");
+  });
 
-    downloadSvgButton.addEventListener("click", () => {
+  const downloadSVG = () => {
+    if (cyInstance){
       const a = document.createElement("a");
       const svg = cyInstance.svg({
         full: true,
@@ -113,14 +107,23 @@
       a.href = url;
       a.download = "demo.svg";
       a.click();
-    });
-  });
+    }
+  }
 
-  onDestroy(() => {
-    cyInstance.off("mouseover");
-    cyInstance.off("mouseout");
-    cyInstance.off("click");
-  });
+  const viewSVG = () => {
+    if (cyInstance){
+      const newWindow = window.open("", "newWindow");
+      if (!newWindow) return;
+      const newDocument = newWindow.document;
+      const svg = cyInstance.svg({
+        full: true,
+        scale: 1,
+      });
+      const div = newDocument.createElement("div");
+      div.innerHTML = svg;
+      newDocument.body.appendChild(div);
+    }
+  }
 
   const addClassAndDisplayTooltips = (elem: Cytoscape.SingularElementReturnValue) => {
     let tooltipMessage = "";
@@ -166,8 +169,9 @@
   $: setHideNeighborsValue(disableHiding);
 </script>
 
-<div>
-  <div class="graph-area">
+<div class="flex h-full">
+  <GraphSidebar on:fit={resetCameraView} on:reset={resetGraph} on:downloadSVG={downloadSVG} on:viewSVG={viewSVG}/>
+  <div class="graph-area bg-white rounded-xl shadow-lg">
     <div bind:this="{chartCanvas}" id="graph-canvas"></div>
   </div>
 </div>
@@ -179,12 +183,15 @@
     width: 100%;
     display: flex;
     align-items: center;
+    position: relative;
   }
 
   #graph-canvas {
     place-items: center;
-    display: block;
-    height: 90vh;
-    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 </style>
