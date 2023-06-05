@@ -1,3 +1,8 @@
+# [v1.5.0](https://github.com/Candy-Doc/candy-board/compare/v1.4.0...v1.5.0) (2023-06-05)
+
+## 💄 UI and style files added or updated
+- [`9223be8`](https://github.com/Candy-Doc/candy-board/commit/9223be8)  style: implement new sidebar from candy-doc/ui update (#37) (Issues: [`#37`](https://github.com/Candy-Doc/candy-board/issues/37))
+
 # [v1.4.0](https://github.com/Candy-Doc/candy-board/compare/v1.3.0...v1.4.0) (2023-06-05)
 
 ## 💄 UI and style files added or updated
