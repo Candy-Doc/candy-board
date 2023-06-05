@@ -3,6 +3,7 @@
 
   import Home from "@Src/pages/Home.svelte";
   import DemoCytoscape from "@Src/pages/DemoCytoscape.svelte";
+  import NotFound from "@Src/pages/NotFound.svelte";
   import Contact from "@Src/pages/Contact.svelte";
 </script>
 
@@ -10,16 +11,20 @@
   <Route path="/">
     <div class="h-full">
       <Home />
-    </div>
-  </Route>
+    </Route>
   <Route path="/demo-cytoscape">
     <div class="h-full">
-      <DemoCytoscape/>
+      <DemoCytoscape />
     </div>
   </Route>
   <Route path="/contact">
     <div class="h-full">
-      <Contact/>
+      <Contact />
+    </div>
+  </Route>
+  <Route path="/*">
+    <div class="h-full">
+      <NotFound />
     </div>
   </Route>
 </main>
