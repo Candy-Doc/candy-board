@@ -11,13 +11,12 @@
   import Style from "@Src/tools/Cytoscape/Style";
   import type { NodesTippy } from "@Src/tools/Cytoscape/Events";
   import { setCytoscapeEvents, setHideNeighborsValue } from "@Src/tools/Cytoscape/Events";
-  import "@candy-doc/ui/src/components/Button/Button";
+  import "@Src/styles/cytoscape.css";
+  import GraphSidebar from "@Src/components/GraphSidebar/GraphSidebar.svelte";
 
   let disableHiding = false;
   let cyInstance: any;
   let chartCanvas: HTMLElement;
-  let printSvgButton: HTMLElement;
-  let downloadSvgButton: HTMLElement;
   let tippys: Array<NodesTippy> = [];
   let fcoseLayoutOptions = {
     name: "fcose",
@@ -25,7 +24,7 @@
     uniformNodeDimensions: true,
     avoidOverlap: true,
     nodeDimensionsIncludeLabels: true,
-    padding: 5,
+    padding: 10,
     quality: "proof",
     animate: false,
     randomize: true,
@@ -40,6 +39,7 @@
     Cytoscape.use(popper);
     Cytoscape.use(svg);
     expandCollapse(Cytoscape);
+    localStorage.removeItem("elementsPosition")
     const savedElements = localStorage.getItem("elementsPosition");
 
     cyInstance = Cytoscape({
@@ -50,13 +50,10 @@
     });
 
     if (!savedElements) {
-      localStorage.setItem(
-        "elementsPosition",
-        JSON.stringify(cyInstance.json().elements)
-      );
+      localStorage.setItem("elementsPosition", JSON.stringify(cyInstance.json().elements));
     }
 
-     cyInstance.elements().forEach((elem: Cytoscape.SingularElementReturnValue) => {
+    cyInstance.elements().forEach((elem: Cytoscape.SingularElementReturnValue) => {
       addClassAndDisplayTooltips(elem);
     });
 
@@ -64,8 +61,7 @@
       if (node.hasClass("event") || node.hasClass("command")) {
         // Set custom shapes width based on label size
         node.style({
-          width:
-            node.layoutDimensions({ nodeDimensionsIncludeLabels: true }).w + 50,
+          width: node.layoutDimensions({ nodeDimensionsIncludeLabels: true }).w + 50,
         });
       }
     });
@@ -91,21 +87,16 @@
         expandCollapseAPI.collapse(clickedNode);
       }
     });
+  });
+  
+  onDestroy(() => {
+    cyInstance.off("mouseover");
+    cyInstance.off("mouseout");
+    cyInstance.off("click");
+  });
 
-     printSvgButton.addEventListener("click", () => {
-      const newWindow = window.open("", "newWindow");
-      if (!newWindow) return;
-      const newDocument = newWindow.document;
-      const svg = cyInstance.svg({
-        full: true,
-        scale: 1,
-      });
-      const div = newDocument.createElement("div");
-      div.innerHTML = svg;
-      newDocument.body.appendChild(div);
-    });
-
-    downloadSvgButton.addEventListener("click", () => {
+  const downloadSVG = () => {
+    if (cyInstance){
       const a = document.createElement("a");
       const svg = cyInstance.svg({
         full: true,
@@ -116,14 +107,23 @@
       a.href = url;
       a.download = "demo.svg";
       a.click();
-    });
-  });
+    }
+  }
 
-  onDestroy(() => {
-    cyInstance.off("mouseover");
-    cyInstance.off("mouseout");
-    cyInstance.off("click");
-  });
+  const viewSVG = () => {
+    if (cyInstance){
+      const newWindow = window.open("", "newWindow");
+      if (!newWindow) return;
+      const newDocument = newWindow.document;
+      const svg = cyInstance.svg({
+        full: true,
+        scale: 1,
+      });
+      const div = newDocument.createElement("div");
+      div.innerHTML = svg;
+      newDocument.body.appendChild(div);
+    }
+  }
 
   const addClassAndDisplayTooltips = (elem: Cytoscape.SingularElementReturnValue) => {
     let tooltipMessage = "";
@@ -148,14 +148,14 @@
     if (tooltipMessage.length > 0) {
       tippys.push({ id: elem.id(), tippy: makeTippy(elem, tooltipMessage) });
     }
-  }
+  };
 
-  const resetCameraView = (e: Event | undefined) => {
+  const resetCameraView = (e?: Event | undefined) => {
     e?.stopPropagation();
     cyInstance.animate({
       fit: {
         eles: cyInstance.elements(),
-        padding: 5,
+        padding: 10,
       },
       easing: "ease",
     });
@@ -163,100 +163,35 @@
 
   const resetGraph = () => {
     cyInstance.layout(fcoseLayoutOptions).run();
-    localStorage.setItem(
-      "elementsPosition",
-      JSON.stringify(cyInstance.json().elements)
-    );
+    localStorage.setItem("elementsPosition", JSON.stringify(cyInstance.json().elements));
   };
 
   $: setHideNeighborsValue(disableHiding);
 </script>
 
-<div class="relative">
-  <div class="graph-area">
-    <div class="options p-3 flex flex-col rounded-md">
-      <candy-button
-        label="Reset camera position"
-        size="sm"
-        class="pb-3"
-        on:keypress={resetCameraView}
-        on:click={resetCameraView}
-      />
-      <candy-button
-        label="Reset graph"
-        size="sm"
-        class="pb-3"
-        on:keypress={resetGraph}
-        on:click={resetGraph}
-      />
-      <div class="flex items-center">
-        <input
-          type="checkbox"
-          bind:checked={disableHiding}
-          class="my-2 mr-2 rounded "
-          name="hide-neighbors"
-        />
-        <label for="hide-neighbors">Enable hiding neighbors</label>
-      </div>
-    </div>
-    <div bind:this={chartCanvas} id="graph-canvas" />
-  </div>
-  <div id="exportButtons">
-    <candy-button
-      type="Secondary"
-      class="py-6"
-      label="reset localStorage elements"
-      size="md"
-      on:keypress
-      on:click={() => localStorage.removeItem("elementsPosition")}
-    />
-    <candy-button
-      type="Secondary"
-      class="py-6 px-4"
-      label="Print as an SVG"
-      size="md"
-      bind:this={printSvgButton}
-    />
-    <candy-button
-      type="Secondary"
-      class="py-6"
-      label="Download SVG"
-      size="md"
-      bind:this={downloadSvgButton}
-    />
+<div class="flex h-full">
+  <GraphSidebar on:fit={resetCameraView} on:reset={resetGraph} on:downloadSVG={downloadSVG} on:viewSVG={viewSVG}/>
+  <div class="graph-area bg-white rounded-xl shadow-lg">
+    <div bind:this="{chartCanvas}" id="graph-canvas"></div>
   </div>
 </div>
 
 <style>
   .graph-area {
-    display: flex;
     justify-content: center;
-    border-radius: 10px;
+    height: 100%;
     width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
   }
 
   #graph-canvas {
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 1);
     place-items: center;
-    width: 100%;
-    height: 80vh;
-    display: block;
-  }
-
-  .options {
-    z-index: 1000;
     position: absolute;
     top: 0;
-    color: rgb(37 99 235);
+    bottom: 0;
     left: 0;
-    background-color: rgba(191, 219, 254, 0.5);
-    backdrop-filter: blur(10px);
-  }
-
-  #exportButtons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    right: 0;
   }
 </style>

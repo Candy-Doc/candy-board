@@ -1,35 +1,30 @@
 <script lang="ts">
   import { Route } from "svelte-navigator";
-  import { getContext } from "svelte";
-  import slugify from "slugify";
 
   import Home from "@Src/pages/Home.svelte";
-  import { Context } from "@Src/tools/context";
-  import type { WritableCandyData } from "@Src/types/candyData";
   import DemoCytoscape from "@Src/pages/DemoCytoscape.svelte";
   import NotFound from "@Src/pages/NotFound.svelte";
-
-  const CandyData = getContext<WritableCandyData>(Context.CandyData);
+  import Contact from "@Src/pages/Contact.svelte";
 </script>
 
-<main>
-  <div class="p-6">
-    <Route path="/">
+<main class="pb-3 pr-3 flex-1 w-full">
+  <Route path="/">
+    <div class="h-full">
       <Home />
     </Route>
-     <Route path="/demo-cytoscape">
+  <Route path="/demo-cytoscape">
+    <div class="h-full">
       <DemoCytoscape />
-    </Route>
-    <Route path="*">
+    </div>
+  </Route>
+  <Route path="/contact">
+    <div class="h-full">
+      <Contact />
+    </div>
+  </Route>
+  <Route path="/*">
+    <div class="h-full">
       <NotFound />
-    </Route>
-    {#each $CandyData as boundedContext}
-      <Route path="{slugify(boundedContext.simpleName, { lower: true, strict: true, trim: true })}">
-        <div class="prose">
-          <h2>{boundedContext.simpleName}</h2>
-          <p>{boundedContext.description}</p>
-        </div>
-      </Route>
-    {/each}
-  </div>
+    </div>
+  </Route>
 </main>
