@@ -23,7 +23,7 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@candy-doc/ui@1.8.1":
+"@candy-doc/ui@^1.8.1":
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/@candy-doc/ui/-/ui-1.8.1.tgz#80e00fcd06488506ce0d243739a2b8d6cfb5a497"
   integrity sha512-CaBSILXqMr7z2wDT3k24n2KkQmQng2f/GVzhjiX1SDc8LiwhfoxvuPRo/3cnlBYt7w/50PVa7OW9+/zEppG37w==
@@ -1843,11 +1843,6 @@ slice-ansi@^4.0.0:
     ansi-styles "^4.0.0"
     astral-regex "^2.0.0"
     is-fullwidth-code-point "^3.0.0"
-
-slugify@^1.6.5:
-  version "1.6.5"
-  resolved "https://registry.npmjs.org/slugify/-/slugify-1.6.5.tgz"
-  integrity sha512-8mo9bslnBO3tr5PEVFzMPIWwWnipGS0xVbYf65zxDqfNwmzYn1LpiKNrR6DlClusuvo+hDHd1zKpmfAe83NQSQ==
 
 sorcery@^0.10.0:
   version "0.10.0"

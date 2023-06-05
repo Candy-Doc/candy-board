@@ -5,9 +5,9 @@
   import Arrow from "../assets/Arrow.svg"
 </script>
 
-<div class="flex h-full flex-col justify-center">
+<div class="flex h-full flex-col">
   <h1 class="flex my-16 text-4xl text-[#080042] font-bold justify-center">CONTACT</h1>
-  <div class="flex flex-row gap-40 mt-20 m-5 place-content-center">
+  <div class="flex flex-row gap-40 mt-20 m-5 justify-center place-content-center">
     <div class="flex flex-col m-7">
       <div class="relative right-1/2 bottom-1/2 h-0">
         <h2 class="absolute top-0 right-16 text-center font-bold text-[#08004243] text-3xl">Want to join a <br>breathtaking
