@@ -12,7 +12,7 @@ dist
 dist-ssr
 *.local
 
-.yarn
+.yarn/*
 .yarnrc.yml
 
 # Editor directories and files
