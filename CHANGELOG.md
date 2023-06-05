@@ -1,3 +1,9 @@
+# [v1.6.0](https://github.com/Candy-Doc/candy-board/compare/v1.5.0...v1.6.0) (2023-06-05)
+
+## ✨ New minor Features
+- [`e1b66f5`](https://github.com/Candy-Doc/candy-board/commit/e1b66f5)  feat(contact): add contact page (#36) (Issues: [`#36`](https://github.com/Candy-Doc/candy-board/issues/36) [`#34`](https://github.com/Candy-Doc/candy-board/issues/34) [`#34`](https://github.com/Candy-Doc/candy-board/issues/34) [`#34`](https://github.com/Candy-Doc/candy-board/issues/34) [`#35`](https://github.com/Candy-Doc/candy-board/issues/35) [`#35`](https://github.com/Candy-Doc/candy-board/issues/35) [`#35`](https://github.com/Candy-Doc/candy-board/issues/35) [`#37`](https://github.com/Candy-Doc/candy-board/issues/37) [`#37`](https://github.com/Candy-Doc/candy-board/issues/37) [`#37`](https://github.com/Candy-Doc/candy-board/issues/37))
+- [`eee8811`](https://github.com/Candy-Doc/candy-board/commit/eee8811)  feat(not found): add 404 not found page (#38) (Issues: [`#38`](https://github.com/Candy-Doc/candy-board/issues/38))
+
 # [v1.5.0](https://github.com/Candy-Doc/candy-board/compare/v1.4.0...v1.5.0) (2023-06-05)
 
 ## 💄 UI and style files added or updated
