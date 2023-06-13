@@ -2,6 +2,7 @@ body {
   background-color: #f8f9fa;
 }
 
-.sidebar candy-sidebar::part(sidebar), .sidebar candy-sidebar-doc::part(sidebar-doc) {
+.sidebar candy-sidebar::part(sidebar),
+.sidebar candy-sidebar-doc::part(doc-sidebar) {
   width: 15rem;
 }

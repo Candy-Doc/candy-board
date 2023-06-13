@@ -7,16 +7,20 @@
 
   const hideChildren = () => {
     expand = !expand;
-  }
+  };
 </script>
 
-<candy-sidebar-doc-title label={title.label} active={expand} on:click|stopPropagation={hideChildren}>
+<candy-sidebar-doc-title
+  label="{title.label}"
+  active="{expand}"
+  on:click|stopPropagation="{hideChildren}"
+>
   {#if title.childrens}
     {#each title.childrens as child}
       {#if child.type === ElementType.TITLE}
-         <svelte:self title={child} expand={true}/>
+        <svelte:self title="{child}" expand="{true}" />
       {:else}
-         <DocElement element={child} />
+        <DocElement element="{child}" />
       {/if}
     {/each}
   {/if}

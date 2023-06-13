@@ -117,9 +117,7 @@
       "id": "v4",
       "label": "Mutable Value Object",
       "parent": "bc3",
-      "warnings": [
-        "A value object is, by definition, immutable"
-      ]
+      "warnings": ["A value object is, by definition, immutable"]
     },
     "classes": "valueObject"
   },
@@ -128,9 +126,7 @@
       "id": "a10",
       "label": "Aggregate",
       "parent": "bc3",
-      "errors": [
-        "Test"
-      ]
+      "errors": ["Test"]
     },
     "classes": "aggregate"
   },
@@ -139,9 +135,7 @@
       "id": "e10",
       "label": "Entity",
       "parent": "a10",
-      "errors" : [
-        "Entities cannot contains aggregates"
-      ]
+      "errors": ["Entities cannot contains aggregates"]
     },
     "classes": "entity"
   },
@@ -158,9 +152,7 @@
       "id": "a11",
       "label": "Aggregate",
       "parent": "e10",
-      "errors" : [
-        "Entities cannot contains aggregates"
-      ]
+      "errors": ["Entities cannot contains aggregates"]
     },
     "classes": "aggregate"
   },
@@ -200,9 +192,7 @@
       "id": "e15",
       "label": "Entity",
       "parent": "a13",
-      "errors": [
-        "An object within an aggregate cannot be referenced by an outsider one"
-      ]
+      "errors": ["An object within an aggregate cannot be referenced by an outsider one"]
     },
     "classes": "entity"
   },
@@ -211,9 +201,7 @@
       "id": "f15",
       "label": "Factory",
       "parent": "bc3",
-      "errors": [
-        "An object within an aggregate cannot be referenced by an outsider one"
-      ]
+      "errors": ["An object within an aggregate cannot be referenced by an outsider one"]
     },
     "classes": "factory"
   },
@@ -229,9 +217,7 @@
       "id": 11,
       "source": "f15",
       "target": "e15",
-      "errors": [
-        "An object within an aggregate cannot be referenced by an outsider one"
-      ]
+      "errors": ["An object within an aggregate cannot be referenced by an outsider one"]
     }
   },
   {
@@ -239,9 +225,7 @@
       "id": "r20",
       "label": "Repository",
       "parent": "bc3",
-      "errors": [
-        "A repository only manages aggregates"
-      ]
+      "errors": ["A repository only manages aggregates"]
     },
     "classes": "repository"
   },
@@ -266,9 +250,7 @@
       "id": "e20",
       "label": "Entity",
       "parent": "bc3",
-      "errors": [
-        "A repository only manages aggregates"
-      ]
+      "errors": ["A repository only manages aggregates"]
     },
     "classes": "entity"
   },
@@ -291,9 +273,7 @@
       "id": 22,
       "source": "r20",
       "target": "e20",
-      "errors": [
-        "A repository only manages aggregates"
-      ]
+      "errors": ["A repository only manages aggregates"]
     }
   },
   {
@@ -301,11 +281,7 @@
       "id": "a100",
       "label": "Triple error",
       "parent": "bc3",
-      "errors": [
-        "This is the first error",
-        "This is the second error",
-        "This is the third error"
-      ]
+      "errors": ["This is the first error", "This is the second error", "This is the third error"]
     },
     "classes": "aggregate"
   },
@@ -327,12 +303,8 @@
       "id": "a102",
       "label": "Error and warning",
       "parent": "bc3",
-      "errors": [
-        "This is the error"
-      ],
-      "warnings": [
-        "This is the warning"
-      ]
+      "errors": ["This is the error"],
+      "warnings": ["This is the warning"]
     },
     "classes": "aggregate"
   },
@@ -357,9 +329,7 @@
       "id": "e110",
       "label": "Entity",
       "parent": "a110",
-      "errors": [
-        "Only aggregates can publish domain events"
-      ]
+      "errors": ["Only aggregates can publish domain events"]
     },
     "classes": "entity"
   },
@@ -368,9 +338,7 @@
       "id": 110,
       "source": "e110",
       "target": "de102",
-      "errors": [
-        "Only aggregates can publish domain events"
-      ]
+      "errors": ["Only aggregates can publish domain events"]
     }
   },
   {
@@ -378,12 +346,8 @@
       "id": "de102",
       "label": "Domain Event",
       "parent": "bc3",
-      "errors": [
-        "Only aggregates can publish domain events"
-      ],
-      "warnings": [
-        "It seems this domain event doesn't own id or timestamp"
-      ]
+      "errors": ["Only aggregates can publish domain events"],
+      "warnings": ["It seems this domain event doesn't own id or timestamp"]
     },
     "classes": "event"
   }

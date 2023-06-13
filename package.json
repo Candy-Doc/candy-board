@@ -14,15 +14,15 @@
     "build": "vite build",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
-    "format": "prettier --plugin=./../../node_modules/prettier-plugin-svelte --check .",
-    "format-fix": "prettier --plugin=./../../node_modules/prettier-plugin-svelte --write .",
+    "format": "prettier --check .",
+    "format-fix": "prettier --write .",
     "lint": "eslint --ext .ts,.json,.svelte .",
     "lint-fix": "eslint --fix --ext .ts,.json,.svelte .",
     "type-check": "tsc --noEmit",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "@candy-doc/ui": "^1.8.1",
+    "@candy-doc/ui": "^1.10.1",
     "@fortawesome/fontawesome-free": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",

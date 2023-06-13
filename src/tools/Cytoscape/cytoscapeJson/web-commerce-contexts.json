@@ -4,7 +4,7 @@
       "id": "bc0",
       "label": "Billing"
     },
-    "classes" : "boundedContext"
+    "classes": "boundedContext"
   },
   {
     "data": {
@@ -36,7 +36,7 @@
       "label": "Id Card",
       "parent": "a1"
     },
-    "classes" : "valueObject"
+    "classes": "valueObject"
   },
   {
     "data": {
@@ -115,7 +115,7 @@
       "id": "bc1",
       "label": "Sales"
     },
-    "classes" : "boundedContext"
+    "classes": "boundedContext"
   },
   {
     "data": {
@@ -170,7 +170,7 @@
       "id": "bc2",
       "label": "Warehouse"
     },
-    "classes" : "boundedContext"
+    "classes": "boundedContext"
   },
   {
     "data": {
@@ -217,7 +217,7 @@
       "id": "bc3",
       "label": "Shipping"
     },
-    "classes" : "boundedContext"
+    "classes": "boundedContext"
   },
   {
     "data": {
@@ -363,13 +363,14 @@
       "label": "Send package"
     },
     "classes": "command"
-  }, {
-  "data": {
-    "id": 1,
-    "source": "a2",
-    "target": "de0"
-  }
-},
+  },
+  {
+    "data": {
+      "id": 1,
+      "source": "a2",
+      "target": "de0"
+    }
+  },
   {
     "data": {
       "id": 2,
@@ -445,8 +446,7 @@
       "id": 12,
       "source": "dc4",
       "target": "a6",
-      "error" : "This edge also have an error"
+      "error": "This edge also have an error"
     }
   }
-
 ]

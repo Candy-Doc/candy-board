@@ -11,7 +11,8 @@
   <Route path="/">
     <div class="h-full">
       <Home />
-    </Route>
+    </div>
+  </Route>
   <Route path="/demo-cytoscape">
     <div class="h-full">
       <DemoCytoscape />
