@@ -1,4 +1,4 @@
-# Pull request for Candy-doc components library
+# Pull request for Candy-board
 
 ## Your checklist for this pull request
 
