@@ -7,3 +7,4 @@ CHANGELOG.md
 .pre-commit-config.yaml
 .releaserc.js
 .vscode/*
+README.md

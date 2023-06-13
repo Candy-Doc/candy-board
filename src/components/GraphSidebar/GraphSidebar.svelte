@@ -27,7 +27,7 @@
 </script>
 
 <div id="graph-sidebar" class="sidebar">
-  <candy-sidebar on:onCollapse={collapseSidebar}>
+  <candy-sidebar on:onCollapse="{collapseSidebar}">
     <ElementContainer
       label="Patterns"
       icon="{faBookBookmark}"
