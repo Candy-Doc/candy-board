@@ -14,8 +14,9 @@
   import "@Src/styles/cytoscape.css";
   import GraphSidebar from "@Src/components/GraphSidebar/GraphSidebar.svelte";
 
-  let disableHiding = false;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let cyInstance: any;
+  let disableHiding = false;
   let chartCanvas: HTMLElement;
   let tippys: Array<NodesTippy> = [];
   let fcoseLayoutOptions = {
@@ -39,7 +40,7 @@
     Cytoscape.use(popper);
     Cytoscape.use(svg);
     expandCollapse(Cytoscape);
-    localStorage.removeItem("elementsPosition")
+    localStorage.removeItem("elementsPosition");
     const savedElements = localStorage.getItem("elementsPosition");
 
     cyInstance = Cytoscape({
@@ -88,7 +89,7 @@
       }
     });
   });
-  
+
   onDestroy(() => {
     cyInstance.off("mouseover");
     cyInstance.off("mouseout");
@@ -96,7 +97,7 @@
   });
 
   const downloadSVG = () => {
-    if (cyInstance){
+    if (cyInstance) {
       const a = document.createElement("a");
       const svg = cyInstance.svg({
         full: true,
@@ -108,10 +109,10 @@
       a.download = "demo.svg";
       a.click();
     }
-  }
+  };
 
   const viewSVG = () => {
-    if (cyInstance){
+    if (cyInstance) {
       const newWindow = window.open("", "newWindow");
       if (!newWindow) return;
       const newDocument = newWindow.document;
@@ -123,7 +124,7 @@
       div.innerHTML = svg;
       newDocument.body.appendChild(div);
     }
-  }
+  };
 
   const addClassAndDisplayTooltips = (elem: Cytoscape.SingularElementReturnValue) => {
     let tooltipMessage = "";
@@ -170,7 +171,12 @@
 </script>
 
 <div class="flex h-full">
-  <GraphSidebar on:fit={resetCameraView} on:reset={resetGraph} on:downloadSVG={downloadSVG} on:viewSVG={viewSVG}/>
+  <GraphSidebar
+    on:fit="{resetCameraView}"
+    on:reset="{resetGraph}"
+    on:downloadSVG="{downloadSVG}"
+    on:viewSVG="{viewSVG}"
+  />
   <div class="graph-area bg-white rounded-xl shadow-lg">
     <div bind:this="{chartCanvas}" id="graph-canvas"></div>
   </div>

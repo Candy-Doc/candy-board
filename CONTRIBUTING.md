@@ -20,7 +20,7 @@ Go through the following points, before creating a new PR.
 Example : ✨ feat(infra): create a new orm interface
 
 - Use this format `<gitmoji><type>(optional scope): <description>`\
-  *More examples [here](https://github.com/arvinxx/gitmoji-commit-workflow/tree/master/packages/commitlint-config)*
+  _More examples [here](https://github.com/arvinxx/gitmoji-commit-workflow/tree/master/packages/commitlint-config)_
 - Limit the first line to 72 characters or less
 - Consider starting the commit message with an applicable emoji:
 
@@ -32,7 +32,7 @@ Example : ✨ feat(infra): create a new orm interface
   > **Minor release emojis**
 
   - ✨ - `:sparkles:` - Introduce new minor features.
-  - ⚡  - `:zap:` - Improve performance.
+  - ⚡ - `:zap:` - Improve performance.
   - 💄 - `:lipstick:` - Add or update the UI and style files.
   - ♻️ - `:recycle:` - Refactor code.
 
@@ -47,11 +47,11 @@ Example : ✨ feat(infra): create a new orm interface
 
   - 🔥 - `:fire:` - Remove code or files.
   - 📝 - `:memo:` - Add or update documentation.
-  - 💚 - `:green_heart:` - Fix CI Build.  
+  - 💚 - `:green_heart:` - Fix CI Build.
   - 👷 - `:construction_worker:` - Add or update CI build system.
-  - ✏️ - `:pencil2:` - Fix typos.  
-  - 🧪 - `:test_tube:` - Add test(s).  
+  - ✏️ - `:pencil2:` - Fix typos.
+  - 🧪 - `:test_tube:` - Add test(s).
 
-## How to set up your PGP key (*Mac/Windows/Linux*)
+## How to set up your PGP key (_Mac/Windows/Linux_)
 
 **Follow steps [here](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key)**

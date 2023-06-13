@@ -5,10 +5,10 @@
 
 <candy-accordion label="shelf" active>
   <div slot="options">
-    <Fa icon={faLocation} />
+    <Fa icon="{faLocation}" />
   </div>
   <div slot="options">
-    <Fa icon={faEye} />
+    <Fa icon="{faEye}" />
   </div>
   <candy-accordion label="book" active>
     <candy-sidebar-element label="Title"></candy-sidebar-element>

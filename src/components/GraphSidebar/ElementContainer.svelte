@@ -3,8 +3,8 @@
   import type { IconDefinition } from "@fortawesome/free-solid-svg-icons";
   import { createEventDispatcher } from "svelte";
 
-  export let label : string;
-  export let icon : IconDefinition;
+  export let label: string;
+  export let icon: IconDefinition;
   export let isCollapsed: boolean;
 
   const dispatch = createEventDispatcher();
@@ -14,19 +14,15 @@
     if (isCollapsed) {
       dispatch("collapse");
     }
-    isActive = !isActive
-  }
+    isActive = !isActive;
+  };
 
-  $: isCollapsed ? isActive = false : null;
+  $: isCollapsed ? (isActive = false) : null;
 </script>
 
-<candy-accordion
-  label={label}
-  active={isActive}
-  on:click|stopPropagation={handleAccordion}
->
+<candy-accordion label="{label}" active="{isActive}" on:click|stopPropagation="{handleAccordion}">
   <div slot="icon">
-    <Fa icon={icon} />
+    <Fa icon="{icon}" />
   </div>
-  <slot></slot>
+  <slot />
 </candy-accordion>

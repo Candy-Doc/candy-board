@@ -4,4 +4,5 @@ module.exports = {
   svelteStrictMode: true,
   svelteAllowShorthand: false,
   svelteIndentScriptAndStyle: true,
+  plugins: ["prettier-plugin-svelte"],
 };

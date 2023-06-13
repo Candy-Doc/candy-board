@@ -1,2 +1,9 @@
+# Ignore
+
 node_modules
 dist
+.github/**
+CHANGELOG.md
+.pre-commit-config.yaml
+.releaserc.js
+.vscode/*

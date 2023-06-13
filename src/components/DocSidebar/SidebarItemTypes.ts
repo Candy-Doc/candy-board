@@ -1,7 +1,7 @@
 export type SidebarItem = {
-  type: ElementType,
-  label: string,
-  childrens?: Array<SidebarItem>
+  type: ElementType;
+  label: string;
+  childrens?: Array<SidebarItem>;
 };
 
 export enum ElementType {

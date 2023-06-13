@@ -21,7 +21,7 @@
   
 **Svelte application** used to create a package of CandyDoc front part.
 
-His goal is to generate html pages where we will insert *JSON file* generated from [CandyDoc Maven plugin](https://github.com/Candy-Doc/candy-doc-maven-plugin).
+His goal is to generate html pages where we will insert _JSON file_ generated from [CandyDoc Maven plugin](https://github.com/Candy-Doc/candy-doc-maven-plugin).
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -39,6 +39,7 @@ Join our [Discord](https://discord.gg/CxwdeKjtcT) to start communicating with ev
 ## Contributors ✨
 
 [Contribute to the project](./CONTRIBUTING.md)
+
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->

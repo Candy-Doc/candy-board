@@ -9,17 +9,25 @@
 
   const changeUrl = (path: string) => {
     navigate(path);
-  }
+  };
 </script>
 
 <candy-topbar>
-  <candy-topbar-element on:click={() => changeUrl("/")} label="Getting Started"></candy-topbar-element>
-  <candy-topbar-element on:click={() => changeUrl("/demo-cytoscape")} label="Graph"></candy-topbar-element>
-  <candy-topbar-element on:click={() => changeUrl("/contact")} label="Contact"></candy-topbar-element>
+  <candy-topbar-element on:click="{() => changeUrl('/')}" label="Getting Started"
+  ></candy-topbar-element>
+  <candy-topbar-element on:click="{() => changeUrl('/demo-cytoscape')}" label="Graph"
+  ></candy-topbar-element>
+  <candy-topbar-element on:click="{() => changeUrl('/contact')}" label="Contact"
+  ></candy-topbar-element>
   <candy-topbar-element>
-    <a slot="icon" href="https://github.com/Candy-Doc/candy-board/issues/new/choose" target="_blank">
+    <a
+      slot="icon"
+      href="https://github.com/Candy-Doc/candy-board/issues/new/choose"
+      target="_blank"
+    >
       <Fa icon="{faBug}" />
-  </candy-topbar-element>
+    </a></candy-topbar-element
+  >
 </candy-topbar>
 
 <style>
