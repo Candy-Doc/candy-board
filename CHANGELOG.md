@@ -1,3 +1,8 @@
+# [v1.6.1](https://github.com/Candy-Doc/candy-board/compare/v1.6.0...v1.6.1) (2023-06-13)
+
+## 🐛 Bug Fixes
+- [`689239d`](https://github.com/Candy-Doc/candy-board/commit/689239d)  fix: patch prettier &amp;&amp; upgrade candy/ui (#41) (Issues: [`#41`](https://github.com/Candy-Doc/candy-board/issues/41) [`#39`](https://github.com/Candy-Doc/candy-board/issues/39) [`#39`](https://github.com/Candy-Doc/candy-board/issues/39))
+
 # [v1.6.0](https://github.com/Candy-Doc/candy-board/compare/v1.5.0...v1.6.0) (2023-06-05)
 
 ## ✨ New minor Features
