@@ -20,7 +20,7 @@
   $: isCollapsed ? (isActive = false) : null;
 </script>
 
-<candy-accordion label="{label}" active="{isActive}" on:click|stopPropagation="{handleAccordion}">
+<candy-accordion label="{label}" active="{isActive}" on:onChange={handleAccordion}>
   <div slot="icon">
     <Fa icon="{icon}" />
   </div>

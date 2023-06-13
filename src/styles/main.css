@@ -3,6 +3,6 @@ body {
 }
 
 .sidebar candy-sidebar::part(sidebar),
-.sidebar candy-sidebar-doc::part(sidebar-doc) {
+.sidebar candy-sidebar-doc::part(doc-sidebar) {
   width: 15rem;
 }
