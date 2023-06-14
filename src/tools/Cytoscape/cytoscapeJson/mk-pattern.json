@@ -1,0 +1,192 @@
+[
+  {
+    "id": "menu",
+    "name": "menu",
+    "children": [
+      {
+        "id": "fr.ipponLille.menu.Cup",
+        "name": "Cup",
+        "children": [
+          {
+            "id": "fr.ipponLille.menu.RaceId",
+            "name": "RaceId",
+            "children": []
+          },
+          {
+            "id": "fr.ipponLille.menu.CupId",
+            "name": "CupId",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "fr.ipponLille.menu.Player",
+        "name": "Player",
+        "children": [
+          {
+            "id": "fr.ipponLille.menu.Character",
+            "name": "Character",
+            "children": [
+              {
+                "id": "fr.ipponLille.menu.Name",
+                "name": "Name",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "fr.ipponLille.menu.Vehicle",
+            "name": "Vehicle",
+            "children": [
+              {
+                "id": "fr.ipponLille.menu.Kart",
+                "name": "Kart",
+                "children": [
+                  {
+                    "id": "fr.ipponLille.menu.KartId",
+                    "name": "KartId",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "fr.ipponLille.menu.Parachute",
+                "name": "Parachute",
+                "children": [
+                  {
+                    "id": "fr.ipponLille.menu.ParachuteId",
+                    "name": "ParachuteId",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "fr.ipponLille.menu.Wheels",
+                "name": "Wheels",
+                "children": [
+                  {
+                    "id": "fr.ipponLille.menu.WheelsId",
+                    "name": "WheelsId",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "fr.ipponLille.menu.Stats",
+        "name": "Stats",
+        "children": []
+      },
+      {
+        "id": "fr.ipponLille.menu.command.ChooseCharacter",
+        "name": "ChooseCharacter",
+        "children": []
+      },
+      {
+        "id": "fr.ipponLille.menu.command.ChooseParachute",
+        "name": "ChooseParachute",
+        "children": []
+      },
+      {
+        "id": "fr.ipponLille.menu.command.InitializeVehicle",
+        "name": "InitializeVehicle",
+        "children": []
+      },
+      {
+        "id": "fr.ipponLille.menu.event.CharacterChosen",
+        "name": "CharacterChosen",
+        "children": []
+      },
+      {
+        "id": "fr.ipponLille.menu.event.KartChosen",
+        "name": "KartChosen",
+        "children": []
+      },
+      {
+        "id": "fr.ipponLille.menu.event.VehicleInitialized",
+        "name": "VehicleInitialized",
+        "children": []
+      },
+      {
+        "id": "fr.ipponLille.menu.event.WheelsChosen",
+        "name": "WheelsChosen",
+        "children": []
+      },
+      {
+        "id": "fr.ipponLille.menu.command.ChooseKart",
+        "name": "ChooseKart",
+        "children": []
+      },
+      {
+        "id": "fr.ipponLille.menu.command.ValidateVehicle",
+        "name": "ValidateVehicle",
+        "children": []
+      },
+      {
+        "id": "fr.ipponLille.menu.event.ParachuteChosen",
+        "name": "ParachuteChosen",
+        "children": []
+      },
+      {
+        "id": "fr.ipponLille.menu.repository.PlayerRepository",
+        "name": "PlayerRepository",
+        "children": []
+      },
+      {
+        "id": "fr.ipponLille.menu.command.ChooseWheels",
+        "name": "ChooseWheels",
+        "children": []
+      },
+      {
+        "id": "fr.ipponLille.menu.event.VehicleValidated",
+        "name": "VehicleValidated",
+        "children": []
+      },
+      {
+        "id": "fr.ipponLille.menu.event.CupChosen",
+        "name": "CupChosen",
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "race",
+    "name": "race",
+    "children": [
+      {
+        "id": "fr.ipponLille.race.Race",
+        "name": "Race",
+        "children": [
+          {
+            "id": "fr.ipponLille.race.Track",
+            "name": "Track",
+            "children": []
+          },
+          {
+            "id": "fr.ipponLille.race.Rank",
+            "name": "Rank",
+            "children": []
+          },
+          {
+            "id": "fr.ipponLille.race.Player",
+            "name": "Player",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "fr.ipponLille.race.event.PlayerFallen",
+        "name": "PlayerFallen",
+        "children": []
+      },
+      {
+        "id": "fr.ipponLille.race.command.ReplacePlayer",
+        "name": "ReplacePlayer",
+        "children": []
+      }
+    ]
+  }
+]

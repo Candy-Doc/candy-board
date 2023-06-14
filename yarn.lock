@@ -1979,10 +1979,10 @@ svelte2tsx@^0.1.151:
     dedent-js "^1.0.1"
     pascal-case "^3.1.1"
 
-svelte@^3.44.0:
-  version "3.48.0"
-  resolved "https://registry.npmjs.org/svelte/-/svelte-3.48.0.tgz"
-  integrity sha512-fN2YRm/bGumvjUpu6yI3BpvZnpIm9I6A7HR4oUNYd7ggYyIwSA/BX7DJ+UXXffLp6XNcUijyLvttbPVCYa/3xQ==
+svelte@3.57.0:
+  version "3.57.0"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.57.0.tgz#a3969cfe51f25f2a55e75f7b98dbd02c3af0980b"
+  integrity sha512-WMXEvF+RtAaclw0t3bPDTUe19pplMlfyKDsixbHQYgCWi9+O9VN0kXU1OppzrB9gPAvz4NALuoca2LfW2bOjTQ==
 
 table@^6.0.9:
   version "6.8.0"

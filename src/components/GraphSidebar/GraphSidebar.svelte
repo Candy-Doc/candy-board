@@ -8,7 +8,7 @@
 
   import ElementContainer from "./ElementContainer.svelte";
   import Tools from "./Elements/Tools.svelte";
-  import Patterns from "./Elements/Patterns.svelte";
+  import Patterns from "./Elements/Patterns/PatternsList.svelte";
   import Legend from "./Elements/Legend.svelte";
 
   let collapsed = false;
@@ -34,7 +34,7 @@
       isCollapsed="{collapsed}"
       on:collapse="{collapseSidebar}"
     >
-      <Patterns />
+      <Patterns on:centerNode />
     </ElementContainer>
     <ElementContainer
       label="Legend"

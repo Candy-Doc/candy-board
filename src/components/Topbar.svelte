@@ -13,11 +13,11 @@
 </script>
 
 <candy-topbar>
-  <candy-topbar-element on:click="{() => changeUrl('/')}" label="Getting Started"
+  <candy-topbar-element on:click="{() => changeUrl('/')}" label="Getting Started" on:keypress
   ></candy-topbar-element>
-  <candy-topbar-element on:click="{() => changeUrl('/demo-cytoscape')}" label="Graph"
+  <candy-topbar-element on:click="{() => changeUrl('/demo-cytoscape')}" label="Graph" on:keypress
   ></candy-topbar-element>
-  <candy-topbar-element on:click="{() => changeUrl('/contact')}" label="Contact"
+  <candy-topbar-element on:click="{() => changeUrl('/contact')}" label="Contact" on:keypress
   ></candy-topbar-element>
   <candy-topbar-element>
     <a
@@ -32,6 +32,12 @@
 
 <style>
   candy-topbar::part(topbar) {
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 0.75rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    background-color: rgb(248, 249, 250, 1);
   }
 </style>
