@@ -34,7 +34,7 @@
       isCollapsed="{collapsed}"
       on:collapse="{collapseSidebar}"
     >
-      <Patterns on:centerNode />
+      <Patterns on:centerNode on:hideNodeNeighbors />
     </ElementContainer>
     <ElementContainer
       label="Legend"

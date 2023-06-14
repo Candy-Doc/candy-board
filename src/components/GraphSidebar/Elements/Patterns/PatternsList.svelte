@@ -4,5 +4,5 @@
 </script>
 
 {#each patterns as pattern}
-  <Pattern pattern="{pattern}" on:centerNode />
+  <Pattern pattern="{pattern}" on:centerNode on:hideNodeNeighbors />
 {/each}

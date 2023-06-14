@@ -10,13 +10,12 @@
   import webCommerceContextsJson from "@Src/tools/Cytoscape/cytoscapeJson/mk-data.json";
   import Style from "@Src/tools/Cytoscape/Style";
   import type { NodesTippy } from "@Src/tools/Cytoscape/Events";
-  import { setCytoscapeEvents, setHideNeighborsValue } from "@Src/tools/Cytoscape/Events";
+  import { setCytoscapeEvents, hideNeighbors, showNeighbors } from "@Src/tools/Cytoscape/Events";
   import "@Src/styles/cytoscape.css";
   import GraphSidebar from "@Src/components/GraphSidebar/GraphSidebar.svelte";
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let cyInstance: any;
-  let disableHiding = false;
   let chartCanvas: HTMLElement;
   let tippys: Array<NodesTippy> = [];
   let fcoseLayoutOptions = {
@@ -181,7 +180,14 @@
     });
   };
 
-  $: setHideNeighborsValue(disableHiding);
+  const hideNodeNeighbors = (e: CustomEvent) => {
+    const nodeNeihborsToHide = cyInstance.$(`node[id = "${e.detail.newPatternId}"]`);
+
+    showNeighbors(cyInstance);
+    if (e.detail.newPatternId !== e.detail.currentPatternId) {
+      hideNeighbors(cyInstance, nodeNeihborsToHide);
+    }
+  };
 </script>
 
 <div class="flex h-full">
@@ -191,6 +197,7 @@
     on:downloadSVG="{downloadSVG}"
     on:viewSVG="{viewSVG}"
     on:centerNode="{centerCameraOnNode}"
+    on:hideNodeNeighbors="{hideNodeNeighbors}"
   />
   <div class="graph-area bg-white rounded-xl shadow-lg">
     <div bind:this="{chartCanvas}" id="graph-canvas"></div>
