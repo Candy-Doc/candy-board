@@ -23,10 +23,10 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@candy-doc/ui@^1.10.1":
-  version "1.10.1"
-  resolved "https://registry.yarnpkg.com/@candy-doc/ui/-/ui-1.10.1.tgz#34f8fce2e2306ca71ab5ddb22b74cd3110c35da4"
-  integrity sha512-OecaBskT48VnxcZgUAOlfGnvDPPijDXNRfjEyS/u9LiUhoIqzY9zXP4BwqrP2m1/jhXxnHMdfOgcEs7+r9+HpA==
+"@candy-doc/ui@^1.12.0":
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/@candy-doc/ui/-/ui-1.12.0.tgz#184c3f7fd4b56b733ab79e5e0a287c5a2defa4a5"
+  integrity sha512-wJm4bu2bdOxaMBUswRm6WkUjqx73lGqQM7npeQGQgYZ8p6PNkKOTwJtyQKW0XPJhx5SyTveJ/SxnPBINaVgSrA==
   dependencies:
     lit "^2.2.2"
 

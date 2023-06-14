@@ -39,7 +39,7 @@
       <Fa icon="{currentNodeIdHideSelected === pattern.id ? faEyeSlash : faEye}" />
     </button>
     {#each pattern.children as childPattern}
-      <svelte:self pattern="{childPattern}" on:centerNode />
+      <svelte:self pattern="{childPattern}" on:centerNode on:hideNodeNeighbors />
     {/each}
   </candy-accordion>
 {:else}
