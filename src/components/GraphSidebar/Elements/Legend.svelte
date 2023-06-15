@@ -9,6 +9,7 @@
     { label: "Service", bgColor: "bg-[#a3e4d7]", textColor: "text-[#a3e4d7]" },
     { label: "Repository", bgColor: "bg-[#aed6f1]", textColor: "text-[#aed6f1]" },
     { label: "Factory", bgColor: "bg-[#f6ddcc]", textColor: "text-[#f6ddcc]" },
+    { label: "Error", bgColor: "bg-[#ff4248]", textColor: "text-[#f6ddcc]" },
   ];
 </script>
 
