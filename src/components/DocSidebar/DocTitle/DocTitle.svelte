@@ -15,12 +15,12 @@
   active="{expand}"
   on:click|stopPropagation="{hideChildren}"
 >
-  {#if title.childrens}
-    {#each title.childrens as child}
-      {#if child.type === ElementType.TITLE}
-        <svelte:self title="{child}" expand="{true}" />
+  {#if title.summary}
+    {#each title.summary as subpart}
+      {#if subpart.type === ElementType.TITLE}
+        <svelte:self title="{subpart}" expand="{true}" />
       {:else}
-        <DocElement element="{child}" />
+        <DocElement element="{subpart}" />
       {/if}
     {/each}
   {/if}

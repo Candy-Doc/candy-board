@@ -6,7 +6,7 @@ This place allows you to visualize your project represented in a DDD graph.
 
 If you're not familiar with the _Domain Driven Design_, we encourage you to check the [DDD tab]().
 
-## How to fully live the candy-board experience ?
+## How to fully live the candy-board experience **?**
 
 Your graph is available on the **Graph** tab, accessible through the top navbar.
 
