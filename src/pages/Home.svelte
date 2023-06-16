@@ -6,8 +6,7 @@
   import Fa from "svelte-fa/src/fa.svelte";
   import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
-  import type { SidebarItem } from "@Src/components/DocSidebar/SidebarItemTypes";
-  import { ElementType } from "@Src/components/DocSidebar/SidebarItemTypes";
+  import { type SidebarItem, ElementType } from "@Src/components/DocSidebar/types";
   import Arrow from "../assets/Arrow.svg";
   import "../styles/home.css";
 
