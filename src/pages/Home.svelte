@@ -5,6 +5,8 @@
   import {onMount} from "svelte";
   import type {SidebarItem} from "@Src/components/DocSidebar/SidebarItemTypes";
   import {ElementType} from "@Src/components/DocSidebar/SidebarItemTypes";
+
+  import Arrow from "../assets/Arrow.svg";
   import "../styles/home.css";
 
   export type HtmlTitle = {
@@ -18,17 +20,20 @@
     typographer: true
   });
   md.use(MarkdownItAnchor);
-  let mdContent: string | undefined = undefined;
+
+  let finalPage: string;
 
   let summary : Array<SidebarItem> = [];
 
   onMount(async () => {
-    const fileContent = await GetReadmeContent(window.location.pathname, "src/markdown/GETTING_STARTED.md");
-    if (fileContent !== undefined) {
-      mdContent = md.render(fileContent);
-      getIds(mdContent);
-      // mdContent = mdContent?.replace('<h1', '<h1 style="color:red;"');
-      // console.log(mdContent)
+    const mdGettingStarted = await GetReadmeContent(window.location.pathname, "src/markdown/GETTING_STARTED.md");
+    const mdDdd = await GetReadmeContent(window.location.pathname, "src/markdown/DDD.md")
+    if (mdGettingStarted && mdDdd) {
+      const htmlGettingStarted = md.render(mdGettingStarted);
+      const htmlDdd = md.render(mdDdd);
+      finalPage = htmlGettingStarted?.concat(htmlDdd);
+      finalPage = updateDddLink(finalPage);
+      getIds(finalPage);
     }
   });
 
@@ -36,6 +41,11 @@
     const file = await fetch(baseurl + path);
     return file.ok ? await file.text() : undefined;
   };
+
+  const updateDddLink = (content: string) => {
+    content = content.replace("href=\"DDD.md\"", "href=\"#domain-driven-design-(ddd)\"")
+    return content
+  }
 
   const getIds = (content: string | undefined) => {
     const inlineParse = md.parseInline(content, {});
@@ -91,47 +101,14 @@
 <div class="flex h-full">
   <DocSidebar summary={summary}/>
   <div class="home prose grow bg-white rounded-xl shadow-lg">
+    <div class="absolute top-14 right-56 -scale-x-75 rotate-90">
+      <img src="{Arrow}" alt="Discord Arrow" />
+    </div>
+    <p class="handwritten absolute top-24 right-20 text-center font-bold text-[#08004243] text-2xl">
+      Access to your<br>graph HERE
+    </p>
     <div class="flex flex-col mx-20 my-10 text-[#000000DD]">
-      {@html mdContent}
+      {@html finalPage}
     </div>
   </div>
 </div>
-
-
-<style>
-    h1 {
-        color: #080042;
-        display: flex;
-        justify-content: center;
-        font-size: 2rem !important;
-        padding: 2rem 0 !important;
-    }
-
-    h2 {
-        color: #080042EE;
-        font-size: 1.5rem !important;
-        padding-top: 3rem !important;
-
-    }
-
-    h3 {
-        color: #080042DD;
-        font-size: 1.3rem !important;
-        padding-top: 2rem !important;
-    }
-
-    p {
-        padding: 0.5rem 0 !important
-    }
-
-    ul {
-        list-style-type: disc !important;
-        list-style-position: outside !important;
-        padding-left: 3rem !important;
-    }
-
-    li {
-        padding-left: 0.5rem;
-    }
-
-</style>
