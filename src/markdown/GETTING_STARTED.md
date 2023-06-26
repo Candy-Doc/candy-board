@@ -16,7 +16,7 @@ You can easily **manipulate** each node by dragging them. Moving node will not
 break the graph structure and will keep edges and containers unchanged.
 
 You can **select** node groups as well by maintaining _Ctrl_. The selected nodes
-will appear with a blue border. You can eventually select each node individually 
+will appear with a blue border. You can eventually select each node individually
 by _Ctrl + click_ on each of them.
 
 You can **expand/collapse** each cluster by _double-clicking_ on them.
@@ -30,9 +30,10 @@ You can expand it to view the project hierarchy. Each node is supplied with a lo
 and focus (the opened eye) buttons.
 
 Then, the paint palette is the **Legend**, you'll be able to recognize the concept of each node by its
-representation. 
+representation.
 
 Finally, the **Tools** tab displays 4 buttons.
+
 - **Fit view** to fit your view on the graph.
 - **Reset** to generate again the graph.
 - **Download SVG** to download the graph on SVG format.
@@ -47,5 +48,3 @@ It'll redirect you to our GitHub repository issue creating page.
 
 If you want to reach us for any other reasons, please click go the **Contact** tab
 available through the navbar.
-
-
