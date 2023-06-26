@@ -5,6 +5,7 @@ import "@candy-doc/ui/src/components/Sidebar";
 import "@candy-doc/ui/src/components/SidebarDoc";
 import "@candy-doc/ui/src/components/SidebarDoc/DocElement";
 import "@candy-doc/ui/src/components/SidebarDoc/DocTitle";
+import "@candy-doc/ui/src/components/FloatingButton";
 
 import App from "./App.svelte";
 import "./styles/tailwind.css";
