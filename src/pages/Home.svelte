@@ -55,7 +55,7 @@
   };
 
   const updateDddLink = (content: string) => {
-    content = content.replace('href="DDD.md"', 'href="#domain-driven-design-(ddd)"');
+    content = content.replace('href="DDD.md"', 'href="#domain-driven-design-(ddd)" class="link"');
     return content;
   };
 

@@ -36,3 +36,10 @@
 .handwritten {
     font-family: Simplicity, sans-serif;
 }
+
+.link{
+    color: #080042;
+    font-weight: bold;
+    text-decoration: underline #080042;
+
+}
