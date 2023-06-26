@@ -43,3 +43,7 @@
     text-decoration: underline #080042;
 
 }
+
+.home .hidden {
+    display: none;
+}

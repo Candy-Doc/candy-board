@@ -24,6 +24,7 @@
   md.use(MarkdownItAnchor);
 
   let finalPage: string;
+  let hideAccessToGraph = false;
 
   let summary: Array<SidebarItem> = [];
 
@@ -47,6 +48,9 @@
         behavior: "smooth",
       });
     });
+
+    window.addEventListener('resize', displayAccessToGraph);
+
   });
 
   const GetReadmeContent = async (baseurl: string, path: string) => {
@@ -127,17 +131,24 @@
     });
     return sideBar;
   };
+
+  const displayAccessToGraph = () => {
+    hideAccessToGraph = window.innerWidth < 768;
+  }
+
 </script>
 
 <div class="flex h-full">
   <DocSidebar summary="{summary}" />
-  <div class="home prose grow bg-white rounded-xl shadow-lg">
-    <div class="absolute top-14 right-56 -scale-x-75 rotate-90">
-      <img src="{Arrow}" alt="Discord Arrow" />
+  <div class="home prose grow bg-white rounded-xl shadow-lg" >
+    <div class={hideAccessToGraph ? "hidden" : ""}>
+      <div class="absolute top-14 right-56 -scale-x-75 rotate-90">
+        <img src="{Arrow}" alt="Discord Arrow" />
+      </div>
+      <p class="handwritten absolute top-24 right-20 text-center font-bold text-[#08004243] text-2xl">
+        Access to your<br />graph HERE
+      </p>
     </div>
-    <p class="handwritten absolute top-24 right-20 text-center font-bold text-[#08004243] text-2xl">
-      Access to your<br />graph HERE
-    </p>
     <div class="flex flex-col mx-20 my-10 text-[#000000DD]">
       {@html finalPage}
       <candy-floating-button
