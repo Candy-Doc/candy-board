@@ -11,7 +11,7 @@
   import Arrow from "../assets/Arrow.svg";
   import "../styles/home.css";
 
-  const MARKDOWN_DIRECTORY_PATH = "src/markdown/";
+  const MARKDOWN_DIRECTORY_PATH = "markdown/";
   const MARKDOWN_FILENAMES = ["GETTING_STARTED.md", "DDD.md"];
 
   type HtmlTitle = {
@@ -139,19 +139,20 @@
   };
 
   const handleEvents = () => {
-    document.getElementById("toTopButton")?.addEventListener("click", () => {
-      scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    });
-
+    document.getElementById("toTopButton")?.addEventListener("click", scrollTop);
     window.addEventListener("resize", displayAccessToGraph);
   };
 
   const removeEvents = () => {
+    document.getElementById("toTopButton")?.removeEventListener("click", scrollTop)
     window.removeEventListener("resize", displayAccessToGraph);
   };
+
+  const scrollTop = () => {
+    scrollTo({
+      top: 0,
+    });
+  }
 
   const displayAccessToGraph = () => {
     hideAccessToGraph = window.innerWidth < 768;
