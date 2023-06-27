@@ -101,22 +101,13 @@
       const htmlInfo = extractTag(htmlTitle);
       switch (htmlInfo[0]) {
         case "h1": {
-          sideBar.push({
-            type: ElementType.TITLE,
-            id: htmlInfo[1],
-            label: htmlTitle.innerText,
-            summary: [],
-          });
+          sideBar.push({...createTitle(ElementType.TITLE, htmlInfo[1], htmlTitle.innerText), summary:[]});
           break;
         }
         case "h2": {
           const lastTitle = sideBar.pop();
           if (lastTitle) {
-            lastTitle.summary?.push({
-              type: ElementType.ELEMENT,
-              id: htmlInfo[1],
-              label: htmlTitle.innerText,
-            });
+            lastTitle.summary?.push(createTitle(ElementType.ELEMENT, htmlInfo[1], htmlTitle.innerText));
             sideBar.push(lastTitle);
           }
           break;
@@ -124,11 +115,7 @@
         case "h3": {
           const lastTitle = sideBar.pop();
           if (lastTitle) {
-            lastTitle.summary?.push({
-              type: ElementType.SUBELEMENT,
-              id: htmlInfo[1],
-              label: htmlTitle.innerText,
-            });
+            lastTitle.summary?.push(createTitle(ElementType.ELEMENT, htmlInfo[1], htmlTitle.innerText));
             sideBar.push(lastTitle);
           }
           break;
@@ -137,6 +124,14 @@
     });
     return sideBar;
   };
+
+  const createTitle = (type: ElementType, htmlId: string, label: string) => {
+    return {
+      type: type,
+      id: htmlId,
+      label: label,
+    };
+  }
 
   const handleEvents = () => {
     document.getElementById("toTopButton")?.addEventListener("click", scrollTop);
