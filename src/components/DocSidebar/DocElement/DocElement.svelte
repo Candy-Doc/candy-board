@@ -5,9 +5,8 @@
 
   const handleClickElement = () => {
     document.getElementById(element.id)?.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    })
+      block: "start",
+    });
   };
 </script>
 
