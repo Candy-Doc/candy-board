@@ -3,11 +3,11 @@
   import MarkdownIt from "markdown-it";
   import MarkdownItAnchor from "markdown-it-anchor";
   import { onMount } from "svelte";
+  import Fa from "svelte-fa/src/fa.svelte";
+  import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+
   import type { SidebarItem } from "@Src/components/DocSidebar/SidebarItemTypes";
   import { ElementType } from "@Src/components/DocSidebar/SidebarItemTypes";
-  import Fa from "svelte-fa/src/fa.svelte";
-
-  import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
   import Arrow from "../assets/Arrow.svg";
   import "../styles/home.css";
 
