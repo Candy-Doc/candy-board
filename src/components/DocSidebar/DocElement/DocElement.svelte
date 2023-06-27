@@ -1,14 +1,12 @@
 <script lang="ts">
   import type { SidebarItem } from "../SidebarItemTypes";
-  import {navigate} from "svelte-navigator";
 
   export let element: SidebarItem;
 
   const handleClickElement = () => {
     document.getElementById(element.id)?.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    })
+      block: "start",
+    });
   };
 </script>
 

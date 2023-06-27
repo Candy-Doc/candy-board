@@ -4,7 +4,6 @@
   import DocElement from "@Src/components/DocSidebar/DocElement/DocElement.svelte";
 
   export let summary: Array<SidebarItem> = [];
-
 </script>
 
 <div class="sidebar">

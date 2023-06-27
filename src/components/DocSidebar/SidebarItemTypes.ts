@@ -8,5 +8,5 @@ export type SidebarItem = {
 export enum ElementType {
   TITLE,
   ELEMENT,
-  SUBELEMENT
+  SUBELEMENT,
 }
