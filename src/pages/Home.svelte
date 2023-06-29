@@ -156,7 +156,7 @@
 
 <div class="flex h-full">
   <DocSidebar summary="{summary}" />
-  <section class="home grow bg-white rounded-xl shadow-lg">
+  <section class="home grow bg-white rounded-xl shadow-lg flex justify-center">
     <div class="{hideAccessToGraph ? 'hidden' : ''}">
       <div class="absolute top-14 right-56 -scale-x-75 rotate-90">
         <img src="{Arrow}" alt="Discord Arrow" />
@@ -167,7 +167,7 @@
         Access to your<br />graph HERE
       </p>
     </div>
-    <div class="flex flex-col mx-20 my-10 text-[#000000DD]">
+    <div class="flex flex-col max-w-screen-lg	mx-20 my-10 text-[#000000DD] text-justify">
       {@html pageContent}
       <candy-floating-button
         id="toTopButton"
