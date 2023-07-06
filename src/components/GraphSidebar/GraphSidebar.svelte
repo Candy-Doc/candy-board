@@ -3,12 +3,16 @@
   import {
     faBookBookmark,
     faPalette,
+    faBookmark as faSolidBookmark,
     faScrewdriverWrench,
   } from "@fortawesome/free-solid-svg-icons";
+  import {
+    faBookmark as faRegularBookmark,
+  } from "@fortawesome/free-regular-svg-icons";
 
   import ElementContainer from "./ElementContainer.svelte";
+  import PatternsList from "./Elements/Patterns/PatternsList.svelte";
   import Tools from "./Elements/Tools.svelte";
-  import Patterns from "./Elements/Patterns/PatternsList.svelte";
   import Legend from "./Elements/Legend.svelte";
 
   let collapsed = false;
@@ -34,11 +38,12 @@
       isCollapsed="{collapsed}"
       on:collapse="{collapseSidebar}"
     >
-      <Patterns on:centerNode on:hideNodeNeighbors />
+      <PatternsList on:centerNode on:hideNodeNeighbors />
     </ElementContainer>
     <ElementContainer
       label="Legend"
       icon="{faPalette}"
+      iconOptions="{[{ active: faSolidBookmark, inactive: faRegularBookmark }]}"
       isCollapsed="{collapsed}"
       on:collapse="{collapseSidebar}"
     >
@@ -47,6 +52,7 @@
     <ElementContainer
       label="Tools"
       icon="{faScrewdriverWrench}"
+      iconOptions="{[{ active: faSolidBookmark, inactive: faRegularBookmark }]}"
       isCollapsed="{collapsed}"
       on:collapse="{collapseSidebar}"
     >
@@ -54,3 +60,9 @@
     </ElementContainer>
   </candy-sidebar>
 </div>
+
+<style>
+  candy-sidebar::part(sidebar) {
+    padding: 0;
+  }
+</style>

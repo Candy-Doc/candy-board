@@ -2,19 +2,23 @@
   {
     "id": "menu",
     "name": "menu",
+    "classes": "boundedContext",
     "children": [
       {
         "id": "fr.ipponLille.menu.Cup",
         "name": "Cup",
+        "classes": "aggregate",
         "children": [
           {
             "id": "fr.ipponLille.menu.RaceId",
             "name": "RaceId",
+            "classes": "valueObject",
             "children": []
           },
           {
             "id": "fr.ipponLille.menu.CupId",
             "name": "CupId",
+            "classes": "valueObject",
             "children": []
           }
         ]
@@ -22,14 +26,17 @@
       {
         "id": "fr.ipponLille.menu.Player",
         "name": "Player",
+        "classes": "aggregate",
         "children": [
           {
             "id": "fr.ipponLille.menu.Character",
             "name": "Character",
+            "classes": "entity",
             "children": [
               {
                 "id": "fr.ipponLille.menu.Name",
                 "name": "Name",
+                "classes": "valueObject",
                 "children": []
               }
             ]
@@ -37,14 +44,17 @@
           {
             "id": "fr.ipponLille.menu.Vehicle",
             "name": "Vehicle",
+            "classes": "entity",
             "children": [
               {
                 "id": "fr.ipponLille.menu.Kart",
                 "name": "Kart",
+                "classes": "entity",
                 "children": [
                   {
                     "id": "fr.ipponLille.menu.KartId",
                     "name": "KartId",
+                    "classes": "valueObject",
                     "children": []
                   }
                 ]
@@ -52,10 +62,12 @@
               {
                 "id": "fr.ipponLille.menu.Parachute",
                 "name": "Parachute",
+                "classes": "entity",
                 "children": [
                   {
                     "id": "fr.ipponLille.menu.ParachuteId",
                     "name": "ParachuteId",
+                    "classes": "valueObject",
                     "children": []
                   }
                 ]
@@ -63,10 +75,12 @@
               {
                 "id": "fr.ipponLille.menu.Wheels",
                 "name": "Wheels",
+                "classes": "entity",
                 "children": [
                   {
                     "id": "fr.ipponLille.menu.WheelsId",
                     "name": "WheelsId",
+                    "classes": "valueObject",
                     "children": []
                   }
                 ]
@@ -78,76 +92,91 @@
       {
         "id": "fr.ipponLille.menu.Stats",
         "name": "Stats",
+        "classes": "valueObject",
         "children": []
       },
       {
         "id": "fr.ipponLille.menu.command.ChooseCharacter",
         "name": "ChooseCharacter",
+        "classes": "command",
         "children": []
       },
       {
         "id": "fr.ipponLille.menu.command.ChooseParachute",
         "name": "ChooseParachute",
+        "classes": "command",
         "children": []
       },
       {
         "id": "fr.ipponLille.menu.command.InitializeVehicle",
         "name": "InitializeVehicle",
+        "classes": "command",
         "children": []
       },
       {
         "id": "fr.ipponLille.menu.event.CharacterChosen",
         "name": "CharacterChosen",
+        "classes": "event",
         "children": []
       },
       {
         "id": "fr.ipponLille.menu.event.KartChosen",
         "name": "KartChosen",
+        "classes": "event",
         "children": []
       },
       {
         "id": "fr.ipponLille.menu.event.VehicleInitialized",
         "name": "VehicleInitialized",
+        "classes": "event",
         "children": []
       },
       {
         "id": "fr.ipponLille.menu.event.WheelsChosen",
         "name": "WheelsChosen",
+        "classes": "event",
         "children": []
       },
       {
         "id": "fr.ipponLille.menu.command.ChooseKart",
         "name": "ChooseKart",
+        "classes": "command",
         "children": []
       },
       {
         "id": "fr.ipponLille.menu.command.ValidateVehicle",
         "name": "ValidateVehicle",
+        "classes": "command",
         "children": []
       },
       {
         "id": "fr.ipponLille.menu.event.ParachuteChosen",
         "name": "ParachuteChosen",
+        "classes": "event",
         "children": []
       },
       {
         "id": "fr.ipponLille.menu.repository.PlayerRepository",
         "name": "PlayerRepository",
+        "classes": "repository",
         "children": []
       },
       {
         "id": "fr.ipponLille.menu.command.ChooseWheels",
         "name": "ChooseWheels",
+        "classes": "command",
         "children": []
       },
       {
         "id": "fr.ipponLille.menu.event.VehicleValidated",
         "name": "VehicleValidated",
+        "classes": "event",
         "children": []
       },
       {
         "id": "fr.ipponLille.menu.event.CupChosen",
         "name": "CupChosen",
+        "classes": "event",
         "children": []
       }
     ]
@@ -155,24 +184,29 @@
   {
     "id": "race",
     "name": "race",
+    "classes": "boundedContext",
     "children": [
       {
         "id": "fr.ipponLille.race.Race",
         "name": "Race",
+        "classes": "aggregate",
         "children": [
           {
             "id": "fr.ipponLille.race.Track",
             "name": "Track",
+            "classes": "valueObject",
             "children": []
           },
           {
             "id": "fr.ipponLille.race.Rank",
             "name": "Rank",
+            "classes": "valueObject",
             "children": []
           },
           {
             "id": "fr.ipponLille.race.Player",
             "name": "Player",
+            "classes": "valueObject",
             "children": []
           }
         ]
@@ -180,11 +214,13 @@
       {
         "id": "fr.ipponLille.race.event.PlayerFallen",
         "name": "PlayerFallen",
+        "classes": "event",
         "children": []
       },
       {
         "id": "fr.ipponLille.race.command.ReplacePlayer",
         "name": "ReplacePlayer",
+        "classes": "command",
         "children": []
       }
     ]
