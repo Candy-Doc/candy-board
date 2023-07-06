@@ -9,6 +9,30 @@
     const value = (target as HTMLInputElement).value;
     inputText = value;
   };
+
+  const isSearchElementIncludeIn = (element, searchedElement) => {
+    return element.name.toLowerCase().includes(searchedElement);
+  };
+
+  const searchInContent = (content, searchedElement, foundElement = []) => {
+    content.forEach((element) => {
+      if (isSearchElementIncludeIn(element, searchedElement)) {
+        foundElement.push({ ...element });
+      } else {
+        if (element.children.length > 0) {
+          searchInContent(element.children, foundElement);
+        }
+      }
+    });
+    return foundElement;
+  };
+
+  const filterSidebarContent = (value) => {
+    const searchedPatternLowerCase = value.toLowerCase();
+    return searchInContent(patternList, searchedPatternLowerCase);
+  };
+
+  $: filteredPatterns = filterSidebarContent(inputText);
 </script>
 
 <div class="patterns-container">
@@ -20,7 +44,7 @@
       shortcut=""
       placeholder="Search pattern..."></candy-input>
   </div>
-  {#each patternList as pattern}
+  {#each filteredPatterns as pattern}
     <Pattern pattern="{pattern}" on:centerNode on:hideNodeNeighbors />
   {/each}
 </div>
