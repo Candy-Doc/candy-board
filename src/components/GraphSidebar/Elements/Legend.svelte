@@ -2,15 +2,15 @@
   import type { patternLegend } from "../types";
 
   let patternsLegend: Array<patternLegend> = [
-    { label: "Bounded Context", bgColor: "bg-[#FFFFFF00]", classes: "boundedContext"},
-    { label: "Aggregate", bgColor: "bg-[#d1ece7]", classes: "aggregate"},
-    { label: "Entity", bgColor: "bg-[#fcf3cf]", classes: "entity"},
-    { label: "Value object", bgColor: "bg-[#d9f7a5]", classes: "valueObject"},
-    { label: "Event", bgColor: "bg-[#f9dd9a]", classes: "event"},
-    { label: "Command", bgColor: "bg-[#adebff]", classes: "command"},
-    { label: "Service", bgColor: "bg-[#a3e4d7]", classes: "service"},
-    { label: "Repository", bgColor: "bg-[#aed6f1]", classes: "repository"},
-    { label: "Factory", bgColor: "bg-[#f6ddcc]", classes: "factory"},
+    { label: "Bounded Context", bgColor: "bg-[#FFFFFF00]", classes: "boundedContext" },
+    { label: "Aggregate", bgColor: "bg-[#d1ece7]", classes: "aggregate" },
+    { label: "Entity", bgColor: "bg-[#fcf3cf]", classes: "entity" },
+    { label: "Value object", bgColor: "bg-[#d9f7a5]", classes: "valueObject" },
+    { label: "Event", bgColor: "bg-[#f9dd9a]", classes: "event" },
+    { label: "Command", bgColor: "bg-[#adebff]", classes: "command" },
+    { label: "Service", bgColor: "bg-[#a3e4d7]", classes: "service" },
+    { label: "Repository", bgColor: "bg-[#aed6f1]", classes: "repository" },
+    { label: "Factory", bgColor: "bg-[#f6ddcc]", classes: "factory" },
   ];
 </script>
 

@@ -6,9 +6,7 @@
     faBookmark as faSolidBookmark,
     faScrewdriverWrench,
   } from "@fortawesome/free-solid-svg-icons";
-  import {
-    faBookmark as faRegularBookmark,
-  } from "@fortawesome/free-regular-svg-icons";
+  import { faBookmark as faRegularBookmark } from "@fortawesome/free-regular-svg-icons";
 
   import ElementContainer from "./ElementContainer.svelte";
   import PatternsList from "./Elements/Patterns/PatternsList.svelte";

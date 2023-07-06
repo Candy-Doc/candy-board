@@ -9,4 +9,4 @@ export type patternLegend = {
   label: string;
   bgColor: string;
   classes: string;
-}
+};
