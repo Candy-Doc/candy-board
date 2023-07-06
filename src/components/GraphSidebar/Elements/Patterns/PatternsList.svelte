@@ -20,7 +20,7 @@
         foundElement.push({ ...element });
       } else {
         if (element.children.length > 0) {
-          searchInContent(element.children, foundElement);
+          searchInContent(element.children, searchedElement, foundElement);
         }
       }
     });
@@ -29,7 +29,7 @@
 
   const filterSidebarContent = (value) => {
     const searchedPatternLowerCase = value.toLowerCase();
-    return searchInContent(patternList, searchedPatternLowerCase);
+      return searchInContent(patternList, searchedPatternLowerCase);
   };
 
   $: filteredPatterns = filterSidebarContent(inputText);
