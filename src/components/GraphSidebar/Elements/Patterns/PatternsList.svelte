@@ -44,6 +44,9 @@
       shortcut=""
       placeholder="Search pattern..."></candy-input>
   </div>
+  {#if filteredPatterns === undefined || filteredPatterns.length === 0}
+    <p class="text-center py-4 text-gray-600">No pattern found</p>
+  {/if}
   {#each filteredPatterns as pattern}
     <Pattern pattern="{pattern}" on:centerNode on:hideNodeNeighbors />
   {/each}
