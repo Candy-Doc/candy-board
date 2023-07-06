@@ -1,8 +1,9 @@
 <script lang="ts">
   import patterns from "@Src/tools/Cytoscape/cytoscapeJson/mk-pattern.json";
   import Pattern from "./Pattern.svelte";
+  import type { patternType } from "../../types";
 
-  const patternList = patterns;
+  const patternList: Array<patternType> = patterns;
   let inputText = "";
 
   const handleInputChange = ({ target }: Event) => {
@@ -10,12 +11,16 @@
     inputText = value;
   };
 
-  const isSearchElementIncludeIn = (element, searchedElement) => {
+  const isSearchElementIncludeIn = (element: patternType, searchedElement: string) => {
     return element.name.toLowerCase().includes(searchedElement);
   };
 
-  const searchInContent = (content, searchedElement, foundElement = []) => {
-    content.forEach((element) => {
+  const searchInContent = (
+    content: Array<patternType>,
+    searchedElement: string,
+    foundElement: Array<patternType> = []
+  ) => {
+    content.forEach((element: patternType) => {
       if (isSearchElementIncludeIn(element, searchedElement)) {
         foundElement.push({ ...element });
       } else {
@@ -27,9 +32,9 @@
     return foundElement;
   };
 
-  const filterSidebarContent = (value) => {
+  const filterSidebarContent = (value: string) => {
     const searchedPatternLowerCase = value.toLowerCase();
-      return searchInContent(patternList, searchedPatternLowerCase);
+    return searchInContent(patternList, searchedPatternLowerCase);
   };
 
   $: filteredPatterns = filterSidebarContent(inputText);

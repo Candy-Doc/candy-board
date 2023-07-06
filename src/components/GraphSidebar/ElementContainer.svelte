@@ -27,7 +27,12 @@
 </script>
 
 <div class="{isLegendSticky ? 'sticky bottom-0 rounded-sm bg-[#f8f9fa]' : ''}">
-  <candy-accordion label="{label}" active="{isActive}" on:onChange="{handleAccordion}">
+  <candy-accordion
+    label="{label}"
+    active="{isActive}"
+    on:onChange="{handleAccordion}"
+    collapsed="{isCollapsed}"
+  >
     {#if iconOptions}
       {#each iconOptions as option}
         <div slot="options">
