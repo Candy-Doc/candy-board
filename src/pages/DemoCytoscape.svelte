@@ -28,7 +28,7 @@
     quality: "proof",
     animate: false,
     randomize: true,
-    nodeSeparation: 400,
+    nodeSeparation: 10,
   };
   let presetLayoutOptions = {
     name: "preset",
