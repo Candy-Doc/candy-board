@@ -28,7 +28,7 @@
 {#if pattern.children?.length > 0}
   <!-- accordion -->
   <div class="{`flex ${pattern.classes}`}">
-    <candy-accordion class="w-full" label="{`${pattern.name}`}">
+    <candy-accordion class="w-full" label="{`${pattern.name}`}" minimizeOptions={true}>
       <button slot="options" on:click|stopPropagation="{() => centerCameraOnNode(pattern.id)}">
         <Fa icon="{faLocation}" />
       </button>
@@ -43,7 +43,7 @@
 {:else}
   <!-- sidebar-element -->
   <div class="{`flex ${pattern.classes}`}">
-    <candy-sidebar-element class="w-full" label="{`${pattern.name}`}">
+    <candy-sidebar-element class="w-full" label="{`${pattern.name}`}" minimizeOptions={true}>
       <button slot="options" on:click|stopPropagation="{() => centerCameraOnNode(pattern.id)}">
         <Fa icon="{faLocation}" />
       </button>
