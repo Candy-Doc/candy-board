@@ -2,9 +2,9 @@
   import Fa from "svelte-fa/src/fa.svelte";
   import { faLocation, faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
   import { createEventDispatcher } from "svelte";
-  import type { patternType } from "../../types";
+  import type { PatternType } from "../../types";
 
-  export let pattern: patternType;
+  export let pattern: PatternType;
 
   const dispatch = createEventDispatcher();
   let currentNodeIdHideSelected: string | undefined = undefined;
@@ -28,7 +28,7 @@
 {#if pattern.children?.length > 0}
   <!-- accordion -->
   <div class="{`flex ${pattern.classes}`}">
-    <candy-accordion class="w-full" label="{`${pattern.name}`}" minimizeOptions={true}>
+    <candy-accordion class="w-full" label="{`${pattern.name}`}" minimizeOptions="{true}">
       <button slot="options" on:click|stopPropagation="{() => centerCameraOnNode(pattern.id)}">
         <Fa icon="{faLocation}" />
       </button>
@@ -43,7 +43,7 @@
 {:else}
   <!-- sidebar-element -->
   <div class="{`flex ${pattern.classes}`}">
-    <candy-sidebar-element class="w-full" label="{`${pattern.name}`}" minimizeOptions={true}>
+    <candy-sidebar-element class="w-full" label="{`${pattern.name}`}" minimizeOptions="{true}">
       <button slot="options" on:click|stopPropagation="{() => centerCameraOnNode(pattern.id)}">
         <Fa icon="{faLocation}" />
       </button>

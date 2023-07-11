@@ -3,9 +3,11 @@
   import type { IconDefinition } from "@fortawesome/free-solid-svg-icons";
   import { createEventDispatcher } from "svelte";
 
+  import type { IconOptionsDefinition } from "./types";
+
   export let label: string;
   export let icon: IconDefinition;
-  export let iconOptions: Array<{ active: IconDefinition; inactive: IconDefinition }> | null = null;
+  export let iconOptions: Array<IconOptionsDefinition> | null = null;
   export let isCollapsed: boolean;
 
   const dispatch = createEventDispatcher();

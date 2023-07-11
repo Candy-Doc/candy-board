@@ -13,12 +13,15 @@
 </script>
 
 <candy-topbar>
-  <candy-topbar-element on:click="{() => changeUrl('/')}" label="Getting Started" on:keypress
-  ></candy-topbar-element>
-  <candy-topbar-element on:click="{() => changeUrl('/demo-cytoscape')}" label="Graph" on:keypress
-  ></candy-topbar-element>
-  <candy-topbar-element on:click="{() => changeUrl('/contact')}" label="Contact" on:keypress
-  ></candy-topbar-element>
+  <button on:click="{() => changeUrl('/')}">
+    <candy-topbar-element label="Getting Started"></candy-topbar-element>
+  </button>
+  <button on:click="{() => changeUrl('/demo-cytoscape')}">
+    <candy-topbar-element label="Graph"></candy-topbar-element>
+  </button>
+  <button on:click="{() => changeUrl('/contact')}">
+    <candy-topbar-element label="Contact"></candy-topbar-element>
+  </button>
   <candy-topbar-element>
     <a
       slot="icon"

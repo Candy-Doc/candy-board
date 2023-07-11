@@ -1,7 +1,7 @@
 <script lang="ts">
-  import type { patternLegend } from "../types";
+  import type { PatternLegend } from "../types";
 
-  let patternsLegend: Array<patternLegend> = [
+  let patternsLegend: Array<PatternLegend> = [
     { label: "Bounded Context", bgColor: "bg-[#FFFFFF00]", classes: "boundedContext" },
     { label: "Aggregate", bgColor: "bg-[#d1ece7]", classes: "aggregate" },
     { label: "Entity", bgColor: "bg-[#fcf3cf]", classes: "entity" },

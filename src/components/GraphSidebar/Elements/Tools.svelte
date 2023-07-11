@@ -2,13 +2,9 @@
   import { createEventDispatcher } from "svelte";
 
   const dispatch = createEventDispatcher();
-
   const fitGraphView = () => dispatch("fit");
-
   const resetGraph = () => dispatch("reset");
-
   const downloadSVG = () => dispatch("downloadSVG");
-
   const viewSVG = () => dispatch("viewSVG");
 </script>
 
