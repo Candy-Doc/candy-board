@@ -1,3 +1,8 @@
+# [v1.7.0](https://github.com/Candy-Doc/candy-board/compare/v1.6.1...v1.7.0) (2023-07-12)
+
+## ✨ New minor Features
+- [`12bc391`](https://github.com/Candy-Doc/candy-board/commit/12bc391)  feat: add patterns listing in the graph sidebar (#43) (Issues: [`#43`](https://github.com/Candy-Doc/candy-board/issues/43))
+
 # [v1.6.1](https://github.com/Candy-Doc/candy-board/compare/v1.6.0...v1.6.1) (2023-06-13)
 
 ## 🐛 Bug Fixes
