@@ -9,6 +9,7 @@
   import { type SidebarItem, ElementType } from "@Src/components/DocSidebar/types";
   import Arrow from "../assets/Arrow.svg";
   import "../styles/home.css";
+  import type Token from "markdown-it/lib/token";
 
   const MARKDOWN_DIRECTORY_PATH = "markdown/";
   const MARKDOWN_FILENAMES = ["GETTING_STARTED.md", "DDD.md"];
@@ -70,7 +71,7 @@
     const storeHtmlInlineAndInnerHtml: Array<HtmlTitle> = [];
     const children = inlineParse[0].children;
     if (children) {
-      children.forEach((token, index) => {
+      children.forEach((token: Token, index: number) => {
         if (
           token.type === "html_inline" &&
           token.content.includes("id=") &&
@@ -153,14 +154,17 @@
   };
 </script>
 
-<div class="flex h-full">
-  <DocSidebar summary="{summary}" />
+<div class="home-container flex h-full">
+  <div class="sticky-sidebar-doc">
+    <DocSidebar summary="{summary}" />
+  </div>
   <section class="home grow bg-white rounded-xl shadow-lg flex justify-center">
     <div class="{hideAccessToGraph ? 'hidden' : ''}">
       <div class="absolute top-14 right-56 -scale-x-75 rotate-90">
         <img src="{Arrow}" alt="Discord Arrow" />
       </div>
       <p
+        style="text-shadow: 0px 0px 25px rgba(100, 100, 100, .2);"
         class="handwritten absolute top-24 right-20 text-center font-bold text-[#08004243] text-2xl"
       >
         Access to your<br />graph HERE

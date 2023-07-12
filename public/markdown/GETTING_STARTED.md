@@ -1,4 +1,4 @@
-# WELCOME ON CANDY-BOARD
+# Welcome on Candy-Board
 
 Candy-part is the front part of the Candy-Doc project.
 

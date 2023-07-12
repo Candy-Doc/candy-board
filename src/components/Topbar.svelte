@@ -42,5 +42,6 @@
     top: 0;
     z-index: 100;
     background-color: rgb(248, 249, 250, 1);
+    height: var(--header-height);
   }
 </style>

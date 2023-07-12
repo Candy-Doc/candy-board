@@ -1,5 +1,10 @@
+.home-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
 .home h1 {
-  color: #080042;
+  color: var(--dark-blue);
   display: flex;
   justify-content: center;
   font-size: 2rem !important;
@@ -8,13 +13,13 @@
 }
 
 .home h2 {
-  color: #080042ee;
+  color: var(--dark-blue);
   font-size: 1.5rem !important;
   padding-top: 3rem !important;
 }
 
 .home h3 {
-  color: #080042dd;
+  color: var(--dark-blue);
   font-size: 1.3rem !important;
   padding-top: 2rem !important;
 }
@@ -38,11 +43,19 @@
 }
 
 .link {
-  color: #080042;
+  color: var(--dark-blue);
   font-weight: bold;
-  text-decoration: underline #080042;
+  text-decoration: underline var(--dark-blue);
 }
 
 .home .hidden {
   display: none;
+}
+
+.sticky-sidebar-doc {
+  position: sticky;
+  overflow-y: scroll;
+  top: calc(var(--header-height) + 1rem);
+  height: calc(100vh - calc(var(--header-height) + 1rem));
+  width: var(--sidebar-width);
 }
