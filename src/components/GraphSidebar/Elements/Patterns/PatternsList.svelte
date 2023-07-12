@@ -49,7 +49,7 @@
       shortcut=""
       placeholder="Search pattern..."></candy-input>
   </div>
-  {#if filteredPatterns === undefined || filteredPatterns.length === 0}
+  {#if !filteredPatterns || filteredPatterns.length === 0}
     <p class="text-center py-4 text-gray-600">No pattern found</p>
   {/if}
   {#each filteredPatterns as pattern}

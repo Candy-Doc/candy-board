@@ -7,7 +7,7 @@
 
   export let label: string;
   export let icon: IconDefinition;
-  export let iconOptions: Array<IconOptionsDefinition> | null = null;
+  export let iconOptions: Array<IconOptionsDefinition> | undefined = undefined;
   export let isCollapsed: boolean;
 
   const dispatch = createEventDispatcher();
