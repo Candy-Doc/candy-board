@@ -1,3 +1,8 @@
+# [v1.7.1](https://github.com/Candy-Doc/candy-board/compare/v1.7.0...v1.7.1) (2023-07-12)
+
+## 🐛 Bug Fixes
+- [`70ef2f1`](https://github.com/Candy-Doc/candy-board/commit/70ef2f1)  fix: filename error (#45) (Issues: [`#45`](https://github.com/Candy-Doc/candy-board/issues/45))
+
 # [v1.7.0](https://github.com/Candy-Doc/candy-board/compare/v1.6.1...v1.7.0) (2023-07-12)
 
 ## ✨ New minor Features
