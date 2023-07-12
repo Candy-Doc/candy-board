@@ -1,14 +1,16 @@
-<script>
-  let patternsLegend = [
-    { label: "Bounded Context", bgColor: "bg-[#FFFFFF00]", textColor: "text-[#FFFFFF]" },
-    { label: "Aggregate", bgColor: "bg-[#d1ece7]", textColor: "text-[#d1ece7]" },
-    { label: "Entity", bgColor: "bg-[#fcf3cf]", textColor: "text-[#fcf3cf]" },
-    { label: "Value object", bgColor: "bg-[#d9f7a5]", textColor: "text-[#d9f7a5]" },
-    { label: "Event", bgColor: "bg-[#f9dd9a]", textColor: "text-[#f9dd9a]" },
-    { label: "Command", bgColor: "bg-[#adebff]", textColor: "text-[#adebff]" },
-    { label: "Service", bgColor: "bg-[#a3e4d7]", textColor: "text-[#a3e4d7]" },
-    { label: "Repository", bgColor: "bg-[#aed6f1]", textColor: "text-[#aed6f1]" },
-    { label: "Factory", bgColor: "bg-[#f6ddcc]", textColor: "text-[#f6ddcc]" },
+<script lang="ts">
+  import type { PatternLegend } from "../types";
+
+  let patternsLegend: Array<PatternLegend> = [
+    { label: "Bounded Context", bgColor: "bg-[#FFFFFF00]", classes: "boundedContext" },
+    { label: "Aggregate", bgColor: "bg-[#d1ece7]", classes: "aggregate" },
+    { label: "Entity", bgColor: "bg-[#fcf3cf]", classes: "entity" },
+    { label: "Value object", bgColor: "bg-[#d9f7a5]", classes: "valueObject" },
+    { label: "Event", bgColor: "bg-[#f9dd9a]", classes: "event" },
+    { label: "Command", bgColor: "bg-[#adebff]", classes: "command" },
+    { label: "Service", bgColor: "bg-[#a3e4d7]", classes: "service" },
+    { label: "Repository", bgColor: "bg-[#aed6f1]", classes: "repository" },
+    { label: "Factory", bgColor: "bg-[#f6ddcc]", classes: "factory" },
   ];
 </script>
 

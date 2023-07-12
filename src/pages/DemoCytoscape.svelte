@@ -6,17 +6,15 @@
   import expandCollapse from "cytoscape-expand-collapse";
   import popper from "cytoscape-popper";
 
-  import { makeTippy } from "@Src/tools/Cytoscape/Tippy";
-  import webCommerceContextsJson from "@Src/tools/Cytoscape/cytoscapeJson/web-commerce-contexts.json";
-  import Style from "@Src/tools/Cytoscape/Style";
-  import type { NodesTippy } from "@Src/tools/Cytoscape/Events";
-  import { setCytoscapeEvents, setHideNeighborsValue } from "@Src/tools/Cytoscape/Events";
+  import { makeTippy } from "@Src/tools/Cytoscape/tippy";
+  import webCommerceContextsJson from "@Src/tools/Cytoscape/cytoscapeJson/mk-data.json";
+  import Style from "@Src/tools/Cytoscape/style";
+  import type { NodesTippy } from "@Src/tools/Cytoscape/events";
+  import { setCytoscapeEvents, hideNeighbors, showNeighbors } from "@Src/tools/Cytoscape/events";
   import "@Src/styles/cytoscape.css";
   import GraphSidebar from "@Src/components/GraphSidebar/GraphSidebar.svelte";
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let cyInstance: any;
-  let disableHiding = false;
   let chartCanvas: HTMLElement;
   let tippys: Array<NodesTippy> = [];
   let fcoseLayoutOptions = {
@@ -29,7 +27,7 @@
     quality: "proof",
     animate: false,
     randomize: true,
-    nodeSeparation: 400,
+    nodeSeparation: 10,
   };
   let presetLayoutOptions = {
     name: "preset",
@@ -40,7 +38,6 @@
     Cytoscape.use(popper);
     Cytoscape.use(svg);
     expandCollapse(Cytoscape);
-    localStorage.removeItem("elementsPosition");
     const savedElements = localStorage.getItem("elementsPosition");
 
     cyInstance = Cytoscape({
@@ -145,7 +142,6 @@
         tooltipMessage += warningMessage + "\n";
       });
     }
-
     if (tooltipMessage.length > 0) {
       tippys.push({ id: elem.id(), tippy: makeTippy(elem, tooltipMessage) });
     }
@@ -167,7 +163,28 @@
     localStorage.setItem("elementsPosition", JSON.stringify(cyInstance.json().elements));
   };
 
-  $: setHideNeighborsValue(disableHiding);
+  const centerCameraOnNode = (e: CustomEvent) => {
+    const node = cyInstance.$(`node[id = "${e.detail.patternId}"]`);
+    if (node.data("id") !== e.detail.patternId) {
+      return;
+    }
+    cyInstance.animate({
+      fit: {
+        eles: node,
+        padding: 10,
+      },
+      easing: "ease",
+    });
+  };
+
+  const hideNodeNeighbors = (e: CustomEvent) => {
+    const nodeNeihborsToHide = cyInstance.$(`node[id = "${e.detail.newPatternId}"]`);
+
+    showNeighbors(cyInstance);
+    if (e.detail.newPatternId !== e.detail.currentPatternId) {
+      hideNeighbors(cyInstance, nodeNeihborsToHide);
+    }
+  };
 </script>
 
 <div class="flex h-full">
@@ -176,6 +193,8 @@
     on:reset="{resetGraph}"
     on:downloadSVG="{downloadSVG}"
     on:viewSVG="{viewSVG}"
+    on:centerNode="{centerCameraOnNode}"
+    on:hideNodeNeighbors="{hideNodeNeighbors}"
   />
   <div class="graph-area bg-white rounded-xl shadow-lg">
     <div bind:this="{chartCanvas}" id="graph-canvas"></div>

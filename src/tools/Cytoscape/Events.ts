@@ -5,7 +5,6 @@ export interface NodesTippy {
   tippy: Instance<Props>;
 }
 
-let hideNeighborsValue = false;
 let isCtrlPressed = false;
 let nodePositionsChanged = false;
 
@@ -22,25 +21,17 @@ const warningOverrideStyle = {
   "font-weight": "bold",
 };
 
-export const setHideNeighborsValue = (value: boolean) => {
-  hideNeighborsValue = value;
-};
-
 export const setCytoscapeEvents = (cyInstance: any, tippys: Array<NodesTippy>) => {
   document.onkeydown = checkCtrlKeyPressed;
   document.onkeyup = checkCtrlKeyPressed;
   cyInstance.on("mouseover", "node", (event: cytoscape.EventObjectNode) => {
     applyHoverStyle(event.target);
     showTippy(tippys, event.target);
-    if (hideNeighborsValue) {
-      hideNeighbors(cyInstance, event.target);
-    }
   });
 
   cyInstance.on("mouseout", "node", (event: cytoscape.EventObjectNode) => {
     resetNodeStyle(event.target);
     hideTippy(tippys, event.target);
-    showNeighbors(cyInstance);
   });
 
   cyInstance.on("mouseover", "edge", (event: cytoscape.EventObjectEdge) =>
@@ -75,6 +66,27 @@ export const setCytoscapeEvents = (cyInstance: any, tippys: Array<NodesTippy>) =
   });
 };
 
+export const hideNeighbors = (cyInstance: any, node: cytoscape.NodeSingular) => {
+  const neighbors = node.neighborhood();
+
+  cyInstance.elements().not(node).not(neighbors).addClass("hidden");
+
+  if (node.isChild()) {
+    node.parent().forEach((subChild: cytoscape.NodeSingular) => {
+      subChild.removeClass("hidden");
+    });
+  }
+  if (node.isParent()) {
+    node.children().forEach((subChild: cytoscape.NodeSingular) => {
+      subChild.removeClass("hidden");
+    });
+  }
+};
+
+export const showNeighbors = (cyInstance: any) => {
+  cyInstance.$().removeClass("hidden");
+};
+
 const applyHoverStyle = (node: cytoscape.NodeSingular) => {
   if (!node.selected()) {
     if (node.hasClass("error")) {
@@ -95,27 +107,6 @@ const resetNodeStyle = (node: cytoscape.NodeSingular) => {
       width: node.layoutDimensions({ nodeDimensionsIncludeLabels: true }).w + 50,
     });
   }
-};
-
-const hideNeighbors = (cyInstance: any, node: cytoscape.NodeSingular) => {
-  const neighbors = node.neighborhood();
-
-  cyInstance.elements().not(node).not(neighbors).addClass("hidden");
-
-  if (node.isChild()) {
-    node.parent().forEach((subChild: cytoscape.NodeSingular) => {
-      subChild.removeClass("hidden");
-    });
-  }
-  if (node.isParent()) {
-    node.children().forEach((subChild: cytoscape.NodeSingular) => {
-      subChild.removeClass("hidden");
-    });
-  }
-};
-
-const showNeighbors = (cyInstance: any) => {
-  cyInstance.$().removeClass("hidden");
 };
 
 const showTippy = (

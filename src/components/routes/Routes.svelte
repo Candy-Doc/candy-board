@@ -5,27 +5,21 @@
   import DemoCytoscape from "@Src/pages/DemoCytoscape.svelte";
   import NotFound from "@Src/pages/NotFound.svelte";
   import Contact from "@Src/pages/Contact.svelte";
+  import FlexHeightRoutes from "@Src/components/routes/FlexHeightRoutes.svelte";
+  import ScreenheightRoutes from "@Src/components/routes/ScreenHeightRoutes.svelte";
 </script>
 
-<main class="pb-3 pr-3 flex-1 w-full">
+<main class="w-full">
   <Route path="/">
-    <div class="h-full">
-      <Home />
-    </div>
+    <FlexHeightRoutes component="{Home}" />
   </Route>
   <Route path="/demo-cytoscape">
-    <div class="h-full">
-      <DemoCytoscape />
-    </div>
+    <ScreenheightRoutes component="{DemoCytoscape}" />
   </Route>
   <Route path="/contact">
-    <div class="h-full">
-      <Contact />
-    </div>
+    <FlexHeightRoutes component="{Contact}" />
   </Route>
   <Route path="/*">
-    <div class="h-full">
-      <NotFound />
-    </div>
+    <FlexHeightRoutes component="{NotFound}" />
   </Route>
 </main>

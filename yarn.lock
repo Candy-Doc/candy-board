@@ -23,10 +23,10 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@candy-doc/ui@^1.10.1":
-  version "1.10.1"
-  resolved "https://registry.yarnpkg.com/@candy-doc/ui/-/ui-1.10.1.tgz#34f8fce2e2306ca71ab5ddb22b74cd3110c35da4"
-  integrity sha512-OecaBskT48VnxcZgUAOlfGnvDPPijDXNRfjEyS/u9LiUhoIqzY9zXP4BwqrP2m1/jhXxnHMdfOgcEs7+r9+HpA==
+"@candy-doc/ui@^1.15.0":
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/@candy-doc/ui/-/ui-1.15.0.tgz#1ef940711c3fc0bca6f24407e99a5fc344dada68"
+  integrity sha512-K2SuZLG4V4jeLHvEisnRpSh2safJQ67FWes12bA4MW3mf7wSKeVn+oU5ZGRBH1tzMGagf2GVwWtyeGkSYf6GmQ==
   dependencies:
     lit "^2.2.2"
 
@@ -57,7 +57,7 @@
 
 "@fortawesome/fontawesome-common-types@6.4.0":
   version "6.4.0"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-6.4.0.tgz#88da2b70d6ca18aaa6ed3687832e11f39e80624b"
+  resolved "https://registry.npmjs.org/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-6.4.0.tgz"
   integrity sha512-HNii132xfomg5QVZw0HwXXpN22s7VBHQBv9CeOu9tfJnhsWQNd2lmTNi8CSrnw5B+5YOmzu1UoPAyxaXsJ6RgQ==
 
 "@fortawesome/fontawesome-free@^6.1.1":
@@ -67,8 +67,15 @@
 
 "@fortawesome/free-brands-svg-icons@^6.4.0":
   version "6.4.0"
-  resolved "https://registry.yarnpkg.com/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-6.4.0.tgz#c785cf5563231eadc5ef5f8cd0274e0b8920433f"
+  resolved "https://registry.npmjs.org/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-6.4.0.tgz"
   integrity sha512-qvxTCo0FQ5k2N+VCXb/PZQ+QMhqRVM4OORiO6MXdG6bKolIojGU/srQ1ptvKk0JTbRgaJOfL2qMqGvBEZG7Z6g==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "6.4.0"
+
+"@fortawesome/free-regular-svg-icons@^6.4.0":
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-regular-svg-icons/-/free-regular-svg-icons-6.4.0.tgz#cacc53bd8d832d46feead412d9ea9ce80a55e13a"
+  integrity sha512-ZfycI7D0KWPZtf7wtMFnQxs8qjBXArRzczABuMQqecA/nXohquJ5J/RCR77PmY5qGWkxAZDxpnUFVXKwtY/jPw==
   dependencies:
     "@fortawesome/fontawesome-common-types" "6.4.0"
 
@@ -619,7 +626,7 @@ cytoscape-popper@^2.0.0:
 
 cytoscape-svg@^0.4.0:
   version "0.4.0"
-  resolved "https://registry.yarnpkg.com/cytoscape-svg/-/cytoscape-svg-0.4.0.tgz#1959320fe1b75c2eea9c00b0e6b7e33e2f67011c"
+  resolved "https://registry.npmjs.org/cytoscape-svg/-/cytoscape-svg-0.4.0.tgz"
   integrity sha512-omqIzfPd1Vy9mk6lHTiR2wTbjxELxb9GXSQ2pE6W+GwAe/6/yvOUQ2h5ApFf2QhCBnpMwLkCTq5DZXxBCgUpDw==
 
 cytoscape@^3.24.0:
@@ -1979,10 +1986,10 @@ svelte2tsx@^0.1.151:
     dedent-js "^1.0.1"
     pascal-case "^3.1.1"
 
-svelte@^3.44.0:
-  version "3.48.0"
-  resolved "https://registry.npmjs.org/svelte/-/svelte-3.48.0.tgz"
-  integrity sha512-fN2YRm/bGumvjUpu6yI3BpvZnpIm9I6A7HR4oUNYd7ggYyIwSA/BX7DJ+UXXffLp6XNcUijyLvttbPVCYa/3xQ==
+svelte@3.57.0:
+  version "3.57.0"
+  resolved "https://registry.npmjs.org/svelte/-/svelte-3.57.0.tgz"
+  integrity sha512-WMXEvF+RtAaclw0t3bPDTUe19pplMlfyKDsixbHQYgCWi9+O9VN0kXU1OppzrB9gPAvz4NALuoca2LfW2bOjTQ==
 
 table@^6.0.9:
   version "6.8.0"
@@ -2084,7 +2091,7 @@ typescript@*:
 
 typescript@^4.6.3:
   version "4.9.5"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.9.5.tgz#095979f9bcc0d09da324d58d03ce8f8374cbe65a"
+  resolved "https://registry.npmjs.org/typescript/-/typescript-4.9.5.tgz"
   integrity sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==
 
 universalify@^0.1.0:
