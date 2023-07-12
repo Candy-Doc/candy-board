@@ -8,5 +8,7 @@ body {
 
 .sidebar candy-sidebar::part(sidebar),
 .sidebar candy-sidebar-doc::part(doc-sidebar) {
-  width: 15rem;
+  width: 20rem;
+  overflow-y: scroll;
+  padding: 0;
 }

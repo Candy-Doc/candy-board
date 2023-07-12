@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { type SidebarItem, ElementType } from "../SidebarItemTypes";
+  import { type SidebarItem, ElementType } from "../types";
   import DocElement from "../DocElement/DocElement.svelte";
 
   export let expand = true;

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { SidebarItem } from "../SidebarItemTypes";
+  import type { SidebarItem } from "../types";
 
   export let element: SidebarItem;
 

@@ -13,12 +13,15 @@
 </script>
 
 <candy-topbar>
-  <candy-topbar-element on:click="{() => changeUrl('/')}" label="Getting Started"
-  ></candy-topbar-element>
-  <candy-topbar-element on:click="{() => changeUrl('/demo-cytoscape')}" label="Graph"
-  ></candy-topbar-element>
-  <candy-topbar-element on:click="{() => changeUrl('/contact')}" label="Contact"
-  ></candy-topbar-element>
+  <button on:click="{() => changeUrl('/')}">
+    <candy-topbar-element label="Getting Started"></candy-topbar-element>
+  </button>
+  <button on:click="{() => changeUrl('/demo-cytoscape')}">
+    <candy-topbar-element label="Graph"></candy-topbar-element>
+  </button>
+  <button on:click="{() => changeUrl('/contact')}">
+    <candy-topbar-element label="Contact"></candy-topbar-element>
+  </button>
   <candy-topbar-element>
     <a
       slot="icon"
@@ -32,6 +35,12 @@
 
 <style>
   candy-topbar::part(topbar) {
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 0.75rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    background-color: rgb(248, 249, 250, 1);
   }
 </style>

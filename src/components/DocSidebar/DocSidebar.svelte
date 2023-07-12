@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { type SidebarItem, ElementType } from "./SidebarItemTypes";
+  import { type SidebarItem, ElementType } from "./types";
   import DocTitle from "@Src/components/DocSidebar/DocTitle/DocTitle.svelte";
   import DocElement from "@Src/components/DocSidebar/DocElement/DocElement.svelte";
 
