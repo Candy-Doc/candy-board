@@ -26,8 +26,15 @@ You can **expand/collapse** each cluster by _double-clicking_ on them.
 On the left side of your screen, you can access to the sidebar.
 
 Firstly, the book tab called **Patterns**, gather all the annotated concepts of your project.
-You can expand it to view the project hierarchy. Each node is supplied with a location (the target icon)
-and focus (the opened eye) buttons.
+You can expand it to view the project hierarchy.
+
+Each node is supplied with two options that you can access by opening the pattern's popover when
+clicking the 3 dots vertical icon:
+
+- location (the target icon): Allow you to center camera on the targeted pattern
+- focus (the open eye): Hide all non-neighbors nodes of the targeted pattern.
+
+A serchbar is also provided to filter the patterns and easily find what you are looking for.
 
 Then, the paint palette is the **Legend**, you'll be able to recognize the concept of each node by its
 representation.
@@ -38,6 +45,12 @@ Finally, the **Tools** tab displays 4 buttons.
 - **Reset** to generate again the graph.
 - **Download SVG** to download the graph on SVG format.
 - **View SVG** to open the graph on an SVG format on a new blank tab.
+
+</br>
+
+The **Legend** and **Tools** tabs are both featuring a sticky mode.
+You can enable it by clickink on the bookmark icon positioned at the right of the line. It allows you
+for instance to keep view on the legend while checking on the patterns.
 
 ### Report a bug
 

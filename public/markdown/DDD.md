@@ -102,7 +102,7 @@ making it easier to write focused and meaningful tests that capture domain behav
 
 ## Conclusion
 
-Domain-Driven Design provides a set of principles, patterns, 
+Domain-Driven Design provides a set of principles, patterns,
 and concepts
 that can guide the development of software systems by putting the **domain at the heart of the design process**.
 It aims to create software that closely models and aligns with the real-world problem domain,
