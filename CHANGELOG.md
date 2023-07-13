@@ -1,3 +1,8 @@
+# [v1.7.2](https://github.com/Candy-Doc/candy-board/compare/v1.7.1...v1.7.2) (2023-07-13)
+
+## 🚨 Compiler / linter warnings fixed
+- [`ca0e1b8`](https://github.com/Candy-Doc/candy-board/commit/ca0e1b8)  lint: run format-fix (#46) (Issues: [`#46`](https://github.com/Candy-Doc/candy-board/issues/46))
+
 # [v1.7.1](https://github.com/Candy-Doc/candy-board/compare/v1.7.0...v1.7.1) (2023-07-12)
 
 ## 🐛 Bug Fixes
