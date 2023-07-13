@@ -101,13 +101,18 @@
       const htmlInfo = extractTag(htmlTitle);
       switch (htmlInfo[0]) {
         case "h1": {
-          sideBar.push({...createTitle(ElementType.TITLE, htmlInfo[1], htmlTitle.innerText), summary:[]});
+          sideBar.push({
+            ...createTitle(ElementType.TITLE, htmlInfo[1], htmlTitle.innerText),
+            summary: [],
+          });
           break;
         }
         case "h2": {
           const lastTitle = sideBar.pop();
           if (lastTitle) {
-            lastTitle.summary?.push(createTitle(ElementType.ELEMENT, htmlInfo[1], htmlTitle.innerText));
+            lastTitle.summary?.push(
+              createTitle(ElementType.ELEMENT, htmlInfo[1], htmlTitle.innerText)
+            );
             sideBar.push(lastTitle);
           }
           break;
@@ -115,7 +120,9 @@
         case "h3": {
           const lastTitle = sideBar.pop();
           if (lastTitle) {
-            lastTitle.summary?.push(createTitle(ElementType.ELEMENT, htmlInfo[1], htmlTitle.innerText));
+            lastTitle.summary?.push(
+              createTitle(ElementType.ELEMENT, htmlInfo[1], htmlTitle.innerText)
+            );
             sideBar.push(lastTitle);
           }
           break;
@@ -131,7 +138,7 @@
       id: htmlId,
       label: label,
     };
-  }
+  };
 
   const handleEvents = () => {
     document.getElementById("toTopButton")?.addEventListener("click", scrollTop);
@@ -139,7 +146,7 @@
   };
 
   const removeEvents = () => {
-    document.getElementById("toTopButton")?.removeEventListener("click", scrollTop)
+    document.getElementById("toTopButton")?.removeEventListener("click", scrollTop);
     window.removeEventListener("resize", displayAccessToGraph);
   };
 
@@ -147,7 +154,7 @@
     scrollTo({
       top: 0,
     });
-  }
+  };
 
   const displayAccessToGraph = () => {
     hideAccessToGraph = window.innerWidth < 768;

@@ -12,11 +12,7 @@
   </h2>
   <candy-button on:click="{() => navigate('/')}" label="Get back home" on:keypress></candy-button>
   <div class="relative translate-x-6 mx-5 my-4">
-    <Fa
-      class="absolute top-36 -left-20 dark-blue-color"
-      size="4x"
-      icon="{faPersonDrowning}"
-    />
+    <Fa class="absolute top-36 -left-20 dark-blue-color" size="4x" icon="{faPersonDrowning}" />
     <div class="-translate-y-8 -rotate-12">
       <img src="{DashLine}" alt="Dashline" />
     </div>
@@ -47,6 +43,6 @@
   }
 
   .dark-blue-color {
-    color: var(--dark-blue)
+    color: var(--dark-blue);
   }
 </style>
