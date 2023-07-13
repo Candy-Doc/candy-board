@@ -38,7 +38,7 @@
     Cytoscape.use(popper);
     Cytoscape.use(svg);
     expandCollapse(Cytoscape);
-    const savedElements = localStorage.getItem("elementsPosition");
+    const savedElements = sessionStorage.getItem("elementsPosition");
 
     cyInstance = Cytoscape({
       container: chartCanvas,
@@ -48,7 +48,7 @@
     });
 
     if (!savedElements) {
-      localStorage.setItem("elementsPosition", JSON.stringify(cyInstance.json().elements));
+      sessionStorage.setItem("elementsPosition", JSON.stringify(cyInstance.json().elements));
     }
 
     cyInstance.elements().forEach((elem: Cytoscape.SingularElementReturnValue) => {
@@ -160,7 +160,7 @@
 
   const resetGraph = () => {
     cyInstance.layout(fcoseLayoutOptions).run();
-    localStorage.setItem("elementsPosition", JSON.stringify(cyInstance.json().elements));
+    sessionStorage.setItem("elementsPosition", JSON.stringify(cyInstance.json().elements));
   };
 
   const centerCameraOnNode = (e: CustomEvent) => {

@@ -1,10 +1,29 @@
+:root {
+  --header-height: 3rem;
+  --sidebar-width: 20rem;
+  --dark-blue: #080042;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #f8f9fa;
 }
 
-.sidebar candy-sidebar::part(sidebar),
-.sidebar candy-sidebar-doc::part(doc-sidebar) {
-  width: 20rem;
+.sidebar candy-sidebar::part(sidebar) {
+  width: var(--sidebar-width);
   overflow-y: scroll;
   padding: 0;
+}
+
+.sidebar candy-sidebar-doc::part(doc-sidebar) {
+  width: 100%;
+  padding-top: 0;
+}
+
+.sidebar candy-sidebar-doc-element::part(doc-element) {
+  color: rgb(60, 60, 60);
+  padding: 0.2rem 0;
 }

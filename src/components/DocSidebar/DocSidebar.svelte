@@ -3,21 +3,12 @@
   import DocTitle from "@Src/components/DocSidebar/DocTitle/DocTitle.svelte";
   import DocElement from "@Src/components/DocSidebar/DocElement/DocElement.svelte";
 
-  const sidebarElements: Array<SidebarItem> = [
-    {
-      type: ElementType.TITLE,
-      label: "Getting started",
-      childrens: [
-        { type: ElementType.ELEMENT, label: "Introduction" },
-        { type: ElementType.ELEMENT, label: "DDD" },
-      ],
-    },
-  ];
+  export let summary: Array<SidebarItem> = [];
 </script>
 
 <div class="sidebar">
   <candy-sidebar-doc>
-    {#each sidebarElements as item}
+    {#each summary as item}
       {#if item.type === ElementType.TITLE}
         <DocTitle title="{item}" expand />
       {:else}

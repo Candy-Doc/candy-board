@@ -57,7 +57,7 @@ export const setCytoscapeEvents = (cyInstance: any, tippys: Array<NodesTippy>) =
   cyInstance.on("mouseup", "node", () => {
     if (nodePositionsChanged) {
       nodePositionsChanged = false;
-      localStorage.setItem("elementsPosition", JSON.stringify(cyInstance.json().elements));
+      sessionStorage.setItem("elementsPosition", JSON.stringify(cyInstance.json().elements));
     }
   });
 

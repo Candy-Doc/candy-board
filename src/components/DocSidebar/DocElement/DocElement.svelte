@@ -4,7 +4,9 @@
   export let element: SidebarItem;
 
   const handleClickElement = () => {
-    console.log("");
+    document.getElementById(element.id)?.scrollIntoView({
+      block: "start",
+    });
   };
 </script>
 

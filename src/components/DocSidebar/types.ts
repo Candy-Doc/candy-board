@@ -1,10 +1,12 @@
 export type SidebarItem = {
   type: ElementType;
+  id: string;
   label: string;
-  childrens?: Array<SidebarItem>;
+  summary?: Array<SidebarItem>;
 };
 
 export enum ElementType {
   TITLE,
   ELEMENT,
+  SUBELEMENT,
 }

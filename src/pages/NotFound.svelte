@@ -6,22 +6,21 @@
 </script>
 
 <div class="flex h-full flex-col items-center">
-  <h1 class="flex mt-24 text-4xl text-[#080042] font-bold justify-center">404 NOT FOUND</h1>
+  <h1 class="flex mt-24 text-4xl font-bold justify-center dark-blue-color">404 NOT FOUND</h1>
   <h2 class="text-center my-20 font-bold text-[#08004243] text-3xl">
     As the first time we heard about DDD, <br />you seem lost
   </h2>
-  <candy-button on:click="{() => navigate('/')}" label="Get back home"></candy-button>
+  <candy-button on:click="{() => navigate('/')}" label="Get back home" on:keypress></candy-button>
   <div class="relative translate-x-6 mx-5 my-4">
     <Fa
-      class="absolute top-36 -left-20"
+      class="absolute top-36 -left-20 dark-blue-color"
       size="4x"
-      style="color: #08004288"
       icon="{faPersonDrowning}"
     />
     <div class="-translate-y-8 -rotate-12">
       <img src="{DashLine}" alt="Dashline" />
     </div>
-    <Fa class="absolute top-14 -right-16" size="4x" style="color: #08004288" icon="{faHouseFlag}" />
+    <Fa class="absolute top-14 -right-16 dark-blue-color" size="4x" icon="{faHouseFlag}" />
   </div>
 </div>
 
@@ -32,7 +31,7 @@
   }
 
   candy-button::part(button) {
-    background-color: #080042;
+    background-color: var(--dark-blue);
     box-shadow: 10px 10px 15px #bbb;
     font-size: 20px;
     padding: 20px;
@@ -45,5 +44,9 @@
 
   h2 {
     font-family: Simplicity, sans-serif;
+  }
+
+  .dark-blue-color {
+    color: var(--dark-blue)
   }
 </style>
