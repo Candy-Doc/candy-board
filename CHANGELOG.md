@@ -1,3 +1,8 @@
+# [v1.7.3](https://github.com/Candy-Doc/candy-board/compare/v1.7.2...v1.7.3) (2023-08-09)
+
+## 🐛 Bug Fixes
+- [`2c69ff3`](https://github.com/Candy-Doc/candy-board/commit/2c69ff3)  fix(home): href redirecting to DDD section was incorrec (#48) (Issues: [`#48`](https://github.com/Candy-Doc/candy-board/issues/48))
+
 # [v1.7.2](https://github.com/Candy-Doc/candy-board/compare/v1.7.1...v1.7.2) (2023-07-13)
 
 ## 🚨 Compiler / linter warnings fixed
