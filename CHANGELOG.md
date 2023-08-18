@@ -1,3 +1,11 @@
+# [v1.7.4](https://github.com/Candy-Doc/candy-board/compare/v1.7.3...v1.7.4) (2023-08-18)
+
+## 🐛 Bug Fixes
+- [`639cc02`](https://github.com/Candy-Doc/candy-board/commit/639cc02)  fix: rename last .js files to .cjs (#51) (Issues: [`#51`](https://github.com/Candy-Doc/candy-board/issues/51))
+
+## ⬆ Dependencies upgraded
+- [`ae6b15a`](https://github.com/Candy-Doc/candy-board/commit/ae6b15a)  chore(svelte): migrate svelte3 to svelte4 (#49) (Issues: [`#49`](https://github.com/Candy-Doc/candy-board/issues/49))
+
 # [v1.7.3](https://github.com/Candy-Doc/candy-board/compare/v1.7.2...v1.7.3) (2023-08-09)
 
 ## 🐛 Bug Fixes
