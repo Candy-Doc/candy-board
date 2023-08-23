@@ -62,7 +62,7 @@
   };
 
   const updateDddLink = (content: string) => {
-    content = content.replace('href="DDD.md"', 'href="#domain-driven-design" class="link"');
+    content = content.replace('href="DDD.md"', 'href="#domain-driven-design" data-testid="ddd-link" class="link"');
     return content;
   };
 
@@ -180,6 +180,7 @@
     <div class="flex flex-col max-w-screen-lg	mx-20 my-10 text-[#000000DD] text-justify">
       {@html pageContent}
       <candy-floating-button
+        data-testid="floating-button"
         id="toTopButton"
         size="md"
         color="#080042"

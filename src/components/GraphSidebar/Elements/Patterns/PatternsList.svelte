@@ -43,6 +43,7 @@
 <div class="patterns-container">
   <div class="pb-1">
     <candy-input
+      data-testid="pattern-search"
       on:input="{handleInputChange}"
       value="{inputText}"
       label=""

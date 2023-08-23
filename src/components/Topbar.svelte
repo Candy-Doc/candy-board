@@ -16,7 +16,7 @@
   <button on:click="{() => changeUrl('/')}">
     <candy-topbar-element label="Getting Started"></candy-topbar-element>
   </button>
-  <button on:click="{() => changeUrl('/demo-cytoscape')}">
+  <button on:click="{() => changeUrl('/graph')}">
     <candy-topbar-element label="Graph"></candy-topbar-element>
   </button>
   <button on:click="{() => changeUrl('/contact')}">
@@ -24,6 +24,7 @@
   </button>
   <candy-topbar-element>
     <a
+      data-testid="topbar-bug-icon"
       slot="icon"
       href="https://github.com/Candy-Doc/candy-board/issues/new/choose"
       target="_blank"

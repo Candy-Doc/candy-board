@@ -14,13 +14,13 @@
   ];
 </script>
 
-<div class="py-1">
+<div class="py-1" data-testid="legend-list">
   {#each patternsLegend as pattern}
     <div class="flex items-center py-[0.2rem]">
       <p
         class="{`
         ${pattern.bgColor}
-        ${pattern.label === 'Bounded Context' ? 'bc' : null}
+        ${pattern.label === 'Bounded Context' ? 'bc' : ''}
         w-[90%] px-[0.75rem] pl-4 py-[0.2rem] rounded-md
       `}"
       >
