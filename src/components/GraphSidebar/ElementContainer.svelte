@@ -38,7 +38,10 @@
     {#if iconOptions}
       {#each iconOptions as option}
         <div slot="options">
-          <button on:click|stopPropagation="{handleSticky}" data-testid="{label.toLowerCase()}-stick-button">
+          <button
+            on:click|stopPropagation="{handleSticky}"
+            data-testid="{label.toLowerCase()}-stick-button"
+          >
             <Fa icon="{isLegendSticky ? option.active : option.inactive}" />
           </button>
         </div>

@@ -13,7 +13,7 @@
     "paths": {
       "@Src/*": ["./src/*"],
       "@Public/*": ["./public/*"]
-    },
+    }
   },
   "references": [{ "path": "./tsconfig.node.json" }],
   "include": ["./src/**/*.d.ts", "./src/**/*.ts", "./src/**/*.js", "./src/**/*.svelte"]

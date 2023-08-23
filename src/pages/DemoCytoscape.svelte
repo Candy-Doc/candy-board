@@ -113,7 +113,7 @@
       const newWindow = window.open("", "newWindow");
       if (!newWindow) return;
       const newDocument = newWindow.document;
-      newWindow.document.title= "Candy-Board SVG View";
+      newWindow.document.title = "Candy-Board SVG View";
       const svg = cyInstance.svg({
         full: true,
         scale: 1,

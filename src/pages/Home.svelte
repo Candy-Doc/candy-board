@@ -1,15 +1,15 @@
 <script lang="ts">
-  import DocSidebar from "@Src/components/DocSidebar/DocSidebar.svelte";
-  import MarkdownIt from "markdown-it";
-  import MarkdownItAnchor from "markdown-it-anchor";
   import { onDestroy, onMount } from "svelte";
   import Fa from "svelte-fa/src/fa.svelte";
+  import type Token from "markdown-it/lib/token";
+  import MarkdownIt from "markdown-it";
+  import MarkdownItAnchor from "markdown-it-anchor";
   import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
+  import DocSidebar from "@Src/components/DocSidebar/DocSidebar.svelte";
   import { type SidebarItem, ElementType } from "@Src/components/DocSidebar/types";
   import Arrow from "../assets/Arrow.svg";
   import "../styles/home.css";
-  import type Token from "markdown-it/lib/token";
 
   const MARKDOWN_DIRECTORY_PATH = "markdown/";
   const MARKDOWN_FILENAMES = ["GETTING_STARTED.md", "DDD.md"];
@@ -62,7 +62,10 @@
   };
 
   const updateDddLink = (content: string) => {
-    content = content.replace('href="DDD.md"', 'href="#domain-driven-design" data-testid="ddd-link" class="link"');
+    content = content.replace(
+      'href="DDD.md"',
+      'href="#domain-driven-design" data-testid="ddd-link" class="link"'
+    );
     return content;
   };
 
@@ -177,7 +180,7 @@
         Access to your<br />graph HERE
       </p>
     </div>
-    <div class="flex flex-col max-w-screen-lg	mx-20 my-10 text-[#000000DD] text-justify">
+    <div class="flex flex-col max-w-screen-lg mx-20 my-10 text-[#000000DD] text-justify">
       {@html pageContent}
       <candy-floating-button
         data-testid="floating-button"
