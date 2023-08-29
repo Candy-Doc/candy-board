@@ -1,3 +1,8 @@
+# [v1.7.5](https://github.com/Candy-Doc/candy-board/compare/v1.7.4...v1.7.5) (2023-08-29)
+
+## 🐛 Bug Fixes
+- [`24a09b9`](https://github.com/Candy-Doc/candy-board/commit/24a09b9)  fix: add markdown folder to the npm publish files (#53) (Issues: [`#53`](https://github.com/Candy-Doc/candy-board/issues/53))
+
 # [v1.7.4](https://github.com/Candy-Doc/candy-board/compare/v1.7.3...v1.7.4) (2023-08-18)
 
 ## 🐛 Bug Fixes
