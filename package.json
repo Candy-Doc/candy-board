@@ -7,7 +7,8 @@
   "files": [
     "dist/assets",
     "dist/favicon.ico",
-    "dist/index.html"
+    "dist/index.html",
+    "dist/markdown"
   ],
   "type": "module",
   "scripts": {
