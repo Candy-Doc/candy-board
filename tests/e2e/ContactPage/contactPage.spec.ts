@@ -1,7 +1,7 @@
 import { test } from "@playwright/test";
-import goToContactPage from "./Functions/goToContactPage";
-import clickContributorButton from "./Functions/clickContributorButton";
-import clickCommunityButton from "./Functions/clickCommunityButton";
+import goToContactPage from "./goToContactPage";
+import clickContributorButton from "./clickContributorButton";
+import clickCommunityButton from "./clickCommunityButton";
 
 test.beforeEach(async ({ page }) => {
   await page.goto("http://localhost:5173/");
@@ -16,3 +16,7 @@ test.describe("User wants to access the contact page", () => {
     await clickCommunityButton(page);
   });
 });
+
+test.afterEach(async ({ page }) => {
+  await page.close();
+})

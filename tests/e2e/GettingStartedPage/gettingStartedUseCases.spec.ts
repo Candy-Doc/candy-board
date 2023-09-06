@@ -1,8 +1,8 @@
 import { expect, test } from "@playwright/test";
-import clickOnDDDLink from "./Functions/clickOnDDDLink";
-import openAndCloseAccordion from "./Functions/openAndCloseAccordions";
-import goToGraphPage from "./Functions/goToGraphPage";
-import clickOnFirstDocTopic from "./Functions/clickOnFirstDocTopic";
+import clickOnDDDLink from "./clickOnDDDLink";
+import openAndCloseAccordion from "../CommonFunctions/openAndCloseAccordions";
+import goToGraphPage from "../CommonFunctions/goToGraphPage";
+import clickOnFirstDocTopic from "./clickOnFirstDocTopic";
 
 test.beforeEach(async ({ page }) => {
   await page.goto("http://localhost:5173/");
@@ -32,3 +32,7 @@ test.describe("User read the getting started then go to the graph page", () => {
     await goToGraphPage(page);
   });
 });
+
+test.afterEach(async ({ page }) => {
+  await page.close();
+})

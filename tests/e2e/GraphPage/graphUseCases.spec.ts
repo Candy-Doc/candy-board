@@ -1,8 +1,8 @@
 import { test } from "@playwright/test";
-import goToGraphPage from "./Functions/goToGraphPage";
-import searchForKartPattern from "./Functions/searchForKartPattern";
-import openGraphLegend from "./Functions/openGraphLegend";
-import useGraphToolsButton from "./Functions/useGraphToolsButton";
+import goToGraphPage from "../CommonFunctions/goToGraphPage";
+import searchForKartPattern from "./searchForKartPattern";
+import openGraphLegend from "./openGraphLegend";
+import useGraphToolsButton from "./useGraphToolsButton";
 
 test.beforeEach(async ({ page }) => {
   await page.goto("http://localhost:5173/");
@@ -20,3 +20,7 @@ test.describe("User manipulate the pattern tools", () => {
     await useGraphToolsButton(page, context);
   });
 });
+
+test.afterEach(async ({ page }) => {
+  await page.close();
+})
