@@ -1,5 +1,5 @@
 import { test } from "@playwright/test";
-import goToContactPage from "./goToContactPage";
+import goToContactPage from "../CommonFunctions/goToContactPage";
 import clickContributorButton from "./clickContributorButton";
 import clickCommunityButton from "./clickCommunityButton";
 
