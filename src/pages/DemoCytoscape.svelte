@@ -113,6 +113,7 @@
       const newWindow = window.open("", "newWindow");
       if (!newWindow) return;
       const newDocument = newWindow.document;
+      newWindow.document.title = "Candy-Board SVG View";
       const svg = cyInstance.svg({
         full: true,
         scale: 1,
@@ -197,7 +198,7 @@
     on:hideNodeNeighbors="{hideNodeNeighbors}"
   />
   <div class="graph-area bg-white rounded-xl shadow-lg">
-    <div bind:this="{chartCanvas}" id="graph-canvas"></div>
+    <div bind:this="{chartCanvas}" id="graph-canvas" data-testid="graph-canvas"></div>
   </div>
 </div>
 
