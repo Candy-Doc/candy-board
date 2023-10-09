@@ -7,4 +7,5 @@ export default async (page: Page) => {
   await page.waitForTimeout(100);
   const scrollOffset = await page.evaluate(() => window.scrollY);
   await expect(scrollOffset).toBeGreaterThan(0);
+  return scrollOffset
 };

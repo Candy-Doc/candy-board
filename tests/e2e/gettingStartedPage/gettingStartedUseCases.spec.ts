@@ -17,8 +17,8 @@ test.describe("User read the getting started then go to the graph page", () => {
     await clickOnDDDLink(page);
   });
   test("User click on first topic", async ({ page }) => {
-    await clickOnDDDLink(page);
-    await clickOnFirstDocTopic(page);
+    const offset = await clickOnDDDLink(page);
+    await clickOnFirstDocTopic(page, offset);
   });
   test("User open and close accordions", async ({ page }) => {
     await openAndCloseAccordion(
